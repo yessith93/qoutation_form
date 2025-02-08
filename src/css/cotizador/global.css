@@ -1,0 +1,2902 @@
+@charset "UTF-8";
+html {
+    -webkit-text-size-adjust: none;
+}
+body {
+    background: #ffffff;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+* {
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+.cont-tit small {
+    font-size: smaller;
+}
+.cont-tit strong {
+    font-weight: bold;
+}
+
+.block-tabs.tabs-info .tab-content.active .block-full-hor {
+    background-color: #F4F4F4;
+}    
+    
+strong {
+    font-weight: 700;
+}
+.separa {
+    width: 100%;
+    clear: both;
+    height: 1px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.aleft {
+    float: left;
+}
+.aright {
+    float: right;
+}
+.center {
+    margin: 0 auto!important;
+    display: block!important;
+}
+.anone {
+    float: none!important;
+}
+.hide {
+    display: none!important;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.text-center {
+    text-align: center!important;
+}
+.hide {
+    display: none;
+}
+.container {
+    width: 100%}
+.auxi {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.responsive {
+    display: none!important;
+}
+.only-desktop {
+    display: block;
+}
+.access1 {
+    height: 0;
+    width: 100%;
+    color: #fcfcfc;
+    overflow: hidden;
+}
+select, input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+select {
+    background: url(/volvo/imag/v1/icon/arrow.png) no-repeat right 10px #fff;
+}
+.cont_enc {
+    margin: 20px 0;
+}
+.breadcrumbs {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.breadcrumbs .pref {
+    font-size: 13px;
+    color: #333;
+}
+.breadcrumbs .breadcrumb {
+    color: #666;
+    font-size: 11px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    margin: 5px auto;
+    padding: 0 6px 0 0;
+    height: 14px;
+    display: inline-block;
+}
+.breadcrumbs .breadcrumb a:first-child:after {
+    content: '/';
+    background: 0 0;
+    left: 5px;
+    position: relative;
+    bottom: 0;
+    font-size: 10px;
+}
+.breadcrumbs .breadcrumb a {
+    color: #333;
+}
+.breadcrumbs .breadcrumb a:hover {
+    color: #666;
+}
+.breadcrumbs p {
+    font-size: 14px;
+    display: inline-block;
+    color: #061d36;
+}
+#main {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+    padding: 0;
+}
+#header {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1000;
+    right: 0;
+    border-left: 0;
+    background-color: #fff;
+}
+#header.pad {
+    padding-bottom: 15px;
+}
+footer {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background: #035682;
+}
+footer .auxi {
+    max-width: 1100px;
+}
+#header .auxi, #footer .auxi {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+body.contraste *, body.contraste section, body.contraste .form-group .form-control {
+    background-color: #000!important;
+    color: #fff!important;
+}
+body.contraste a, body.contraste p, body.contraste h2, body.contraste h3, body.contraste h4, body.contraste .modal_btn .btn_ac {
+    color: #fff!important;
+}
+body.contraste .pod_box .contBtns img, body.contraste .contTit .banner, body.contraste .tags .tag a, body.contraste .wp-pagenavi span.pag_actual, body.contraste .form-horizontal .form-group .btn, body.contraste .head_social img, body.contraste .filt.active a, body.contraste .filt_container img, body.contraste .logo_cont img, body.contraste .marker:checked+label, body.contraste #exterior .car_box, body.contraste .swiper-pagination-bullet, body.contraste footer .foot_social ul li a {
+    background-color: #fff!important;
+    color: #000!important;
+}
+body.contraste .auxi, body.contraste .separa, body.contraste .cont_box, body.contraste .wrap_car, body.contraste .swiper-container, body.contraste .swiper-wrapper, body.contraste img, body.contraste .cont_btn, body.contraste .wrap, body.contraste .cont_txt, body.contraste .content_box, body.contraste .pref, body.contraste #exterior .car_box .img_wrap, body.contraste #interior .dest_box {
+    background: 0 0!important;
+}
+body.contraste #header.navbar .cbp-hrsub {
+    background-color: #000!important;
+}
+body.contraste .form-group input.form-control:placeholder-shown {
+    color: #fff!important;
+}
+body.contraste .form-group input.form-control::placeholder {
+    color: #fff!important;
+}
+body.contraste .form-group input.form-control::-moz-placeholder {
+    color: #fff!important;
+}
+body.contraste .form-group input.form-control:-ms-input-placeholder {
+    color: #fff!important;
+}
+body.contraste .form-group input.form-control:-moz-placeholder {
+    color: #fff!important;
+}
+body.contraste .form-group input.form-control:placeholder-shown {
+    color: #fff!important;
+}
+body.contraste .form-group input.form-control:focus {
+    outline: none;
+    box-shadow: none!important;
+    color: #fff!important;
+}
+body.contraste .form-group .form-control {
+    color: #fff!important;
+}
+body.contraste footer, body.contraste .prefooter, body.contraste #descubre .result {
+    border-top: 2px solid #fff;
+}
+body.contraste #header, body.contraste .cont_steps, body.contraste .menu_anchor.sticky_sub, body.contraste #detalles {
+    border-bottom: 2px solid #fff;
+}
+body.contraste .menumin li a, body.contraste .prefooter .btn, body.contraste .fullScreenDiv .car_box, body.contraste #galeria .car_box, body.contraste .cont_comp .car_box, body.contraste .menujq_ac ul li ul li, body.contraste #testimonios .car_box, body.contraste #modelos .filt_container .filt {
+    border: none!important;
+}
+body.contraste #header :focus, body.contraste #footer :focus {
+    outline: 2px solid #fc9!important;
+}
+body.contraste .cbp-hrsub {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+body.contraste .fancybox-content, body.contraste .modal_btn .btn_ac, body.contraste .menu_side, body.contraste .car_box, body.contraste #modelos .filt_container .filt a, body.contraste .btn, body.contraste .btn_main, body.contraste #accesorios .cont_box, body.contraste .marker+label, body.contraste .menujq_ac ul li, body.contraste .rel_more a, body.contraste .cont-subtit .subtitulos a, body.contraste .filt, body.contraste .acces_box .cont_box, body.contraste #header.navbar ul.sub-menu, body.contraste #selectCar .car_box .cont_btn a {
+    border: 2px solid #fff!important;
+    background-color: #000;
+}
+body.contraste .success-checkmark .check-icon::before, body.contraste .success-checkmark .check-icon::after, body.contraste .sa-error:after, body.contraste .sa-error:before, body.contraste .sa-error-x, body.contraste .sa-error-placeholder, body.contraste .row, body.contraste .dest_main, body.contraste .content_top, body.contraste .content_bottom, body.contraste .cont_btns {
+    background: 0 0!important;
+}
+#header a {
+    position: relative;
+}
+#header.navbar {
+    margin: 0 auto;
+}
+#header.navbar .logo_cont {
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    vertical-align: middle;
+}
+#header.navbar .logo_cont img {
+    height: auto;
+    display: inline-block;
+    width: 100%}
+#header.navbar .logo_cont2 {
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    vertical-align: middle;
+    margin-left: 25px;
+    min-height: 65px;
+    border-left: 1px solid #eaeaea;
+}
+#header.navbar .logo_cont2 img {
+    height: auto;
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 0;
+}
+#header.navbar .nav {
+    padding: 5px 0;
+    transition: .2s all ease-in;
+    display: inline-block;
+    width: 84%;
+    vertical-align: middle;
+}
+header.concesionario #header.navbar .nav {
+    width: 66%}
+#header.navbar .nav .nav_cont {
+    display: inline-block;
+    float: right;
+}
+#header.navbar .nav .sub-menu {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+#header.navbar .nav .navmin {
+    max-width: 1200px;
+    margin: 0 auto 10px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+}
+#header.navbar .navmin .menu_usuario a {
+    color: #595b59;
+    font-size: 12px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+#header.navbar .navmin .menu_usuario a:focus {
+    border-bottom: 2px solid #333;
+    padding-bottom: 3px;
+}
+#header.navbar .navmin .menu_usuario li {
+    color: #325996;
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 20px;
+}
+#header.navbar .nav .navmin .menumin {
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+#header.navbar .nav .navmin .menumin li {
+    display: inline-block;
+}
+#header.navbar .nav .navmin .menumin li a {
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    font-size: 11px;
+    padding: 0 10px;
+    letter-spacing: 1px;
+}
+#header.navbar .nav .navmin .menumin li a.btn-destacado {
+    background: #325996;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 7px 15px 5px;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+#header.navbar .nav .navmin .menumin li a.btn-destacado:hover {
+    background: #000;
+}
+#header.navbar .nav .navmin .head_social li a {
+    margin: 0 0 0 5px;
+}
+#header.navbar .nav .navmin .head_social li a img {
+    width: auto;
+    position: relative;
+    display: block;
+}
+#header.navbar .nav .navsup {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+}
+#header.navbar .nav .navsub .menu_nav li {
+    display: inline-block;
+}
+#header.navbar .nav .navsub .menu_nav .desp.sec {
+    position: relative;
+}
+#header.navbar .nav .navsub .menu_nav {
+    margin-top: 10px;
+}
+#header.navbar .nav .navsub .menu_nav .header_btn_cotiza {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #000;
+}
+#header.navbar .nav .navsub .menu_nav li img {
+    margin-left: 4px;
+    position: relative;
+    bottom: 2px;
+}
+#header.navbar .nav ul li {
+    display: block;
+}
+#header.navbar .nav .menu_nav li a {
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    color: #595b59;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+#header.navbar .nav .menu_nav .btn_cotiza {
+    background-color: #1C2B4D;
+}
+#header.navbar .nav .menu_nav .btn_cotiza a {
+    color: #fff;
+    text-align: center;
+    padding: 8px 15px;
+}
+#header.navbar .nav .menu_nav .btn_cotiza:hover {
+    background-color: #414141;
+    transition: .3s all ease;
+}
+#header.navbar .nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+#header.navbar .nav .head_social {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+#header.navbar .nav .head_social li {
+    display: inline-block;
+    vertical-align: middle;
+}
+#header.navbar .nav .head_social li a img {
+    width: auto;
+    position: relative;
+}
+.search-bar {
+    display: none;
+    position: absolute;
+    right: 100px;
+    background-color: #333;
+    z-index: 100;
+    padding: 15px 9px 9px;
+    width: 314px;
+}
+#header.navbar .navbar-form {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -ms-flex-pack: center;
+    position: relative;
+}
+.sticky {
+    position: fixed!important;
+    top: 0!important;
+    width: 100%;
+    background-color: #fff;
+}
+.sticky+.alert {
+    padding-top: 152px;
+}
+#header.navbar.sticky .nav .navmin {
+    margin-bottom: 13px;
+}
+#header.navbar.sticky .nav .logo_cont {
+    padding-bottom: 10px;
+}
+#header.navbar.sticky .nav .navsub .menu_nav {
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: .3s all ease;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont {
+    position: relative;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d ul {
+    display: inline-block;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d a {
+    display: inline-block;
+    font-size: 10px!important;
+    padding: 0;
+    vertical-align: middle;
+    color: #848484;
+    font-family: robotoregular, sans-serif;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d a:hover {
+    transition: .3s all ease;
+    color: #1C2B4D;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d .txt_user:after {
+    content: '|';
+    padding: 0 2px 0 5px;
+    color: #959595;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d img {
+    display: inline-block;
+    vertical-align: middle;
+}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d .user_d {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%}
+#header.navbar .nav .navsub .menu_nav .user_cont .login_d .txt_user {
+    display: inline-block;
+    color: #272727;
+    font-size: 12px!important;
+    vertical-align: middle;
+    bottom: 1px;
+    position: relative;
+}
+#header.navbar .nav .search-cont {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+#header.navbar .nav .search-button {
+    display: inline-block;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    background: 0 0;
+    border: none;
+    outline: none;
+}
+.search-wrapper {
+    position: absolute;
+    transform: translate(-7%, -50%);
+    top: 50%;
+    right: 0;
+}
+.search-wrapper .input-holder {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 6px;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.search-wrapper.active .input-holder {
+    width: 450px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #cecece;
+    transition: all .5s cubic-bezier(0, .105, .035, 1.57);
+}
+.search-wrapper .input-holder .search-input {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    background: 0 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: open sans, Arial, Verdana;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1C2B4D;
+    transition: all .3s cubic-bezier(0, .105, .035, 1.57);
+    transition-delay: .3s;
+}
+.search-wrapper.active .input-holder .search-input {
+    opacity: 1;
+    transform: translate(0, 3px);
+    padding: 0 15px;
+}
+.search-wrapper .input-holder .search-icon {
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    right: 3px;
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+    padding: 0;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    float: right;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.search-wrapper.active .input-holder .search-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+}
+.search-wrapper .input-holder .search-icon span {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transform: rotate(45deg);
+    transition: all .4s cubic-bezier(.65, -.6, .24, 1.65);
+}
+.search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
+    position: absolute;
+    content: ''}
+.search-wrapper .input-holder .search-icon span::before {
+    width: 2px;
+    height: 6px;
+    left: 9px;
+    top: 13px;
+    border-radius: 2px;
+    background: #b2b2b2;
+}
+.search-wrapper .input-holder .search-icon span::after {
+    width: 14px;
+    height: 14px;
+    left: 3px;
+    top: 0;
+    border-radius: 16px;
+    border: 2px solid #b2b2b2;
+}
+.search-wrapper .close {
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    transition: all .3s cubic-bezier(.285, -.45, .935, .11);
+    transition-delay: .2s;
+}
+.search-wrapper.active .close {
+    right: -23px;
+    transform: rotate(45deg);
+    transition: all .6s cubic-bezier(0, .105, .035, 1.57);
+    transition-delay: .5s;
+}
+.search-wrapper .close::before, .search-wrapper .close::after {
+    position: absolute;
+    content: '';
+    background: #a9a9a9;
+}
+.search-wrapper .close::before {
+    width: 2px;
+    height: 16px;
+    left: 7px;
+    top: 0;
+}
+.search-wrapper .close::after {
+    width: 16px;
+    height: 2px;
+    left: 0;
+    top: 7px;
+}
+#header .form-group.stickybar {
+    position: absolute;
+    top: 20px;
+    padding-top: 25px;
+    height: 100px;
+}
+#header.navbar .form-group .form-control {
+    width: 76%;
+    height: 30px;
+    border: none;
+    padding: 1px 10px;
+    font-size: 13px;
+    z-index: 2;
+    background: 0 0;
+    border-bottom: 1px solid #fff!important;
+    position: relative;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+#header.navbar .form-group input.form-control:focus {
+    outline: none;
+    box-shadow: none!important;
+    color: #fff;
+}
+#header.navbar .form-group input.form-control::placeholder {
+    color: #fff!important;
+}
+#header.navbar .form-group input.form-control::-moz-placeholder {
+    color: #fff!important;
+}
+#header.navbar .form-group input.form-control:-ms-input-placeholder {
+    color: #fff!important;
+}
+#header.navbar .form-group input.form-control:-moz-placeholder {
+    color: #fff!important;
+}
+#header.navbar .form-group input.form-control:placeholder-shown {
+    color: #fff!important;
+}
+#header.navbar .form-group .btn.btn-default {
+    z-index: 100;
+    color: #333;
+    padding: 0;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+#header.navbar .form-group {
+    width: 100%}
+#header.navbar .menu_nav .desp a {
+    background-image: url(/volvo/imag/v1/auxi/flecha_menu.png);
+    background-repeat: no-repeat;
+    background-position: 98% 45%;
+    background-size: 7px;
+    color: #333;
+    width: 100%}
+#header.navbar .menu_nav .desp.sec ul.sub-menu {
+    position: absolute;
+    z-index: 9;
+    background-color: #fff;
+    display: none;
+    width: 100%;
+    left: 0;
+}
+#header.navbar .menu_nav .desp.sec ul.sub-menu li {
+    float: none;
+    display: block!important;
+    color: #333;
+}
+#header.navbar .menu_nav .desp.sec ul.sub-menu li a {
+    padding: 10px;
+    color: #333;
+    text-align: left!important;
+    border: none;
+    font-size: 10px;
+    text-align: left;
+    display: block;
+    background: 0 0;
+}
+#header.navbar .menu_nav .desp.sec ul.sub-menu li a:hover {
+    background-color: #d1d1d1;
+    transition: .3s all ease;
+}
+#header.navbar .menu_nav .desp.sec ul.sub-menu li:hover ul.sub-menu {
+    display: block;
+}
+#header.navbar .menu_nav .desp.sec:hover ul.sub-menu {
+    display: block;
+    min-width: 190px;
+    padding: 15px 0;
+}
+#header.navbar .menu_nav .cbp-hrsub .submenu_tit {
+    font-size: 40px;
+    text-align: left;
+    color: #fff;
+    padding: 0;
+}
+#header.navbar .menu_nav .cbp-hrsub {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    margin: 0 auto;
+    transition: all .5s ease 0s;
+    padding-bottom: 30px;
+}
+#header.navbar .menu_nav .cbp-hrsub .menu_secundario {
+    padding: 0 0 0 40px;
+}
+#header.navbar .menu_nav .cbp-hrsub .auxi {
+    padding-top: 30px;
+    max-width: 1000px;
+}
+#header.navbar .menu_nav .cbp-hrsub .auxi.first-file {
+    padding-top: 0;
+    max-width: 1280px;
+}
+#header.navbar .menu_nav .cbp-hrsub .auxi.second-file {
+    padding-top: 0;
+    max-width: 920px;
+}
+#header.navbar .menu_nav .cbp-hrsub .col:nth-child(2) .menu_secundario {
+    border-right: 1px solid #e7e7e7;
+}
+#header.navbar .menu_nav .cbp-hrsub .menu_secundario li {
+    display: block!important;
+    list-style: disc;
+}
+#header.navbar .menu_nav .cbp-hrsub .menu_secundario li:hover {
+    text-decoration: none;
+}
+#header.navbar .menu_nav .cbp-hrsub .menu_secundario li a:hover {
+    text-decoration: none;
+    color: #666;
+}
+#header.navbar .menu_nav .cbp-hrsub .menu_secundario li a {
+    background: 0 0;
+    width: 100%;
+    max-width: 100%!important;
+    text-align: left;
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    font-size: 16px!important;
+    padding: 0 0 26px!important;
+    text-transform: none;
+    color: #333;
+}
+#header.navbar .menu_nav .cbp-hrsub p {
+    font-size: 14px;
+    color: #595b59;
+    line-height: 1.5;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+#header.navbar .menu_nav .cbp-hrsub .btn_submenu {
+    max-width: 245px;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #1B365D;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 16px;
+    font-size: 12px;
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+#header.navbar .menu_nav .cbp-hrsub .btn_submenu:hover {
+    border: 1px solid #fff;
+    background: 0 0;
+    color: #fff;
+    transition: .3s all ease;
+}
+#header.navbar .menu_nav .cbp-hrsub .car_cont {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+#header.navbar .menu_nav .cbp-hrsub .car_cont .img_wrap {
+    padding: 10px 20px;
+}
+#header.navbar .menu_nav .cbp-hrsub .car_cont .img_wrap img {
+    width: 100%;
+    margin-left: 0;
+    bottom: 0;
+}
+#header.navbar .menu_nav .cbp-hrsub .car_cont a {
+    background-image: none;
+}
+#header.navbar .menu_nav .cbp-hrsub .car_cont .cont_txt {
+    text-align: center;
+}
+#header.navbar .menu_nav .cbp-hrsub .cont_btns .btn_main {
+    text-align: center;
+    background-color: #1B365D;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: auto!important;
+    margin-top: 5px;
+}
+#header.navbar .menu_nav .cbp-hrsub .cont_btns .btn_main:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#header.navbar .menu_nav .cbp-hrsub .cont_btns .btn_sec {
+    width: auto;
+    display: inline-block;
+    background: 0 0;
+}
+header.interior .menu_responsive {
+    display: block!important;
+}
+header.interior .menu_responsive .navbar {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+header.interior .auxi {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+header.interior #menu-btn {
+    padding-left: 0;
+}
+header.interior .menu_responsive .ico-head img {
+    float: none;
+    margin-right: 0;
+    margin-top: 5px;
+}
+header.interior .menu_responsive .menujq {
+    width: 90%}
+.menu_responsive {
+    display: none;
+    z-index: 1000;
+    width: 100%}
+.menu_responsive .access_m {
+    text-align: right;
+    padding: 5px 5px 0 0;
+}
+.menu_responsive .access_m .head_access li {
+    display: inline-block;
+}
+.menu_responsive .navbar {
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_responsive .menujq {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 15px 0;
+    z-index: 1000;
+}
+.menu_responsive .menujq ul {
+    list-style: none;
+    display: block;
+    margin-left: 0!important;
+}
+.menu_responsive .menujq li.center {
+    margin-left: 20px;
+}
+.menu_responsive .menujq li.center a {
+    text-align: center!important;
+    padding-left: 0;
+    display: inline-block;
+    min-width: auto;
+    width: 80px;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+.menu_responsive .menujq li.center a:first-child {
+    width: 90px;
+    border-right: 1px solid #fff;
+}
+.menu_responsive .menujq li.center a:last-child {
+    right: 4px;
+    position: relative;
+}
+.menu_responsive .menujq a.bold {
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+.menu_responsive .menujq ul li {
+    display: block;
+    text-align: left;
+}
+.menu_responsive .menujq ul li a {
+    padding: 12px 5px 12px 20px;
+    font-size: .7rem;
+    display: block;
+    color: #333;
+}
+.menu_responsive .menujq ul li.alert a {
+    background: #d05557;
+}
+.menu_responsive .menujq ul .main-link a {
+    color: #325996;
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+.menu_responsive .menujq ul li ul li a {
+    color: #595b59;
+    padding: 10px 0 10px 30px;
+    background-color: #fff;
+    border: none;
+}
+.menu_responsive .menujq ul li ul {
+    display: none;
+}
+.menu_responsive .menujq .menusec a {
+    padding-left: 20px!important;
+}
+.menu_responsive .logo img {
+    float: left;
+    margin-left: 10px;
+    max-width: 191px;
+    margin-top: 5px;
+}
+#menu-btn {
+    padding-right: 20px;
+    padding-top: 0;
+    cursor: pointer;
+}
+.menu_responsive .navbar .box-actions{
+    display: flex;
+    align-items: center;
+}
+.menu_responsive .ic-call {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+.menu_responsive #menu-btn {
+    display: inline-block;
+}
+.menu_responsive .desplegable {
+    position: relative;
+}
+.menu_responsive .desplegable .arrow-link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    padding: 12px 20px 12px 30px;
+}
+.menu_responsive .desplegable .arrow-link img, .menu_responsive .active .arrow-link img {
+    width: 8px;
+}
+.menu_responsive .desplegable.active .arrow-link img {
+    transform: rotate(180deg);
+    transition: .4s all ease;
+}
+.menu_responsive .desplegable.active .sub-menu li a {
+    background-image: none;
+}
+.menu_responsive .desplegable .sub-menu a {
+    background-image: none;
+}
+.menu_responsive.header-concesionario .logo img {
+    float: left;
+    margin-left: 10px;
+    max-width: 125px;
+    margin-top: 14px;
+}
+.menu_responsive.header-concesionario .logo_cont2 {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 14px;
+    margin-left: 10px;
+    border-left: 1px solid #eaeaea;
+}
+.menu_responsive.header-concesionario .logo_cont2 img {
+    height: auto;
+    display: inline-block;
+    max-width: 125px;
+    margin: 5px 0 0;
+}
+.menu_responsive .buscar {
+    width: 88%;
+    max-width: 300px;
+    margin: 12px 0 0 20px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    position: relative;
+}
+.menu_responsive .buscar label {
+    display: block;
+    clear: both;
+    font-size: 18px;
+    font-weight: 500;
+    color: #475156;
+}
+.menu_responsive .buscar input {
+    margin: 0;
+    display: block;
+    border: none;
+    height: 32px;
+    float: left;
+    top: 1px;
+    position: relative;
+    width: 100%}
+.menu_responsive .buscar button {
+    z-index: 10;
+    background: 0 0;
+    cursor: pointer;
+    border: none;
+    height: 34px;
+    width: 34px;
+    right: 5px;
+    padding: 0 4px 0 5px;
+    position: absolute;
+    outline: none;
+}
+.menu_responsive input {
+    width: 82%;
+    height: 30px;
+    border: none;
+    padding: 1px 17px;
+    font-size: 13px;
+    z-index: 2;
+    background: 0 0;
+    border: 1px solid #cecece;
+    border-right: none!important;
+    position: relative;
+    bottom: 11px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+.menu_responsive input:focus {
+    outline: none;
+    box-shadow: none!important;
+    color: #333;
+}
+.menu_responsive input::placeholder {
+    color: #333!important;
+}
+.menu_responsive input::-moz-placeholder {
+    color: #333!important;
+}
+.menu_responsive input:-ms-input-placeholder {
+    color: #333!important;
+}
+.menu_responsive input:-moz-placeholder {
+    color: #333!important;
+}
+.menu_responsive input:placeholder-shown {
+    color: #333!important;
+}
+.menu_responsive .menusec {
+    background-color: #325996;
+    margin-top: 20px;
+}
+.menu_responsive .menusec li {
+    margin: 5px 0;
+    list-style-type: none;
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu_responsive .menusec li a {
+    color: #333;
+    color: #e0e0e0;
+    font-size: 10px;
+    padding-left: 0!important;
+}
+.menu_responsive .login ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu_responsive .login ul li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0!important;
+}
+.menu_responsive .login ul .txt_user:after {
+    content: '|';
+    padding: 0 7px 0 9px!important;
+    color: #959595;
+}
+.menu_responsive .login ul li a {
+    color: #4e4e4e;
+    font-size: 9px;
+    text-transform: uppercase;
+    padding: 0;
+    letter-spacing: .8px;
+}
+.menu_responsive .login img {
+    vertical-align: middle;
+}
+.menu_responsive .login .txt_user {
+    color: #272727;
+    font-size: 11px;
+}
+.menu_responsive .login {
+    position: relative;
+    border-top: 1px solid #ccc;
+    margin: 5px 10px;
+    padding: 10px 0;
+}
+.menujq ul li>a.dropbtn:after, .menujq ul li ul li>a.dropbtn:after {
+    float: right;
+    content: "\25BA\00A0";
+    position: relative;
+    top: 3px;
+    color: #9a9a9a;
+}
+.menujq ul li>a.dropbtn:after, .menujq ul li ul li>a.dropbtn:after {
+    content: "\25BC\00A0 ";
+    position: relative;
+    top: 3px;
+    color: #fff;
+}
+.bar1, .bar2, .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #595b59;
+    margin: 5px 0;
+    transition: .4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: #333;
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    background-color: #333;
+}
+footer {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: #f6f6f6;
+}
+footer p, footer a, footer li {
+    color: #555;
+    display: inline-block;
+    font-size: 15px;
+}
+footer .foot_sub li {
+    display: block;
+    margin: 14px 0;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+footer .foot_sub li.sec:nth-child(7) {
+    margin-top: 30px;
+}
+footer .foot_sub li:hover a {
+    color: #1C2B4D;
+    transition: .3s all ease;
+}
+footer .foot_sub li a {
+    font-size: 13px;
+    color: #666;
+}
+footer .info-footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: -ms-flexbox;
+}
+footer .info-footer .auxi {
+    margin: 10px auto;
+    padding: 25px 0 35px;
+    border-bottom: 1px solid #dfe2e7;
+}
+footer .info-footer p {
+    font-size: 16px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+footer .foot_social {
+    text-align: right;
+}
+footer .foot_social ul {
+    display: block;
+    vertical-align: middle;
+    padding: 30px 0;
+}
+footer .foot_social ul li a {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid #000;
+    padding: 5px;
+}
+footer .foot_social ul li a img {
+    width: 100%;
+    display: block;
+}
+footer .foot_social ul li:hover a {
+    background-color: #f3f3f3;
+    transition: .3s all ease;
+    border: 2px solid #666;
+}
+footer .foot_social .pref {
+    font-family: robotobold, sans-serif;
+    font-size: 12px;
+}
+footer .foot_social li {
+    padding: 0 7px;
+    display: inline-block;
+}
+footer .foot_social li:hover {
+    opacity: .5;
+    transition: .3s all ease;
+}
+footer .info-footer .btn_footer {
+    border: 3px solid #fff;
+    width: 153px;
+    float: right;
+    text-align: center;
+    margin-bottom: 30px;
+}
+footer .info-footer .btn_footer a:hover {
+    display: block;
+    background-color: #fff;
+    color: #1C2B4D;
+    transition: .3s all ease-in;
+}
+footer .info-footer .btn_footer a {
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 16px;
+}
+footer .info-footer h2.foot_subtit {
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    text-transform: uppercase;
+    color: #7a7a7a;
+    letter-spacing: .2px;
+}
+footer .info-footer .foot_subtit a {
+    font-size: 15px;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+footer .info-footer .footer_subtit_link {
+    font-size: 15px;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+footer .foot_subtit a {
+    font-size: 18px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    text-transform: uppercase;
+    color: #7a7a7a;
+    letter-spacing: .2px;
+}
+footer .info-footer .footer_subtit_link {
+    text-transform: uppercase;
+    color: #7a7a7a;
+    letter-spacing: .2px;
+}
+footer .sup_foot {
+    padding: 15px 0 20px;
+    margin-bottom: 20px;
+}
+footer .sup_foot li:after {
+    content: "-";
+    padding-left: 5px;
+    font-size: 14px;
+    padding-right: 3px;
+}
+footer .sup_foot ul li:last-child:after {
+    display: none;
+}
+footer .sup_foot li a {
+    font-size: 10px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+footer .sup_foot li a:hover {
+    opacity: .8;
+}
+footer .sup_foot ul {
+    text-align: center;
+}
+footer .sup_foot p {
+    font-size: 10px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+footer .sup_foot .col:last-child {
+    text-align: right;
+}
+footer .sup_foot .col:first-child ul {
+    text-align: left;
+}
+footer .foot_social {
+    width: 100%;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: -ms-flexbox;
+}
+footer .foot_social .link-ico a {
+    color: #1C2B4D;
+    font-weight: 700;
+}
+footer .sup_foot .foot_social li::after {
+    content: inherit;
+}
+footer .foot_social .link-ico {
+    text-align: right;
+    margin: 40px 0;
+}
+footer .foot_social .link-ico span {
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    bottom: 3px;
+}
+footer .foot_social .link-ico img {
+    width: 100%;
+    height: auto;
+}
+@media(max-width:767px) {
+    footer .accordionfooter {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    transition: .4s;
+    border-top: 1px solid #ccc;
+    margin-bottom: 0!important;
+    text-align: left!important;
+}
+footer .accordionfooter:after {
+    content: '\002B';
+    font-size: 24px;
+    color: #777;
+    font-weight: 700;
+    float: right;
+    margin-top: -5px;
+}
+footer .active:after {
+    content: "\2715";
+    font-size: 16px;
+    margin-top: 0;
+}
+footer .panelfooter {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+    background: #f6f6f6;
+}
+footer .panelfooter.foot_sub li {
+    padding: 18px;
+    margin: 0;
+    border-top: 1px solid #ccc;
+}
+footer .panelfooter.foot_sub li a {
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+footer .info-footer h2.foot_subtit {
+    font-size: 15px!important;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    text-transform: uppercase;
+    color: #7a7a7a;
+    letter-spacing: .2px;
+}
+footer .info-footer .auxi {
+    padding-bottom: 0;
+}
+footer .foot_social {
+    justify-content: center;
+}
+footer .foot_social ul {
+    text-align: center;
+    padding-bottom: 30px!important;
+}
+footer .foot_social .link-ico {
+    text-align: center;
+    margin: 30px 0 0;
+}
+}.prefooter {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+.prefooter .cont_pref {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.prefooter .cont_pref .img_wrap img {
+    width: 100%;
+    display: block;
+}
+.prefooter .cont_pref .img_wrap {
+    width: 34px;
+    margin: 15px auto;
+}
+.prefooter .cont_pref .foot_subtit {
+    font-size: 18px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    text-transform: uppercase;
+    color: #1C2B4D;
+    letter-spacing: .2px;
+}
+.prefooter .cont_pref .foot_subtit a {
+    color: #1C2B4D;
+}
+.prefooter .cont_pref .txt {
+    font-size: 14px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    color: #a2a2a2;
+    letter-spacing: .2px;
+    margin: 15px auto;
+    max-width: 240px;
+}
+.prefooter .cont_pref .btn {
+    margin-top: 42px;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+.prefooter .cont_pref .btn:hover {
+    color: #333;
+    transition: .3s all ease;
+}
+footer#port-concesionarios .info-footer h2 {
+    margin-top: 15px;
+}
+footer#port-concesionarios .info-footer p {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: block;
+}
+footer#port-concesionarios .info-footer a {
+    font-size: 11px;
+    color: #1C2B4D;
+    display: block;
+    margin-top: 3px;
+}
+button.btn_close {
+    background: 0 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-right: 0;
+    float: right;
+    position: relative;
+    bottom: 20px;
+    right: -20px;
+}
+.menujq.mobile .subtit{
+    border-bottom: 1px solid #666666;
+    margin:0;
+    
+}
+
+.menujq.mobile .img-wrap
+{
+    margin-bottom: 16px;
+    
+}
+.menujq.mobile .active .subtit{
+    font-family: 'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+
+.menujq.mobile  .block-full-hor{
+    padding:0;
+}
+#selectCar .modal_tit {
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#selectCar {
+    max-width: 950px;
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 44px 75px;
+}
+#selectCar .car_box {
+    margin-bottom: 6px;
+}
+#selectCar .car_box .img_wrap {
+    position: relative;
+    overflow: hidden;
+}
+#selectCar .car_box .img_wrap img {
+    width: 100%;
+    display: block;
+}
+#selectCar .car_box .img_wrap:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+#selectCar .car_box .subtit {
+    display: block;
+    margin-right: 0;
+}
+#selectCar .car_box .subtit a {
+    display: block;
+    padding: 13px 15px 9px;
+    color: #333;
+    text-transform: uppercase;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    font-size: 13px;
+    text-align: left;
+    letter-spacing: .8px;
+}
+#selectCar .car_box .sec_content {
+    background-color: #fff;
+    width: 100%}
+#selectCar .car_box .sec_content .sec_baj a {
+    font-size: 14px;
+    color: #000;
+}
+#selectCar .car_box .reprod {
+    margin-top: 5px;
+    padding: 5px 10px;
+    min-height: 129px;
+}
+#selectCar .car_box .sec_baj {
+    vertical-align: middle;
+    text-align: left;
+    line-height: 1.2;
+    letter-spacing: .5px;
+}
+#selectCar .car_box .tit_select {
+    margin-bottom: 15px;
+}
+#selectCar .car_box .cont_txt {
+    vertical-align: top;
+    font-size: 13px;
+}
+#selectCar .car_box .contselect select {
+    width: 100%;
+    color: #333;
+    text-align: left;
+    height: 30px;
+}
+#selectCar .car_box .contselect {
+    margin: 20px 0;
+}
+#selectCar .car_box .cont_btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#selectCar .car_box .cont_btn a {
+    display: block;
+    text-align: center;
+    background-color: #1C2B4D;
+    border-radius: 50px;
+    padding: 14px 70px;
+    color: #fff;
+    font-size: 11px;
+    max-width: 200px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+#selectCar .car_box .cont_btn a:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#selectCar .swiper-button-next {
+    background: url(/volvo/imag/v1/auxi/car_arrow_right.png) no-repeat center;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+}
+#selectCar .swiper-button-prev {
+    background: url(/volvo/imag/v1/auxi/car_arrow_left.png) no-repeat center;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+}
+#login {
+    max-width: 500px!important;
+}
+.modal_btn {
+    max-width: 95%;
+    margin: 45px auto;
+    text-align: left;
+}
+.modal_btn .btn_ac {
+    display: block;
+    background-color: #4c4c4c;
+    margin: 10px 5px;
+    color: #fff;
+    vertical-align: middle;
+    font-size: 13px;
+    border-radius: 3px;
+}
+.modal_btn .btn_ac:hover {
+    background-color: #666!important;
+    color: #fff;
+    transition: .3s all ease;
+}
+.modal_btn .img_wrap {
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+.modal_btn .btn_ac img {
+    width: 18px;
+    vertical-align: middle;
+}
+.modal_btn .r_facebook {
+    background-color: #3b5999;
+    padding: 3px;
+}
+.modal_btn .r_google {
+    background-color: #fff;
+    padding: 3px;
+    color: #666;
+    border: 1px solid #d2d2d2;
+}
+#descarga .form_descarga {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#descarga .bajada {
+    color: #666;
+}
+#descarga .form_descarga .form-control {
+    margin-right: 10px;
+    width: 78%;
+    background-color: #fff;
+    height: 48px;
+    border: none;
+    padding: 1px 17px 1px 25px;
+    font-size: 14px;
+    z-index: 2;
+    border-radius: 30px;
+    font-family: robotobold, sans-serif;
+    outline: none;
+    border: 1px solid #b0bec5;
+}
+#descarga .form_descarga input.form-control:placeholder-shown {
+    color: #333;
+}
+#descarga .form_descarga input.form-control::placeholder {
+    color: #333;
+}
+#descarga .form_descarga input.form-control::-moz-placeholder {
+    color: #333;
+}
+#descarga .form_descarga input.form-control:-ms-input-placeholder {
+    color: #333;
+}
+#descarga .form_descarga input.form-control:-moz-placeholder {
+    color: #333;
+}
+#descarga .form_descarga input.form-control:placeholder-shown {
+    color: #333;
+}
+#descarga .form_descarga button.btn-default {
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#descarga .form_descarga button.btn-default:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#descarga .form_descarga .form-group {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#descarga button.btn-descarga {
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#brochure .form_brochure {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#brochure .bajada {
+    color: #666;
+}
+#brochure .form_brochure .form-control {
+    margin-right: 10px;
+    width: 78%;
+    background-color: #fff;
+    height: 48px;
+    border: none;
+    padding: 1px 17px 1px 25px;
+    font-size: 14px;
+    z-index: 2;
+    border-radius: 30px;
+    font-family: robotobold, sans-serif;
+    outline: none;
+    border: 1px solid #b0bec5;
+}
+#brochure .form_brochure input.form-control:placeholder-shown {
+    color: #333;
+}
+#brochure .form_brochure input.form-control::placeholder {
+    color: #333;
+}
+#brochure .form_brochure input.form-control::-moz-placeholder {
+    color: #333;
+}
+#brochure .form_brochure input.form-control:-ms-input-placeholder {
+    color: #333;
+}
+#brochure .form_brochure input.form-control:-moz-placeholder {
+    color: #333;
+}
+#brochure .form_brochure input.form-control:placeholder-shown {
+    color: #333;
+}
+#brochure .form_brochure button.btn-default {
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#brochure .form_brochure button.btn-default:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#brochure .form_brochure .form-group {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#brochure button.btn-descarga {
+    margin-bottom: 20px;
+    margin-left: 35px;
+    min-width: 200px!important;
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#brochure button.btn-descarga:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#brochure .wrap.step_3 {
+    margin: 30px 0;
+}
+#brochure .wrap.step_3 .bajada {
+    max-width: 700px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+#brochure .wrap.step_4 {
+    text-align: center;
+}
+#brochure .wrap.step_4 .modal_tit {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#brochure .wrap.step_3 .modal_tit {
+    font-size: 22px;
+    margin-bottom: -26px;
+    margin-left: 44px;
+}
+#brochure .wrap.step_4 .img_confirm {
+    max-width: 115px;
+    margin: 0 auto;
+}
+#brochure .wrap.step_4 .bajada {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+#brochure .modal_btn {
+    max-width: 90%}
+#descarga button.btn-descarga {
+    margin-bottom: 20px;
+    margin-left: 35px;
+    min-width: 200px!important;
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#descarga button.btn-descarga:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#descarga .wrap.step_1 {
+    margin: 30px 0;
+}
+#descarga .wrap.step_1 .bajada {
+    max-width: 700px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+#descarga .wrap.step_2 {
+    text-align: center;
+}
+#descarga .modal_tit {
+    font-size: 22px;
+    margin-bottom: -26px;
+    margin-left: 44px;
+}
+#descarga .wrap.step_2 .modal_tit {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#descarga .wrap.step_1 .modal_tit {
+    font-size: 22px;
+    margin-bottom: -26px;
+    margin-left: 44px;
+}
+#descarga .wrap.step_2 .img_confirm {
+    max-width: 115px;
+    margin: 0 auto;
+}
+#descarga .wrap.step_2 .bajada {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+#descarga .modal_btn {
+    max-width: 90%}
+#suscribirse .form_suscribirse {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#suscribirse .bajada {
+    color: #666;
+}
+#suscribirse .form_suscribirse .form-control {
+    margin-right: 10px;
+    width: 78%;
+    background-color: #fff;
+    height: 48px;
+    border: none;
+    padding: 1px 17px 1px 25px;
+    font-size: 14px;
+    z-index: 2;
+    border-radius: 30px;
+    font-family: robotobold, sans-serif;
+    outline: none;
+    border: 1px solid #b0bec5;
+}
+#suscribirse .form_suscribirse input.form-control:placeholder-shown {
+    color: #333;
+}
+#suscribirse .form_suscribirse input.form-control::placeholder {
+    color: #333;
+}
+#suscribirse .form_suscribirse input.form-control::-moz-placeholder {
+    color: #333;
+}
+#suscribirse .form_suscribirse input.form-control:-ms-input-placeholder {
+    color: #333;
+}
+#suscribirse .form_suscribirse input.form-control:-moz-placeholder {
+    color: #333;
+}
+#suscribirse .form_suscribirse input.form-control:placeholder-shown {
+    color: #333;
+}
+#suscribirse .form_suscribirse button.btn-default {
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#suscribirse .form_suscribirse button.btn-default:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#suscribirse .form_suscribirse .form-group {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#suscribirse button.btn-descarga {
+    margin-bottom: 20px;
+    margin-left: 35px;
+    min-width: 200px!important;
+    cursor: pointer;
+    border: none;
+    min-width: 135px;
+    height: 48px;
+    color: #fff;
+    background-color: #1C2B4D;
+    font-size: 11px;
+    text-decoration: underline;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    border-radius: 30px;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+#suscribirse button.btn-descarga:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+#suscribirse .wrap.step_1 {
+    margin: 30px 0;
+}
+#suscribirse .wrap.step_1 .bajada {
+    max-width: 700px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+#suscribirse .wrap.step_2 {
+    text-align: center;
+}
+#suscribirse .wrap.step_2 .modal_tit {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#suscribirse .wrap.step_1 .modal_tit {
+    font-size: 22px;
+    margin-bottom: -26px;
+    margin-left: 44px;
+}
+#suscribirse .wrap.step_2 .img_confirm {
+    max-width: 115px;
+    margin: 0 auto;
+}
+#suscribirse .wrap.step_2 .bajada {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+#suscribirse .modal_btn {
+    max-width: 90%}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 25px 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #1C2B4D;
+}
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+.container input:checked~.checkmark {
+    background-color: #2196f3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked~.checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    content: '';
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.modalContainer {
+    max-width: 900px!important;
+    width: 100%}
+.modal_esp .slide_cont img {
+    width: 100%}
+.modal_esp .cont_btns .btn_main {
+    text-align: center;
+    background-color: #1C2B4D;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.modal_esp .cont_btns .btn_main:hover {
+    background-color: #333;
+    transition: .3s all ease;
+}
+.modal_esp .pref {
+    font-size: 12px;
+    letter-spacing: .5px;
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    color: #333;
+    margin: 20px 0 8px;
+}
+.modal_esp .descript {
+    font-size: 14px;
+    color: #555;
+}
+.modal_esp .tit {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family:  'VolvoNovum-Bold',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    margin: 10px 0;
+}
+.modal_esp .subtit {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    color: #555;
+    margin-bottom: 15px;
+}
+.modal_esp .cont_btns {
+    text-align: right;
+    margin: 20px 0;
+}
+.modal_esp .cont_btns .btn_sec {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 0 15px;
+    color: #1C2B4D;
+    font-family: 'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+}
+.modal_esp .cont_btns .btn_sec:hover {
+    color: #333;
+    transition: .3s all ease;
+}
+.menu_side:hover, nav.menu_side.expanded {
+    width: 180px;
+    overflow: hidden;
+}
+.menu_side {
+    background-color: #1C2B4D;
+    position: fixed;
+    top: 22%;
+    right: 0;
+    width: 43px;
+    padding: 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    z-index: 1000;
+}
+.menu_side li {
+    position: relative;
+    display: block;
+    width: 180px;
+}
+.menu_side li img {
+    padding: 5px;
+}
+.menu_side li>a {
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #fff;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.menu_side li>a:hover {
+    background-color: #001c34;
+    transition: .3s all ease;
+}
+.menu_side .nav-text {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 190px;
+    font-family: 'VolvoNovum-Light',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif;
+    padding: 10px;
+}
+.menu_bar {
+    display: none;
+}
+.menu_bar {
+    position: fixed;
+    bottom: 0;
+    background-color: #1C2B4D;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    padding: 5px 10px 15px;
+}
+.menu_bar li {
+    display: inline-block;
+    min-width: 80px;
+}
+.menu_bar li span {
+    display: block;
+    color: #fff;
+    font-size: 11px;
+}
+@media(min-width:1340px) and (max-width:2000px) {
+    header.interior .menu_responsive .menujq {
+    width: 80%}
+}@media(min-width:1200px) {
+}
+@media(min-width:1101px) and (max-width:1304px) {
+}
+@media(min-width:992px) and (max-width:1199px) {
+    footer .info-footer {
+    padding: 0 20px;
+}
+footer .sup_foot {
+    padding: 15px 20px 20px;
+}
+}@media(min-width:768px) and (max-width:991px) {
+    header {
+    display: none;
+}
+header.interior .menu_responsive, header.interior {
+    display: block;
+}
+header.interior .menu_responsive .ico-head img {
+    margin-right: 20px;
+}
+header.interior #menu-btn {
+    padding-left: 20px;
+    padding-right: 0;
+}
+header.interior .menu_responsive .menujq {
+    width: 100%}
+header.interior .menu_responsive .logo img {
+    margin-left: 0;
+}
+.menu_responsive {
+    display: block;
+}
+.menu_side {
+    display: none;
+}
+.menu_bar {
+    display: block;
+}
+footer .info-footer {
+    padding: 0 20px;
+}
+footer .sup_foot .col:last-child {
+    text-align: center;
+}
+footer .sup_foot .col:first-child ul {
+    text-align: center;
+}
+footer {
+    padding-bottom: 80px;
+}
+}@media(max-width:767px) {
+    header {
+    display: none;
+}
+.only-desktop {
+    display: none!important;
+}
+.responsive {
+    display: block!important;
+}
+.menu_responsive, header.interior {
+    display: block;
+}
+header.interior .menu_responsive .menujq {
+    width: 100%}
+header.interior .menu_responsive .ico-head img {
+    margin-right: 20px;
+}
+header.interior #menu-btn {
+    padding-left: 20px;
+    padding-right: 0;
+}
+header.interior .menu_responsive .logo img {
+    margin-left: 0;
+}
+.menu_side {
+    display: none;
+}
+.menu_bar {
+    display: block;
+}
+footer {
+    padding-bottom: 80px;
+}
+footer .info-footer .foot_subtit {
+    text-align: center;
+}
+footer .sup_foot .col ul {
+    text-align: center!important;
+}
+footer .sup_foot p {
+    text-align: center!important;
+    margin-top: 10px;
+}
+footer .foot_social ul {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+footer .sup_foot .col:last-child {
+    text-align: center;
+}
+#descarga {
+    padding: 44px 20px;
+}
+#descarga .modal_tit {
+    font-size: 25px;
+}
+#descarga .modal_btn {
+    max-width: 100%;
+    margin: 30px auto;
+}
+#descarga .form_descarga {
+    display: block;
+}
+#descarga .form_descarga .form-control {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 35px;
+}
+#descarga .form_descarga button.btn-default {
+    width: 100%;
+    height: 35px;
+    margin-left: 0;
+}
+#brochure {
+    padding: 44px 20px;
+}
+#brochure .modal_tit {
+    font-size: 25px;
+}
+#brochure .modal_btn {
+    max-width: 100%;
+    margin: 30px auto;
+}
+#brochure .form_brochure {
+    display: block;
+}
+#brochure .form_brochure .form-control {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 35px;
+}
+#brochure .form_brochure button.btn-default {
+    width: 100%;
+    height: 35px;
+    margin-left: 0;
+}
+.container {
+    margin: 25px 0;
+    font-size: 12px;
+}
+#descarga .wrap.step_2 .img_confirm {
+    max-width: 96px;
+}
+#descarga .btn_close {
+    right: -4px;
+}
+#brochure .wrap.step_4 .img_confirm {
+    max-width: 96px;
+}
+#brochure .btn_close {
+    right: -4px;
+}
+#login {
+    padding: 44px 20px;
+}
+#login .btn_close {
+    right: -4px;
+}
+footer#port-concesionarios .info-footer {
+    text-align: center;
+}
+footer#port-concesionarios .info-footer h2 {
+    margin-top: 25px;
+}
+.menu_bar ul {
+    display: flex;
+    justify-content: center;
+}
+}@media(max-width:600px) {
+}
+@media(min-width:426px) and (max-width:766px) {
+    #descarga .modal_btn {
+    max-width: 320px;
+    margin: 30px auto;
+}
+}@media(max-width:320px) {
+}
+@media(min-width:426px) and (max-width:460px) {
+}
+@media(min-width:321px) and (max-width:425px) {
+}
+@media(min-width:900px) and (max-width:1024px) {
+}
+.container.dos {
+    padding-left: 0;
+    margin: 25px 0;
+}
+.form-group.alternativa {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.form-group.alternativa label.container {
+    width: auto;
+    margin: 0 10px;
+}
+.form-group.alternativa label.container .answer.si {
+    float: left;
+    padding: 0 0 0 25px;
+    color: #3e3e3e;
+}
+.form-group.alternativa label.container .answer.no {
+    float: left;
+    padding: 0 0 0 25px;
+    color: #666;
+}
+.form-group.alternativa label.container .checkmark {
+    top: 10px!important;
+}
+.form-group.alternativa .container input {
+    position: fixed;
+    opacity: 0;
+    cursor: pointer;
+    margin-top: -10px;
+}
+/*.form-group.alternativa .checkmark {
+    border-radius: 50%;
+     position: absolute ; top:0 ;left:0 height:25px width:25px background-color:#eee ; border-radius:50%;}    position */
+.form-group.alternativa .container:hover input~.checkmark, .form-group.alternativa .container .checkmark {
+    background-color: #ccc;
+}
+.form-group.alternativa .container input:checked~.checkmark {
+    background-color: #2196f3;
+}
+.form-group.alternativa .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.form-group.alternativa .container input:checked~.checkmark:after {
+    display: block;
+}
+.form-group.alternativa .container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+@media(max-width:767px) {
+    .form-group.alternativa .checkmark {
+    position: absolute!important;
+}
+}
+
+/*menu lateral*/
+.menu_side:hover,nav.menu_side.expanded {width:180px; overflow: hidden;}
+.menu_side {background-color: #211915;position:fixed;top: 22%; right: 0; width: 43px;padding: 20px 0;overflow:hidden;-webkit-transition:width .05s linear;transition:width .05s linear;-webkit-transform:translateZ(0) scale(1,1);z-index:1000;}
+.menu_side li {position:relative;display:block;width:180px;}
+.menu_side li img{padding:5px;}
+.menu_side li>a {position:relative;display:table;border-collapse:collapse;border-spacing:0;color:#ffffff;font-family: 'Work Sans', sans-serif;font-size: 14px;text-decoration:none;-webkit-transform:translateZ(0) scale(1,1);-webkit-transition:all .2s linear;transition:all .2s linear;}
+.menu_side li>a:hover{background-color: #bf0811; transition: .3s all ease;}
+.menu_side .nav-text {position:relative;display:table-cell;vertical-align:middle;width:190px;font-family: 'Work Sans', sans-serif; padding:10px;}
+.menu_bar{display: none;}
+.menu_bar{position: fixed; bottom:0; background-color: #bf0811; width: 100%; text-align: center; z-index: 10; padding:5px 10px;}
+/*.menu_bar ul {display: flex; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox;display: -o-flex; display: -ms-flexbox; justify-content: space-between; -webkit-box-pack: justify; -moz-box-pack:justify; -ms-flex-pack: justify; -webkit-justify-content:space-between; max-width: 500px; margin: 0 auto;}*/
+.menu_bar li {display: inline-block; min-width:80px;}
+.menu_bar li span{display: block; color:#ffffff; font-size: 11px;}
+
+
+
+/*LG--- Pantallas grandes*/
+@media(min-width:1200px){}
+
+/* media especiales para header*/
+@media(min-width:1101px) and (max-width:1304px){}
+
+/*MD--- Pantallas medianas*/
+@media(min-width:992px) and (max-width:1199px){
+    #header.navbar .nav .menu_nav li a{padding: 10px 17px;}
+    #header.navbar .nav .menu_nav .btn_cotiza{margin-left: 20px;}
+	footer .info-footer{padding: 0 20px;}
+	footer .sup_foot{padding: 15px 20px 20px;}
+}
+
+/*SM--- Tablet*/
+@media(min-width:768px) and (max-width:991px){
+	header {display: none;}
+	.menu_responsive {display: block;}
+	.menu_side{display: none;}
+	.menu_bar{display: block;}
+	footer .info-footer{padding: 0 20px;}
+	footer .sup_foot .col:last-child{text-align: center;}
+	footer .sup_foot .col:first-child ul{text-align: center;}
+	footer{padding-bottom:80px;}
+}
+
+/*XS--- Movil*/
+@media (max-width: 767px){
+	header {display: none;}
+	.menu_responsive {display: block;}
+	.menu_side{display: none;}
+	.menu_bar{display: block;z-index:100;}
+	footer{padding-bottom:80px;}
+	footer .info-footer .foot_subtit{text-align: center;}
+	footer .sup_foot .col ul{text-align: center !important;}
+	footer .sup_foot p{text-align: center !important; margin-top:10px;}
+	footer .foot_social ul{text-align: center;padding: 30px 0 10px;}
+	footer .sup_foot .col:last-child{text-align: center;}
+	#descarga {padding: 44px 20px;}
+	#descarga .modal_tit{font-size: 25px;}
+	#descarga .modal_btn{max-width:100%;margin: 30px auto}
+	#descarga .form_descarga{display: block;}
+	#descarga .form_descarga .form-control {width: 100%;margin-bottom: 20px; height: 35px;}
+	#descarga .form_descarga button.btn-default{width: 100%; height: 35px; margin-left:0;}
+	#brochure {padding: 44px 20px;}
+	#brochure .modal_tit{font-size: 25px;}
+	#brochure .modal_btn{max-width:100%;margin: 30px auto}
+	#brochure .form_brochure{display: block;}
+	#brochure .form_brochure .form-control {width: 100%;margin-bottom: 20px; height: 35px;}
+	#brochure .form_brochure button.btn-default{width: 100%; height: 35px; margin-left:0;}
+	.container{margin: 25px 0; font-size: 12px;}
+	#descarga .wrap.step_2 .img_confirm {max-width: 96px;}
+	#descarga .btn_close{right: -4px;}
+	#brochure .wrap.step_4 .img_confirm {max-width: 96px;}
+	#brochure .btn_close{right: -4px;}
+	#login {padding: 44px 20px;}
+	#login .btn_close{right: -4px;}
+	footer#port-concesionarios .info-footer {text-align: center; }
+	footer#port-concesionarios .info-footer h2 {margin-top:25px; }
+	.menu_bar ul {display: flex; justify-content: center;}
+	footer .sup_foot .col:first-child ul {justify-content: center;}
+}
+
+/*XS--- Movil-especial*/
+@media (max-width: 600px){}
+@media (min-width:426px) and (max-width: 766px){
+	#descarga .modal_btn{max-width:320px;margin: 30px auto}
+}
+@media (max-width: 320px){}
+@media (min-width:426px) and (max-width: 460px){}
+@media (min-width:321px) and (max-width: 425px){}
+
+/*MD--- Laptop especial*/
+@media (min-width:900px) and (max-width: 1024px){}
+
+.container.dos {padding-left:0; margin: 25px 0;}
+.form-group.alternativa {display: flex;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+-webkit-box-lines: single;
+-moz-box-lines: single;
+-ms-flex-wrap: wrap;
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+-ms-flex-align: stretch;
+-moz-box-align: stretch;
+-webkit-box-align: stretch;
+-webkit-align-items: stretch;
+align-items: stretch;
+-webkit-box-pack: center;
+-moz-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;}
+
+.form-group.alternativa label.container {width:auto; margin: 0 10px;}
+.form-group.alternativa label.container .answer.si {float:left; padding:0 0 0 25px; color:#3E3E3E;}
+.form-group.alternativa label.container .answer.no {float:left; padding:0 0 0 25px; color:#666666;}
+.form-group.alternativa label.container .checkmark {top: 10px !important;}
+
+
+
+/* Hide the browser's default radio button */
+.form-group.alternativa .container input {position: fixed; opacity: 0; cursor: pointer; margin-top: -10px;}
+
+/* Create a custom radio button */
+.form-group.alternativa .checkmark {border-radius: 50%; position: absolute ; top: 0  ; left: 0 ; height: 25px ; width: 25px ; background-color: #eee ; border-radius: 50%;}
+
+/* On mouse-over, add a grey background color */
+.form-group.alternativa .container:hover input ~ .checkmark, .form-group.alternativa .container .checkmark {background-color: #ccc;}
+
+/* When the radio button is checked, add a blue background */
+.form-group.alternativa .container input:checked ~ .checkmark {background-color: #bf0811;}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.form-group.alternativa .checkmark:after {content: ""; position: absolute; display: none;}
+
+/* Show the indicator (dot/circle) when checked */
+.form-group.alternativa .container input:checked ~ .checkmark:after {display: block;}
+
+/* Style the indicator (dot/circle) */
+.form-group.alternativa .container .checkmark:after {top: 6px; left: 6px; width: 8px; height: 8px; border-radius: 50%; background: white;}
+@media (max-width: 767px){
+	.form-group.alternativa .checkmark {position: absolute !important;}
+}
+
+
+
+/* MENU FLOTANTE */
+.menu-side {display: flex;}
+.menu-side {
+    background-color: #F5F5F5;
+    position: fixed;
+    top: 22%;
+    right: 0;
+    overflow: hidden;
+    -webkit-transition: width 0.05s linear;
+    transition: width 0.05s linear;
+    z-index: 1000;
+    box-shadow: 0px -1px 6px 1px rgba(0, 0, 0, 0.19);
+ }
+.menu-side li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+}
+.menu-side li > a {
+    position: relative;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: block-axis;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: block-axis;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.menu-side li > a:hover {background-color: #E7E7E7; transition: 0.3s all ease;}
+.menu-side li > a img {margin: 0 auto; max-width: 28px;}
+.menu-side .nav-text {
+    font-family:"'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif", Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #333333;
+    display: block;
+    vertical-align: middle;
+    padding-top: 5px;
+    max-width: 50px;
+}
+.menu-side .menu-container .has-subnav img{
+ filter: brightness(0) saturate(100%) invert(12%) sepia(58%) saturate(1254%) hue-rotate(195deg) brightness(88%) contrast(90%);
+ stroke-width: 1px;
+}
+@media (min-width: 769px) {
+    .menu-side .drop-down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1C2B4D;
+        font-family:"'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif", Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, sans-serif;
+        width: 24px;
+        opacity: 1;
+        transition: opacity 1s ease-in-out, width 0.3s ease-in-out;
+    }
+    .menu-side:hover .drop-down {
+        opacity: 0;
+        width: 0px;
+        transition: width 0.3s ease-in-out;
+    }
+    
+    .menu-side .drop-down p {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-family: "'VolvoNovum-Regular',Helvetica Neue,-apple-system,"system-ui",BlinkMacSystemFont,sans-serif", Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    .menu-side .drop-down p::after {
+        content: url(../../imag/v1/icon/menu-flotante/polygon3.svg);
+        position: absolute;
+        rotate: 180deg;
+        padding-bottom: 8.41px;
+        transition: all 0.3s ease-in-out;
+    }
+    .menu-side ul {
+        max-width: 0px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    .menu-side:hover ul {
+        max-width: 76px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    
+}
+@media (max-width: 768px) {
+    .menu-side {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        top: auto;
+        transition: transform 0.8s;
+    }
+    .menu-side .drop-down {display: none;}
+    
+    .scroll-down .menu-side {
+        transform: translate3d(0, 100%, 0);
+    }
+    .scroll-up .menu-side {
+        transform: none;
+    }
+}
+@media (max-width: 768px) {
+    .menu-side .drop-down {display: none;}
+    .menu-side li > a:hover {background-color: #E7E7E7;}
+    .menu-side li > a:hover img{filter: none;}
+    .menu-side li > a:hover .nav-text{color: #333333;}
+}
+@media (max-width: 426px) {
+    .menu-side {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        top: auto;
+    }
+    .menu-side ul {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .menu-side li {display: inline-block; min-width: 80px;}
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .menu-side {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        top: auto;
+    }
+    .menu-side ul {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .menu-side li {display: inline-block; min-width: 80px;}
+}
+
+/* END MENU FLOTANTE */

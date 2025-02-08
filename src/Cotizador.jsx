@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import './css/tasacion.css'
+import './css/cotizador/tasacion.css'
+import './css/cotizador/gridpak.css'
+import './css/cotizador/reset.css'
+import './css/cotizador/global.css'
 
 const Cotizador = () => {
   const [step, setStep] = useState(1);
@@ -86,16 +89,13 @@ const Step1 = ({ onNext }) => {
                   </figure>
                   <div className="cont-subtit">
                     <h3 className="subtit">{modelo.modelo}</h3>
-                    <img className="ic-arrow" src="/volvo/imag/v1/icon/articulos/cotizador/ic_arrow_r.svg" alt="ic_arrow" />
+                    <img className="ic-arrow" src="/src/assets/ic_arrow_r.svg" alt="ic_arrow" />
                   </div>
                 </a>
               </article>
             </li>
           ))}
         </ul>
-      </div>
-      <div className="cont-btn">
-        <button className="btn-main" onClick={onNext}>Siguiente</button>
       </div>
     </div>
   );
