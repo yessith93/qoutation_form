@@ -52,12 +52,13 @@ const StepBar = ({ step }) => {
 
 const Step1 = ({ onNext }) => {
   const modelos = [
-    { id: 'EC40PE', modelo: 'EC40 Pure Electric', img: '/volvo/site/artic/20230606/imag/foto_0000023820230606175503_0c4.png' },
-    { id: 'EX40PE', modelo: 'EX40 Pure Electric', img: '/volvo/site/artic/20230615/imag/foto_0000030320230615175004_xc40-pure.png' },
-    { id: 'EX30ELE', modelo: 'EX30 Eléctrico', img: '/volvo/site/artic/20240313/imag/foto_0000059020240313151901_ex30-reveal.png' },
-    { id: 'XC90PH', modelo: 'XC90 Plug-In Hybrid', img: '/volvo/site/artic/20230525/imag/foto_0000016220230525133458_1.png' },
-    { id: 'XC60Plug', modelo: 'XC60 Plug-In Hybrid', img: '/volvo/site/artic/20230606/imag/foto_0000024620230606175321_xc60l.png' },
-    { id: 'XC60POLESTAR', modelo: 'XC60 Polestar', img: '/volvo/site/artic/20241204/imag/foto_0000034420241204140409__COTIZADOR_480x194.png' },
+    { id: 'EC40PE', modelo: 'EC40 Pure Electric', img: '/src/assets/models_images/0c4.png' },
+    { id: 'EX40PE', modelo: 'EX40 Pure Electric', img: '/src/assets/models_images/xc40-pure.png' },
+    { id: 'EX30ELE', modelo: 'EX30 Eléctrico', img: '/src/assets/models_images/foto_0000059020240313151901_ex30-reveal.png' },
+    { id: 'XC90PH', modelo: 'XC90 Plug-In Hybrid', img: '/src/assets/models_images/foto_0000016220230525133458_1.png' },
+    { id: 'XC60Plug', modelo: 'XC60 Plug-In Hybrid', img: '/src/assets/models_images/foto_0000024620230606175321_xc60l.png' },
+    { id: 'XC60POLESTAR', modelo: 'XC60 Polestar', img: '/src/assets/models_images/foto_0000034420241204140409__COTIZADOR_480x194.png' }, 
+    
   ];
 
   return (
