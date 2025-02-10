@@ -1,14 +1,43 @@
+import React, { useState, useEffect } from 'react';
+import { modelService } from '../../services/Get_models';
+
 const Step1 = ({ onNext }) => {
-    const modelos = [
-      { id: 'EC40PE', modelo: 'EC40 Pure Electric', img: '/src/assets/models_images/0c4.png' },
-      { id: 'EX40PE', modelo: 'EX40 Pure Electric', img: '/src/assets/models_images/xc40-pure.png' },
-      { id: 'EX30ELE', modelo: 'EX30 Eléctrico', img: '/src/assets/models_images/foto_0000059020240313151901_ex30-reveal.png' },
-      { id: 'XC90PH', modelo: 'XC90 Plug-In Hybrid', img: '/src/assets/models_images/foto_0000016220230525133458_1.png' },
-      { id: 'XC60Plug', modelo: 'XC60 Plug-In Hybrid', img: '/src/assets/models_images/foto_0000024620230606175321_xc60l.png' },
-      { id: 'XC60POLESTAR', modelo: 'XC60 Polestar', img: '/src/assets/models_images/foto_0000034420241204140409__COTIZADOR_480x194.png' }, 
-      
-    ];
+  const [modelos, setModelos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [familiaSeleccionada, setFamiliaSeleccionada] = useState('all');
+
+  // get data from api
+  useEffect(() => {
+    fetchModelos();
+  }, []);
+  const fetchModelos = async () => {
+    try {
+      setLoading(true);
+      // En desarrollo usa getModelsMock(), en producción usa getModels()
+      const data = await modelService.getModelsMock();
+      setModelos(data);
+    } catch (err) {
+      setError('Error al cargar los modelos');
+      console.error('Error fetching models:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const filteredModelos = modelos.filter(modelo => 
+    familiaSeleccionada === 'all' || modelo.familia === familiaSeleccionada
+  );
+  const handleFamiliaClick = (familia) => {
+    setFamiliaSeleccionada(familia);
+  };
+
+    if (loading) {
+      return <div className="loading">Cargando modelos...</div>;
+    }
   
+    if (error) {
+      return <div className="error">{error}</div>;
+    }
     return (
       <div className="tabs div-step step1">
         <header className="cont-tit step1 step-header">

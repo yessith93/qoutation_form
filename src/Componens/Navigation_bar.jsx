@@ -12,12 +12,12 @@ const steps = [
 const Navigation_bar = ({ currentStep }) => {
   return (
     <ul className="step-bar">
-      {steps.map((step) => (
-        <li key={step.number} className={currentStep >= step.number ? (currentStep === step.number ? "active" : "completed") : ""}>
+      {steps.map((s, index) => (
+        <li key={index} className={currentStep === s.number ? 'active' : ''}>
           <figure className="img-wrap">
-            <span className="ic-step ic-number">{step.number}</span>
+            <span className="ic-step ic-number">{s.number}</span>
           </figure>
-          <p className="subtit">{step.label}</p>
+          <p className="subtit">{s.label}</p>
         </li>
       ))}
     </ul>

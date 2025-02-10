@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Navigation_bar from './Componens/Navigation_bar'
 import viteLogo from '/vite.svg'
-import './css/styles.css'
 
 function App() {
   const [currentStep, setCurrentStep] = useState(4); // Puedes cambiar el paso inicial
