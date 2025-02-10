@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './css/cotizador/tasacion.css'
-import './css/cotizador/gridpak.css'
-import './css/cotizador/reset.css'
-import './css/cotizador/global.css'
-import Navigation_bar from './Componens/Navigation_bar';
-import { Step1, Step2, Step3, Step4 } from './Componens/steps'
+import './css/quotation/tasacion.css'
+import './css/quotation/gridpak.css'
+import './css/quotation/reset.css'
+import './css/quotation/global.css'
+import Navigation_bar from './Components/Navigation_bar';
+import { Step1, Step2, Step3, Step4 } from './Components/steps'
 import { useQuote } from './hooks/UseQuote';
 
-const Cotizador = () => {
+const QuotationForm = () => {
   const { step } = useQuote();
   return (
     <section className="cont-form">
@@ -26,4 +26,4 @@ const Cotizador = () => {
 };
 
 
-export default Cotizador;
+export default QuotationForm;

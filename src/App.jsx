@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navigation_bar from './Componens/Navigation_bar'
+// import Navigation_bar from './Componens/Navigation_bar'
 import viteLogo from '/vite.svg'
 
 function App() {
