@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { modelService } from '../../services/Get_models';
+import TabSelector from '../Tab_selector';
 
 const Step1 = ({ onNext }) => {
-  const [modelos, setModelos] = useState([]);
+  const [allModels, setAllModels] = useState([]);
+  const [models, setModels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [familiaSeleccionada, setFamiliaSeleccionada] = useState('all');
+  const [families, setFamilies] = useState([]);
 
   // get data from api
   useEffect(() => {
@@ -15,8 +17,10 @@ const Step1 = ({ onNext }) => {
     try {
       setLoading(true);
       // En desarrollo usa getModelsMock(), en producción usa getModels()
-      const data = await modelService.getModelsMock();
-      setModelos(data);
+      const { modelos: models, familias: families } = await modelService.getModelsMock();
+      setModels(models);
+      setFamilies(families);
+      setAllModels(models);
     } catch (err) {
       setError('Error al cargar los modelos');
       console.error('Error fetching models:', err);
@@ -24,20 +28,12 @@ const Step1 = ({ onNext }) => {
       setLoading(false);
     }
   };
-  const filteredModelos = modelos.filter(modelo => 
-    familiaSeleccionada === 'all' || modelo.familia === familiaSeleccionada
-  );
-  const handleFamiliaClick = (familia) => {
-    setFamiliaSeleccionada(familia);
-  };
-
-    if (loading) {
-      return <div className="loading">Cargando modelos...</div>;
-    }
   
-    if (error) {
-      return <div className="error">{error}</div>;
-    }
+  
+
+  if (loading) return <div className="loading">Cargando modelos...</div>;
+  if (error) return <div className="error">{error}</div>;
+
     return (
       <div className="tabs div-step step1">
         <header className="cont-tit step1 step-header">
@@ -45,16 +41,10 @@ const Step1 = ({ onNext }) => {
             <p><strong>Elige la categoría, modelo y versión</strong> <br /> del vehículo que quieres</p>
           </h2>
         </header>
-        <div className="tab-bar">
-          <nav className="cont-tabs flex-center" id="familias-list">
-            <button className="tablink active" data-familia="all">TODOS</button>
-            <button className="tablink" data-familia="Electric">ELECTRIC</button>
-            <button className="tablink" data-familia="Plug-in Hybrid">PLUG-IN HYBRID</button>
-          </nav>
-        </div>
+        <TabSelector families={families} models={allModels} setModels={setModels} />
         <div className="tab-content active">
           <ul className="row" id="modelos-list">
-            {modelos.map((modelo) => (
+            {models.map((modelo) => (
               <li key={modelo.id} className="col xs-12 sm-6 lg-4">
                 <article className="car-item">
                   <a href="javascript:void(0)">

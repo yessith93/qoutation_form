@@ -10,7 +10,10 @@ export const modelService = {
       familia: item.familia_cotizador
     }));
   },
-
+  getFamilies(data) {
+    const families = new Set(data.map(item => item.familia_cotizador));
+    return Array.from(families);
+  },
   // Obtiene los datos de la API
   async getModels() {
     try {
@@ -19,7 +22,10 @@ export const modelService = {
         throw new Error('Error fetching models');
       }
       const data = await response.json();
-      return this.transformModelData(data);
+      return {
+        modelos: this.transformModelData(data),
+        familias: this.getFamilies(data)
+      };
     } catch (error) {
       console.error('Error in getModels:', error);
       throw error;
@@ -31,6 +37,9 @@ export const modelService = {
 
     // Simula delay de red
     await new Promise(resolve => setTimeout(resolve, 500));
-    return this.transformModelData(data);
+    return {
+      modelos: this.transformModelData(data),
+      familias: this.getFamilies(data)
+    };
   }
 };
