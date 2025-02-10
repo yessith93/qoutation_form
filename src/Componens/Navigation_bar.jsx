@@ -9,11 +9,11 @@ const steps = [
   { number: 4, label: "Ingresa tus datos" },
 ];
 
-const Navigation_bar = ({ currentStep }) => {
+const Navigation_bar = ({ step }) => {
   return (
     <ul className="step-bar">
       {steps.map((s, index) => (
-        <li key={index} className={currentStep === s.number ? 'active' : ''}>
+        <li key={index} className={step === s.number ? 'active' : ''}>
           <figure className="img-wrap">
             <span className="ic-step ic-number">{s.number}</span>
           </figure>
