@@ -1,5 +1,12 @@
-
-const Step2 = ({ onNext, onPrevious }) => {
+import {useQuote} from '../../hooks/UseQuote';
+const Step2 = () => {
+    const { handleNextStep, handlePreviousStep } = useQuote();
+    const onNext = () => {
+        handleNextStep();
+    };
+    const onPrevious = () => {
+        handlePreviousStep();
+    };
     return (
       <div className="div-step step2">
         <header className="cont-tit step2 step-header">
