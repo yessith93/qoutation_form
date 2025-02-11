@@ -5,10 +5,7 @@ import QuotationForm from './Cotizador.jsx'
 import { QuoteProvider } from './contexts/QuoteContext';
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
     <QuoteProvider>
       <QuotationForm />
-
     </QuoteProvider>
-  // </StrictMode>,
 )

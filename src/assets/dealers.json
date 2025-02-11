@@ -1,0 +1,65 @@
+[
+    {
+        "nombre": "Volvo La Dehesa",
+        "id_dealer": "2",
+        "sel1": "Metropolitana",
+        "sel2": "Lo Barnechea",
+        "sel3": ""
+    },
+    {
+        "nombre": "Volvo Vitacura",
+        "id_dealer": "10",
+        "sel1": "Metropolitana",
+        "sel2": "Vitacura",
+        "sel3": ""
+    },
+    {
+        "nombre": "Carmona y cia. - La Serena",
+        "id_dealer": "21",
+        "sel1": "IV Región - Coquimbo",
+        "sel2": "La Serena",
+        "sel3": ""
+    },
+    {
+        "nombre": "Mach - Viña del mar",
+        "id_dealer": "65",
+        "sel1": "V Región - Valparaiso",
+        "sel2": "Viña del mar",
+        "sel3": ""
+    },
+    {
+        "nombre": "Salazar Israel Concepción",
+        "id_dealer": "24",
+        "sel1": "VIII Región - Biobío",
+        "sel2": "Concepción",
+        "sel3": ""
+    },
+    {
+        "nombre": "Portillo Sur - Temuco",
+        "id_dealer": "23",
+        "sel1": "IX Región - Araucanía",
+        "sel2": "Temuco",
+        "sel3": ""
+    },
+    {
+        "nombre": "Servimaq - Osorno",
+        "id_dealer": "35",
+        "sel1": "X Región - Los Lagos",
+        "sel2": "Osorno",
+        "sel3": ""
+    },
+    {
+        "nombre": "Yusic - Antofagasta",
+        "id_dealer": "36",
+        "sel1": "II Región  - Antofagasta",
+        "sel2": "Antofagasta",
+        "sel3": ""
+    },
+    {
+        "nombre": "Recasur - Punta Arenas",
+        "id_dealer": "36",
+        "sel1": "XII - Región de Magallanes y la Antártica Chilena",
+        "sel2": "Punta Arenas",
+        "sel3": ""
+    }
+]

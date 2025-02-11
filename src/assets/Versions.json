@@ -1,0 +1,181 @@
+[
+    {
+        "model": "EC40PE",
+        "Versions": [
+            {
+                "informacion": {
+                    "nombre": "EC40 P8 Recharge Electric",
+                    "descripcion": "",
+                    "id": "EC40P8REEL",
+                    "id_forum": "",
+                    "foto": "/volvo/site/artic/20230606/imag/foto_0000038620230606175503_foto_0000032320230606175503_c40-electric-removebg-.png",
+                    "precio": ""
+                }
+            },
+            {
+                "informacion": {
+                    "nombre": "EC40 P6 Recharge Electric",
+                    "descripcion": "",
+                    "id": "EC40P6REEL",
+                    "id_forum": "",
+                    "foto": "/volvo/site/artic/20230606/imag/foto_0000032320230606175503_c40-electric.jpg",
+                    "precio": ""
+                }
+            }
+        ]
+    },
+    {
+        "model": "EX40PE",
+        "Versions": [
+            [
+                {
+                    "informacion": {
+                        "nombre": "EX40 P8 Recharge",
+                        "descripcion": "",
+                        "id": "EX40p8RE",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230615/imag/foto_0000045820230615175004_foto_0000038420230615175004_xc40-electric-removebg.png",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "EX40 P6 Recharge",
+                        "descripcion": "",
+                        "id": "EX40p6RE",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230615/imag/foto_0000038420230615175004_xc40-electric.jpg",
+                        "precio": ""
+                    }
+                }
+            ]
+        ]
+    },
+    {
+        "model": "EX30ELE",
+        "Versions": [
+            [
+                {
+                    "informacion": {
+                        "nombre": "EX30 Core",
+                        "descripcion": "",
+                        "id": "EX30CORE",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20240313/imag/foto_0000059220240313151901_Volvo_EX30_480x190px.png",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "EX30 Plus",
+                        "descripcion": "",
+                        "id": "EX30PLUS",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20240313/imag/foto_0000059020240313151901_ex30-reveal.png",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "EX30 Ultra",
+                        "descripcion": "",
+                        "id": "EX30ULTRA",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20240313/imag/foto_0000059020240313151901_ex30-reveal.png",
+                        "precio": ""
+                    }
+                }
+            ]
+        ]
+    },
+    {
+        "model": "XC90PH",
+        "Versions": [
+            [
+                {
+                    "informacion": {
+                        "nombre": "XC90 T8 AWD Recharge Ultimate",
+                        "descripcion": "",
+                        "id": "XC90T8AWD04",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230525/imag/foto_0000033120230525133458_foto_0000027020230525133458__xc90-hybrid-removebg-.png",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "XC90 T8 AWD Recharge Plus",
+                        "descripcion": "",
+                        "id": "XC90T8AWDRECHARGEPLUS",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230525/imag/foto_0000027020230525133458__xc90-hybrid.jpg",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "XC90 T8 AWD Recharge Ultimate Dark Edition",
+                        "descripcion": "",
+                        "id": "XC90T8AWDRECHARGEULTIMATEDARKEDITION",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230525/imag/foto_0000033120230525133458_foto_0000027020230525133458__xc90-hybrid-removebg-.png",
+                        "precio": ""
+                    }
+                }
+            ]
+        ]
+    },
+    {
+        "model": "XC60Plug",
+        "Versions": [
+            [
+                {
+                    "informacion": {
+                        "nombre": "XC60 T8 AWD Recharge Plus",
+                        "descripcion": "",
+                        "id": "XC60T8AWDRECHARGEPLUS",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230606/imag/foto_0000037820230606175321_foto_0000035520230606175321__xc60-hybrid-removebg-.png",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "XC60 T8 AWD Recharge Ultimate",
+                        "descripcion": "",
+                        "id": "XC60T8AWD05",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230606/imag/foto_0000035520230606175321__xc60-hybrid.jpg",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "XC60 T8 AWD Recharge Ultimate Dark Edition",
+                        "descripcion": "",
+                        "id": "XC60T8AWDRECHARGEULTIMATEDARKEDITION",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230606/imag/foto_0000037820230606175321_foto_0000035520230606175321__xc60-hybrid-removebg-.png",
+                        "precio": ""
+                    }
+                }
+            ]
+        ]
+    },{
+        "model": "XC60POLESTAR",
+        "Versions": [
+            [
+                {
+                    "informacion": {
+                        "nombre": "XC60 T8 Polestar Engineered",
+                        "descripcion": "",
+                        "id": "XC60T8POLESTAR",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20241204/imag/foto_0000034420241204140409__COTIZADOR_480x194.png",
+                        "precio": ""
+                    }
+                }
+            ]
+        ]
+    }
+]

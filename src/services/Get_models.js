@@ -1,5 +1,5 @@
 const API_BASE_URL = 'YOUR_API_URL'; // Reemplazar con la URL base de tu API
-import data from '../assets/data.json';
+import data from '../assets/models.json';
 export const modelService = {
   // Transforma los datos crudos de la API al formato que necesita el componente
   transformModelData(rawData) {
@@ -36,7 +36,7 @@ export const modelService = {
   async getModelsMock() {
 
     // Simula delay de red
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 200));
     return {
       modelos: this.transformModelData(data),
       familias: this.getFamilies(data)
