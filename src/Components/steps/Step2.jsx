@@ -3,9 +3,12 @@ import { useQuote } from '../../hooks/UseQuote';
 import { versionService } from '../../services/get_versions';
 import ErrorMessage from '../General_components/ErrorMessage';
 import LoadingIndicator from '../General_components/LoadingIndicator';
+import Dropdown from '../General_components/Dropdown';
+import PreviousButton from '../General_components/PreviousButton';
+import NextButton from '../General_components/NextButton';
 
 const Step2 = () => {
-  const { handleNextStep, handlePreviousStep, quoteData } = useQuote();
+  const { handleNextStep, quoteData } = useQuote();
   const { model } = quoteData;
   const { name, img, id } = model;
 
@@ -13,12 +16,6 @@ const Step2 = () => {
   const [versions, setVersions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const onNext = () => {
-    handleNextStep();
-  };
-  const onPrevious = () => {
-    handlePreviousStep();
-  };
   // get data from api
   useEffect(() => {
     if (!id) return;
@@ -60,31 +57,11 @@ const Step2 = () => {
             <h3 className="subtit modelo-title">{name}</h3>
           </div>
         </article>
-        <div className="enc-select" style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
-          <div className="dropdown-container">
-            <div className="enc-select">
-              <p className="drop-txt version-title">Selecciona Version</p>
-              <figure className="ic-arrow">
-                <img src="/src/assets/icons/ic_arrow_d.svg" alt="" />
-              </figure>
-            </div>
-            <div className="list-select" style={{ maxHeight: '0px' }}>
-              <div className="article-inner">
-                <ul id="versiones-list">
-                  {versions.length > 0 && versions.map((version) => (
-                    <li key={version.id} data-version={version.name} data-id={version.id}>
-                      <a href="">{version.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Dropdown label_text={'Selecciona una versión'} options={versions} selected={model.id} onChange={handleNextStep} />
       </div>
       <div className="cont-btn">
-        <button className="btn-main" onClick={onNext}>Siguiente</button>
-        <button className="btn-sec cambiar-modelo" onClick={onPrevious}>Volver</button>
+        <NextButton />
+        <PreviousButton />
       </div>
     </div>
   );

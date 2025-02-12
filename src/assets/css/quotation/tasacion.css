@@ -1280,6 +1280,7 @@ line-height: 19px;}
     line-height: 1.3;
     font-size: 18px;
 	color: #666666;
+	cursor: pointer;
 }
 
 .cotizador .dropdown-container .article-inner li a:hover{
