@@ -2,26 +2,28 @@
     {
         "model": "EC40PE",
         "Versions": [
-            {
-                "informacion": {
-                    "nombre": "EC40 P8 Recharge Electric",
-                    "descripcion": "",
-                    "id": "EC40P8REEL",
-                    "id_forum": "",
-                    "foto": "/volvo/site/artic/20230606/imag/foto_0000038620230606175503_foto_0000032320230606175503_c40-electric-removebg-.png",
-                    "precio": ""
+            [
+                {
+                    "informacion": {
+                        "nombre": "EC40 P8 Recharge Electric",
+                        "descripcion": "",
+                        "id": "EC40P8REEL",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230606/imag/foto_0000038620230606175503_foto_0000032320230606175503_c40-electric-removebg-.png",
+                        "precio": ""
+                    }
+                },
+                {
+                    "informacion": {
+                        "nombre": "EC40 P6 Recharge Electric",
+                        "descripcion": "",
+                        "id": "EC40P6REEL",
+                        "id_forum": "",
+                        "foto": "/volvo/site/artic/20230606/imag/foto_0000032320230606175503_c40-electric.jpg",
+                        "precio": ""
+                    }
                 }
-            },
-            {
-                "informacion": {
-                    "nombre": "EC40 P6 Recharge Electric",
-                    "descripcion": "",
-                    "id": "EC40P6REEL",
-                    "id_forum": "",
-                    "foto": "/volvo/site/artic/20230606/imag/foto_0000032320230606175503_c40-electric.jpg",
-                    "precio": ""
-                }
-            }
+            ]
         ]
     },
     {
@@ -161,7 +163,8 @@
                 }
             ]
         ]
-    },{
+    },
+    {
         "model": "XC60POLESTAR",
         "Versions": [
             [

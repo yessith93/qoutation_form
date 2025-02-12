@@ -33,7 +33,7 @@ export const versionService = {
   async getVersionsMock(id_model) {
 
     // Simula delay de red
-    await new Promise(resolve => setTimeout(resolve, 200));
+    await new Promise(resolve => setTimeout(resolve, 300));
     const filteredversions = data.filter(item => item.model === id_model);
     return {
       versions: this.transformVersionData(filteredversions),

@@ -5,9 +5,9 @@ export const modelService = {
   transformModelData(rawData) {
     return rawData.map(item => ({
       id: item.id_modelo,
-      modelo: item.modelo,
+      name: item.modelo,
       img: item.foto.startsWith('/volvo') ? `https://www.volvocars.com${item.foto}` : item.foto,
-      familia: item.familia_cotizador
+      family: item.familia_cotizador
     }));
   },
   getFamilies(data) {

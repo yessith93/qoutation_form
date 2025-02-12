@@ -6,7 +6,7 @@ export const QuoteContext = createContext();
 export const QuoteProvider = ({ children }) => {
   const [step, setStep] = useState(1);
   const [quoteData, setQuoteData] = useState({
-    model: '',
+    model: {},
     version: '',
     location: '',
     userInfo: {}
