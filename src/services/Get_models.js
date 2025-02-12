@@ -1,5 +1,5 @@
 const API_BASE_URL = 'YOUR_API_URL'; // Reemplazar con la URL base de tu API
-import data from '../assets/models.json';
+import data from '../assets/data/models.json';
 export const modelService = {
   // Transforma los datos crudos de la API al formato que necesita el componente
   transformModelData(rawData) {

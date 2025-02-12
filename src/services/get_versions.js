@@ -1,11 +1,11 @@
-import data from '../assets/Versions.json';
+import data from '../assets/data/Versions.json';
 export const versionService = {
   // Transforma los datos crudos de la API al formato que necesita el componente
   transformVersionData(data) {
     return data.flatMap(item => 
         item.Versions.flatMap(versionGroup => 
             versionGroup.map(version => ({
-                nombre: version.informacion.nombre,
+                name: version.informacion.nombre,
                 id: version.informacion.id
             }))
         )

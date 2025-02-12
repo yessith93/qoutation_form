@@ -18,7 +18,7 @@ const ModelCard = ({ model }) => {
                     </figure>
                     <div className="cont-subtit">
                         <h3 className="subtit">{name}</h3>
-                        <img className="ic-arrow" src="/src/assets/ic_arrow_r.svg" alt="ic_arrow" />
+                        <img className="ic-arrow" src="/src/assets/icons/ic_arrow_r.svg" alt="ic_arrow" />
                     </div>
                 </a>
             </article>

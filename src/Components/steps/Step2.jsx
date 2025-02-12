@@ -29,7 +29,7 @@ const Step2 = () => {
     const fetchVersions = async () => {
       try {
         // En desarrollo usa getModelsMock(), en producción usa getModels()
-        const versions = await versionService.getVersionsMock(id);
+        const { versions } = await versionService.getVersionsMock(id);
         setVersions(versions);
       } catch (err) {
         setError('error fetching Versions');
@@ -63,20 +63,19 @@ const Step2 = () => {
         <div className="enc-select" style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
           <div className="dropdown-container">
             <div className="enc-select">
-              <p className="drop-txt version-title">EX40 P8 Recharge</p>
+              <p className="drop-txt version-title">Selecciona Version</p>
               <figure className="ic-arrow">
-                <img src="/volvo/imag/v1/icon/articulos/cotizador/ic_arrow_d.svg" alt="" />
+                <img src="/src/assets/icons/ic_arrow_d.svg" alt="" />
               </figure>
             </div>
             <div className="list-select" style={{ maxHeight: '0px' }}>
               <div className="article-inner">
                 <ul id="versiones-list">
-                  <li data-version="EX40 P8 Recharge" data-id="EX40p8RE">
-                    <a href="javascript:void(0)">EX40 P8 Recharge</a>
-                  </li>
-                  <li data-version="EX40 P6 Recharge" data-id="EX40p6RE">
-                    <a href="javascript:void(0)">EX40 P6 Recharge</a>
-                  </li>
+                  {versions.length > 0 && versions.map((version) => (
+                    <li key={version.id} data-version={version.name} data-id={version.id}>
+                      <a href="">{version.name}</a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

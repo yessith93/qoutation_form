@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './css/quotation/tasacion.css'
-import './css/quotation/gridpak.css'
-import './css/quotation/reset.css'
-import './css/quotation/global.css'
+import './assets/css/quotation/tasacion.css'
+import './assets/css/quotation/gridpak.css'
+import './assets/css/quotation/reset.css'
+import './assets/css/quotation/global.css'
 import Navigation_bar from './Components/Navigation_bar';
 import { Step1, Step2, Step3, Step4 } from './Components/steps'
 import { useQuote } from './hooks/UseQuote';
