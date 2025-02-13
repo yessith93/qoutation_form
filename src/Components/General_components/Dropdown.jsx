@@ -1,5 +1,5 @@
 import { useState,useEffect,useRef } from 'react';
-const Dropdown = ({ label_text, options, selected, onChange }) => {
+const Dropdown = ({ label_text, options, onChange }) => {
     const [labelText, setLabelText] = useState(label_text);
     const [isOpen, setIsOpen] = useState(false);
     const listRef = useRef(null);
@@ -7,6 +7,7 @@ const Dropdown = ({ label_text, options, selected, onChange }) => {
     const handleLabelClick = () => {
         setIsOpen(!isOpen);
     };
+
     useEffect(() => {
         if (isOpen && listRef.current) {
           listRef.current.style.maxHeight = listRef.current.scrollHeight + 'px';
@@ -14,12 +15,14 @@ const Dropdown = ({ label_text, options, selected, onChange }) => {
           listRef.current.style.maxHeight = '0px';
         }
       }, [isOpen]);
-      useEffect(() => {
+    
+    useEffect(() => {
         setIsOpen(false);
-      }, [labelText]);
+    }, [labelText]);
   
       const handleOptionClick = (option) => { // Call the parent's onChange function
           setLabelText(option.name);
+          onChange(option);
       }
 
     return (

@@ -4,15 +4,14 @@ import { versionService } from '../../services/get_versions';
 import ErrorMessage from '../General_components/ErrorMessage';
 import LoadingIndicator from '../General_components/LoadingIndicator';
 import Dropdown from '../General_components/Dropdown';
-import PreviousButton from '../General_components/PreviousButton';
-import NextButton from '../General_components/NextButton';
+import ContainerBtn from '../General_components/ContainerBtn';
+
 
 const Step2 = () => {
-  const { handleNextStep, quoteData } = useQuote();
+  const { quoteData,updateQuoteData } = useQuote();
+  const[disableNextButton, setDisableNextButton] = useState(true);
   const { model } = quoteData;
   const { name, img, id } = model;
-
-
   const [versions, setVersions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,7 +38,24 @@ const Step2 = () => {
     fetchVersions();
   }, [id]);
 
-  if (loading) return <LoadingIndicator message="Cargando Versiones..." />;
+  const searchVersionSelected = (version) => {
+    if (version) {
+      return versions.find(v => v.id === version.id);
+    }
+    return null;
+  }
+  const handleDropdownChange = (option) => {
+    if (option) {
+      if(searchVersionSelected(option)) {
+        updateQuoteData('version', option);
+        setDisableNextButton(false);
+        return;
+      }
+    }
+  }
+
+
+  // if (loading) return <LoadingIndicator message="Cargando Versiones..." />;
   if (error) return <ErrorMessage message={error} onRetry={onPrevious} />;
   return (
     <div className="div-step step2">
@@ -57,12 +73,13 @@ const Step2 = () => {
             <h3 className="subtit modelo-title">{name}</h3>
           </div>
         </article>
-        <Dropdown label_text={'Selecciona una versión'} options={versions} selected={model.id} onChange={handleNextStep} />
+        {loading && <LoadingIndicator message="Cargando Versiones..." />}
+        {error && <ErrorMessage message={error} onRetry={onPrevious} />}
+        {!loading && !error && 
+        <Dropdown label_text={'Selecciona una versión'} options={versions} onChange={handleDropdownChange} />
+        }
       </div>
-      <div className="cont-btn">
-        <NextButton />
-        <PreviousButton />
-      </div>
+      <ContainerBtn disableNextButton={disableNextButton} />
     </div>
   );
 };

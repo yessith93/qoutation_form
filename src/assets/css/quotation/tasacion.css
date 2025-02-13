@@ -48,6 +48,10 @@
 	align-items: center;
 	justify-content: center;
 }
+.tasacion .btn-main:disabled {
+    background-color: rgb(196, 196, 196);
+    pointer-events: none;
+}
 
 
 .tasacion .btn-main:hover{

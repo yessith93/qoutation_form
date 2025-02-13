@@ -1,3 +1,5 @@
+import ContainerBtn from '../General_components/ContainerBtn';
+
 
 const Step3 = ({ onNext, onPrevious }) => {
     return (
@@ -47,10 +49,7 @@ const Step3 = ({ onNext, onPrevious }) => {
             </div>
           </div>
         </div>
-        <div className="cont-btn">
-          <button className="btn-main" onClick={onNext}>Siguiente</button>
-          <button className="btn-sec cambiar-version" onClick={onPrevious}>Volver</button>
-        </div>
+        <ContainerBtn />
       </div>
     );
   };
