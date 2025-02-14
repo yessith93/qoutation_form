@@ -1,5 +1,5 @@
 import { useState,useEffect,useRef } from 'react';
-const Dropdown = ({ label_text, options, onChange }) => {
+const Dropdown = ({ label_text, options, onChange, isDisabled = false }) => {
     const [labelText, setLabelText] = useState(label_text);
     const [isOpen, setIsOpen] = useState(false);
     const listRef = useRef(null);
@@ -30,8 +30,9 @@ const Dropdown = ({ label_text, options, onChange }) => {
             handleOptionClick(options[0]);
         }
     }, [options]);
+
     return (
-        <div className="enc-select" style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
+        <div className={`enc-select ${options.length === 0  ? 'disable' : isDisabled ? 'disable' : ''} `} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
             <div className={`dropdown-container ${isOpen ? 'open' : ''}`}>
                 <div className="enc-select" onClick={handleLabelClick}>
                     <p className="drop-txt">{labelText}</p>
