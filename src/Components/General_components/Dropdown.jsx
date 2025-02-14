@@ -3,11 +3,11 @@ const Dropdown = ({ label_text, options, onChange }) => {
     const [labelText, setLabelText] = useState(label_text);
     const [isOpen, setIsOpen] = useState(false);
     const listRef = useRef(null);
-
+    //open and close dropdown
     const handleLabelClick = () => {
         setIsOpen(!isOpen);
     };
-
+    //show and hide options when the label is clicked
     useEffect(() => {
         if (isOpen && listRef.current) {
           listRef.current.style.maxHeight = listRef.current.scrollHeight + 'px';
@@ -19,12 +19,17 @@ const Dropdown = ({ label_text, options, onChange }) => {
     useEffect(() => {
         setIsOpen(false);
     }, [labelText]);
-  
-      const handleOptionClick = (option) => { // Call the parent's onChange function
-          setLabelText(option.name);
-          onChange(option);
-      }
-
+    //change the label when an option is clicked and select the option
+    const handleOptionClick = (option) => { 
+        setLabelText(option.name);
+        onChange(option);        
+    }
+    //select the first option when there is only one option
+    useEffect(() => {
+        if (options.length === 1) {
+            handleOptionClick(options[0]);
+        }
+    }, [options]);
     return (
         <div className="enc-select" style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
             <div className={`dropdown-container ${isOpen ? 'open' : ''}`}>

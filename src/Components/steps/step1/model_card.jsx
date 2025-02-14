@@ -6,6 +6,7 @@ const ModelCard = ({ model }) => {
     const { handleNextStep, updateQuoteData } = useQuote();
     const handleClick = () => {
         updateQuoteData('model', model);
+        updateQuoteData('version', {});
         handleNextStep();
     };
 

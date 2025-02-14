@@ -8,9 +8,9 @@ import ContainerBtn from '../General_components/ContainerBtn';
 
 
 const Step2 = () => {
-  const { quoteData,updateQuoteData } = useQuote();
+  const { quoteData,updateQuoteData, handleNextStep } = useQuote();
   const[disableNextButton, setDisableNextButton] = useState(true);
-  const { model } = quoteData;
+  const { model,version } = quoteData;
   const { name, img, id } = model;
   const [versions, setVersions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -47,9 +47,12 @@ const Step2 = () => {
   const handleDropdownChange = (option) => {
     if (option) {
       if(searchVersionSelected(option)) {
+        let wasThereAVersionBefore = Object.keys(version).length > 0 ? true : false;
         updateQuoteData('version', option);
         setDisableNextButton(false);
-        return;
+        if (versions.length === 1&& !wasThereAVersionBefore) {
+          handleNextStep();
+        }
       }
     }
   }
@@ -76,7 +79,7 @@ const Step2 = () => {
         {loading && <LoadingIndicator message="Cargando Versiones..." />}
         {error && <ErrorMessage message={error} onRetry={onPrevious} />}
         {!loading && !error && 
-        <Dropdown label_text={'Selecciona una versión'} options={versions} onChange={handleDropdownChange} />
+        <Dropdown label_text= 'Selecciona una versión' options={versions} onChange={handleDropdownChange}/> 
         }
       </div>
       <ContainerBtn disableNextButton={disableNextButton} />
