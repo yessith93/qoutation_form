@@ -77,7 +77,16 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
     }, [selectedRegion]);
 
     return (
-        <Dropdown label_text={labelText} options={filteredComunas} onChange={onChange} isDisabled={filteredComunas.length === 0} />
+        <>
+            {
+            filteredComunas.length === 0 
+                ? (
+                    <Dropdown label_text={labelText} options={[]}  />
+                ):(
+                    <Dropdown label_text={labelText} options={filteredComunas} onChange={onChange}  />
+                ) 
+            }
+        </>
     );
 };
 export default SecondDealerSelector;

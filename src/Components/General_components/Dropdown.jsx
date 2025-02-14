@@ -1,5 +1,5 @@
 import { useState,useEffect,useRef } from 'react';
-const Dropdown = ({ label_text, options, onChange, isDisabled = false }) => {
+const Dropdown = ({ label_text, options, onChange}) => {
     const [labelText, setLabelText] = useState(label_text);
     const [isOpen, setIsOpen] = useState(false);
     const listRef = useRef(null);
@@ -16,12 +16,10 @@ const Dropdown = ({ label_text, options, onChange, isDisabled = false }) => {
         }
       }, [isOpen]);
     
-    useEffect(() => {
-        setIsOpen(false);
-    }, [labelText]);
     //change the label when an option is clicked and select the option
     const handleOptionClick = (option) => { 
         setLabelText(option.name);
+        setIsOpen(false);
         onChange(option);        
     }
     //select the first option when there is only one option
@@ -32,7 +30,7 @@ const Dropdown = ({ label_text, options, onChange, isDisabled = false }) => {
     }, [options]);
 
     return (
-        <div className={`enc-select ${options.length === 0  ? 'disable' : isDisabled ? 'disable' : ''} `} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
+        <div className={`enc-select ${options.length === 0  ? 'disable' :  ''} `} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
             <div className={`dropdown-container ${isOpen ? 'open' : ''}`}>
                 <div className="enc-select" onClick={handleLabelClick}>
                     <p className="drop-txt">{labelText}</p>
