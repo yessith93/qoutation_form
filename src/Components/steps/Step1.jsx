@@ -4,6 +4,7 @@ import TabSelector from './step1/Tab_selector';
 import ModelCards from './step1/Model_cards';
 import ErrorMessage from '../General_components/ErrorMessage';
 import LoadingIndicator from '../General_components/LoadingIndicator';
+import StepHeader from '../General_components/StepHeader';
 
 const Step1 = () => {
   const [models, setModels] = useState([]);
@@ -40,11 +41,7 @@ const Step1 = () => {
 
     return (
       <div className="tabs div-step step1">
-        <header className="cont-tit step1 step-header">
-          <h2 className="titu">
-            <p><strong>Elige la categoría, modelo y versión</strong> <br /> del vehículo que quieres</p>
-          </h2>
-        </header>
+        <StepHeader step={1} title="Elige la categoría, modelo y versión" subtitle="del vehículo que quieres" />
         <TabSelector families={families} models={allModelsRef.current} setModels={setModels} />
         <ModelCards models={models} />
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ContainerBtn from '../General_components/ContainerBtn';
 import FirstDealerSelector from './step3/FirstDealerSelector';
 import SecondDealerSelector from './step3/SecondDealerSelector';
+import StepHeader from '../General_components/StepHeader';
 
 
 const Step3 = ({ onNext, onPrevious }) => {
@@ -23,9 +24,7 @@ const Step3 = ({ onNext, onPrevious }) => {
 
   return (
     <div className="div-step step3">
-      <header className="cont-tit step3 step-header">
-        <h2 className="titu"><strong>Escoge dónde quieres cotizar tu auto</strong></h2>
-      </header>
+      <StepHeader step={3} title="Escoge dónde quieres cotizar tu auto" />
       <FirstDealerSelector setSelectOption={setSelectedRegion} />
       <SecondDealerSelector selectedRegion={selectedRegion} setSelectOption={setSelectedComuna} />
       <div className="enc-select disable">

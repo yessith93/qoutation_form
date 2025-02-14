@@ -5,6 +5,7 @@ import ErrorMessage from '../General_components/ErrorMessage';
 import LoadingIndicator from '../General_components/LoadingIndicator';
 import Dropdown from '../General_components/Dropdown';
 import ContainerBtn from '../General_components/ContainerBtn';
+import StepHeader from '../General_components/StepHeader';
 
 
 const Step2 = () => {
@@ -62,11 +63,7 @@ const Step2 = () => {
   if (error) return <ErrorMessage message={error} onRetry={onPrevious} />;
   return (
     <div className="div-step step2">
-      <header className="cont-tit step2 step-header">
-        <h2 className="titu">
-          <strong>Elige la categoría, modelo y versión</strong><br /> del vehículo que quieres
-        </h2>
-      </header>
+      <StepHeader step={2} title="Elige la categoría, modelo y versión" subtitle="del vehículo que quieres" />
       <div className="version-sel">
         <article className="car-item">
           <figure className="img-wrap modelo-img">

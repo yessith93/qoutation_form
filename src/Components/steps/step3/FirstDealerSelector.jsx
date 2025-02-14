@@ -1,7 +1,8 @@
+import { useMemo } from 'react';
 import Dropdown from '../../General_components/Dropdown';
 
 const FirstDealerSelector = ({ options,setSelectOption }) => {
-    const regions = [{
+    const regions = useMemo(() =>[{
             name: "II Región - Antofagasta",
             id: "II Región - Antofagasta",
         },
@@ -33,7 +34,7 @@ const FirstDealerSelector = ({ options,setSelectOption }) => {
             name: "XII Región de Magallanes y la Antártica Chilena",
             id: "XII Región de Magallanes y la Antártica Chilena",
         },
-    ];
+    ],[]);
     const onChange = (option) => {
         if (option) {
             if (regions.find(r => r.id === option.id)) {

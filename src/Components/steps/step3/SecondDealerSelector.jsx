@@ -1,9 +1,11 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect,useMemo } from "react";
 import Dropdown from "../../General_components/Dropdown";
 
 const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
-    const [labelText, setLabelText] = useState("Selecciona Comuna");
-    const comunas = {
+    const initialLabelText = "Selecciona Comuna";
+    const [labelText, setLabelText] = useState(initialLabelText);
+    const [filteredComunas, setFilteredComunas] = useState([]);
+    const comunas = useMemo(() => ({
         "Metropolitana": [
             {
                 name: "Lo Barnechea",
@@ -62,8 +64,8 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
                 id: "Punta Arenas",
             }
         ],
-    };
-    const filteredComunas = comunas[selectedRegion] ?? [];
+    }), []);
+    // const filteredComunas = comunas[selectedRegion] ?? [];
     const onChange = (option) => {
         if (option) {
             if (filteredComunas.find(c => c.id === option.id)) {
@@ -73,7 +75,11 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
     }
     //change the label when selectedRegion changes
     useEffect(() => {
-        setLabelText(`Selecciona Comuna de ${selectedRegion}`);
+        if (selectedRegion==="") {
+            setLabelText(initialLabelText);
+        }else
+            setLabelText(`Selecciona Comuna de ${selectedRegion}`);
+        setFilteredComunas(comunas[selectedRegion] ?? []);
     }, [selectedRegion]);
 
     return (

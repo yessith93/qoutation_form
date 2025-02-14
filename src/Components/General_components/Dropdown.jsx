@@ -26,6 +26,8 @@ const Dropdown = ({ label_text, options, onChange}) => {
     useEffect(() => {
         if (options.length === 1) {
             handleOptionClick(options[0]);
+        }else{
+            setLabelText(label_text);
         }
     }, [options]);
 
