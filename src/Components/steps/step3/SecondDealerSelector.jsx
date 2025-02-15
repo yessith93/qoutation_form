@@ -65,7 +65,7 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
             }
         ],
     }), []);
-    // const filteredComunas = comunas[selectedRegion] ?? [];
+    
     const onChange = (option) => {
         if (option) {
             if (filteredComunas.find(c => c.id === option.id)) {
@@ -80,6 +80,7 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
         }else
             setLabelText(`Selecciona Comuna de ${selectedRegion}`);
         setFilteredComunas(comunas[selectedRegion] ?? []);
+        setSelectOption("");
     }, [selectedRegion]);
 
     return (

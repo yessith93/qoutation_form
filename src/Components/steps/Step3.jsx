@@ -1,43 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ContainerBtn from '../General_components/ContainerBtn';
 import FirstDealerSelector from './step3/FirstDealerSelector';
 import SecondDealerSelector from './step3/SecondDealerSelector';
 import StepHeader from '../General_components/StepHeader';
+import ThirdDealerSelector from './step3/ThirdDealerSelector';
+import { useQuote } from '../../hooks/UseQuote';
 
 
-const Step3 = ({ onNext, onPrevious }) => {
-
-  const concesionarios = {
-    "Lo Barnechea": ["Volvo La Dehesa"],
-    "Vitacura": ["Volvo Vitacura"],
-    "La Serena": ["Carmona y Cía."],
-    "Viña del Mar": ["Mach - Viña del Mar"],
-    "Concepción": ["Salazar Israel Concepción"],
-    "Temuco": ["Portillo Sur - Temuco"],
-    "Osorno": ["Servimaq - Osorno"],
-    "Antofagasta": ["Yusic - Antofagasta"],
-    "Punta Arenas": ["Recasur - Punta Arenas"],
-  };
+const Step3 = () => {
   const [selectedRegion, setSelectedRegion] = useState("");
   const [selectedComuna, setSelectedComuna] = useState("");
   const [selectedConcesionario, setSelectedConcesionario] = useState("");
-
+  const[disableNextButton, setDisableNextButton] = useState(true);
+  const { updateQuoteData } = useQuote();
+  useEffect(() => {
+    if (selectedConcesionario) {
+      if(JSON.stringify(selectedConcesionario) !== JSON.stringify({})) {
+        updateQuoteData('concesionario', selectedConcesionario);
+        setDisableNextButton(false);
+      }
+      else {
+        setDisableNextButton(true);
+      }
+    }
+  },[selectedConcesionario]);
   return (
     <div className="div-step step3">
       <StepHeader step={3} title="Escoge dónde quieres cotizar tu auto" />
       <FirstDealerSelector setSelectOption={setSelectedRegion} />
       <SecondDealerSelector selectedRegion={selectedRegion} setSelectOption={setSelectedComuna} />
-      <div className="enc-select disable">
-        <div className="dropdown-container">
-          <div className="enc-select" style={{ backgroundColor: "rgb(244, 244, 244)" }}>
-            <p className="drop-txt concesionario-title">Selecciona Concesionario</p>
-            <figure className="ic-arrow">
-              <img src="/volvo/imag/v1/icon/articulos/cotizador/ic_arrow_d.svg" alt="ic_arrow" />
-            </figure>
-          </div>
-        </div>
-      </div>
-      <ContainerBtn  />
+      <ThirdDealerSelector selectedComuna={selectedComuna} setSelectOption={setSelectedConcesionario} />
+      <ContainerBtn  disableNextButton={disableNextButton}/>
     </div>
   );
 };
