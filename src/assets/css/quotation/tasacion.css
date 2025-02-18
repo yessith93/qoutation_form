@@ -1295,6 +1295,7 @@ line-height: 19px;}
 	display: flex;
 	padding: 30px 24px 0;
 	border-top: 1px solid #808080;
+	flex-direction: column;
 }
 .cotizador .msj-checkbox{
 	flex: 1 0 50%;
@@ -1538,7 +1539,7 @@ line-height: 19px;}
 	color: #DE4346 !important;
 }
 
-.tasacion .form-group  .txt-error{
+.tasacion .form-group .txt-error, .cont-checkbox .txt-error{
 	margin-top: 10px;
 	color: #DE4346;
 }

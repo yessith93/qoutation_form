@@ -1,13 +1,16 @@
-import { useState,useEffect } from 'react';
 import { useQuote } from '../../hooks/UseQuote';
-const NextButton = ({ label = "Siguiente",disableNextButton =true }) => {
+const NextButton = ({ label = "Siguiente",disableNextButton =true,alternativeNextFunction,isSubmit}) => {
     const { handleNextStep } = useQuote();
-    const [disabled, setDisabled] = useState(disableNextButton);
-    useEffect(() => {
-        setDisabled(disableNextButton);
-      }, [disableNextButton]);
+    const handleClick = () => {
+        if(!isSubmit){
+            alternativeNextFunction && alternativeNextFunction();
+            handleNextStep();
+        }
+    }
+    
+    
     return (
-        <button className="btn-main" onClick={handleNextStep} disabled={disabled===true}> 
+        <button type={isSubmit?"submit":"button"} className="btn-main" onClick={handleClick} disabled={disableNextButton===true}>
             {label}
         </button>
     );
