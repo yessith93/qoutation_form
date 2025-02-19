@@ -1573,7 +1573,7 @@ line-height: 19px;}
 }
   
 /* estado activo */
-.tasacion .form-group .form-control:focus ~ label, .tasacion .form-group .form-control:valid ~ label{
+.tasacion .form-group .form-control:focus ~ label, .tasacion .form-group .form-control:not(.empty) ~ label{
 	top: 8px;
 	font-size:13px;
 	color:#1C2B4D;

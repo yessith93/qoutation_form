@@ -8,7 +8,6 @@ const NextButton = ({ label = "Siguiente",disableNextButton =true,alternativeNex
         }
     }
     
-    
     return (
         <button type={isSubmit?"submit":"button"} className="btn-main" onClick={handleClick} disabled={disableNextButton===true}>
             {label}

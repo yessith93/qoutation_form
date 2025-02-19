@@ -14,8 +14,6 @@ const QuotationForm = () => {
         {
           formSubmitted ? <ThankYouPage /> : <FormPage />
         }
-        
-        
       </div>
     </section>
   );
