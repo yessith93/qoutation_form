@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useQuote } from '../../hooks/UseQuote';
+import { useQuote, useStep } from '../../hooks';
 import { versionService } from '../../services/get_versions';
 import ErrorMessage from '../General_components/ErrorMessage';
 import LoadingIndicator from '../General_components/LoadingIndicator';
@@ -9,7 +9,8 @@ import StepHeader from '../General_components/StepHeader';
 
 
 const Step2 = () => {
-  const { quoteData,updateQuoteData, handleNextStep } = useQuote();
+  const { quoteData,updateQuoteData } = useQuote();
+  const { handleNextStep } = useStep();
   const[disableNextButton, setDisableNextButton] = useState(true);
   const { model,version } = quoteData;
   const { name, img, id } = model;

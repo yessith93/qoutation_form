@@ -1,9 +1,10 @@
 import React from 'react';
-import { useQuote } from '../../../hooks/UseQuote';
+import { useQuote, useStep } from '../../../hooks';
 
 const ModelCard = ({ model }) => {
     const { name, img} = model;
-    const { handleNextStep, updateQuoteData } = useQuote();
+    const { updateQuoteData } = useQuote();
+    const { handleNextStep } = useStep();
     const handleClick = () => {
         updateQuoteData('model', model);
         updateQuoteData('version', {});

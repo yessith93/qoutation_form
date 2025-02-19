@@ -1,6 +1,6 @@
-import { useQuote } from '../../hooks/UseQuote';
+import { useStep } from '../../hooks';
 const NextButton = ({ label = "Siguiente",disableNextButton =true,alternativeNextFunction,isSubmit}) => {
-    const { handleNextStep } = useQuote();
+    const { handleNextStep } = useStep();
     const handleClick = () => {
         if(!isSubmit){
             alternativeNextFunction && alternativeNextFunction();

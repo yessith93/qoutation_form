@@ -1,25 +1,16 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 export const QuoteContext = createContext();
 
 // Provider component
 export const QuoteProvider = ({ children }) => {
-  const [step, setStep] = useState(1);
-  const [formSubmitted, setFormSubmitted] = useState(true);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [quoteData, setQuoteData] = useState({
     model: {},
     version: {},
-    location: '',
+    location: {},
     userInfo: {}
   });
-
-  const handleNextStep = () => {
-    setStep(prev => Math.min(prev + 1, 4));
-  };
-
-  const handlePreviousStep = () => {
-    setStep(prev => Math.max(prev - 1, 1));
-  };
 
   const updateQuoteData = (field, value) => {
     setQuoteData(prev => ({
@@ -29,10 +20,7 @@ export const QuoteProvider = ({ children }) => {
   };
 
   const value = {
-    step,
     quoteData,
-    handleNextStep,
-    handlePreviousStep,
     updateQuoteData,
     formSubmitted,
     setFormSubmitted

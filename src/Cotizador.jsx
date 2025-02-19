@@ -6,8 +6,6 @@ import FormPage from './pages/FormPage';
 import { useQuote } from './hooks/UseQuote';
 import ThankYouPage from './pages/ThankYouPage';
 
-
-
 const QuotationForm = () => {
   const { formSubmitted } = useQuote();
   return (
