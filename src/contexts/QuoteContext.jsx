@@ -5,6 +5,7 @@ export const QuoteContext = createContext();
 // Provider component
 export const QuoteProvider = ({ children }) => {
   const [step, setStep] = useState(1);
+  const [formSubmitted, setFormSubmitted] = useState(true);
   const [quoteData, setQuoteData] = useState({
     model: {},
     version: {},
@@ -32,7 +33,9 @@ export const QuoteProvider = ({ children }) => {
     quoteData,
     handleNextStep,
     handlePreviousStep,
-    updateQuoteData
+    updateQuoteData,
+    formSubmitted,
+    setFormSubmitted
   };
 
   return (
