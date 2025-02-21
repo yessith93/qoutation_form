@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Rating from '../Components/thankYouPage/rating';
 import Headers from '../Components/thankYouPage/headers';
 import InfoList from '../Components/thankYouPage/InfoList';
@@ -8,7 +7,8 @@ import {useQuote} from '../hooks';
 const thankYouPage = () => {
   const {quoteData} = useQuote();
   const {model, version, userInfo} = quoteData;
-  
+  console.log(model)
+  //use usememo for userInformation and additionalInfo
   const userInformation = [
     { label: 'Nombre completo', value: `${userInfo.nombre} ${userInfo.primer_apellido}` },
     { label: 'RUT', value: userInfo.rut },
@@ -30,13 +30,9 @@ const additionalInfo = [
         <h2 className="tit">Resumen de cotización</h2>
         <article className="car-item car-resume">
           <figure className="img-wrap">
-            <img src="/volvo/site/artic/20241204/imag/foto_0000034420241204140409__COTIZADOR_480x194.png" alt="" />
-            <h3 className="car-txt">XC60 Polestar</h3>
-            <h3 className="car-txt">XC60 T8 Polestar Engineered</h3>
-            <div className="car-price" style={{ display: 'none' }}>
-              <p className="title"></p>
-              <p className="number">$74.900.000</p>
-            </div>
+            <img src={model.img} alt={model.name} />
+            <h3 className="car-txt">{model.name}</h3>
+            <h3 className="car-txt">{version.name}</h3>
           </figure>
           <div className="cont-info">
             <div className="subtit only-desktop">Revisa tus datos <img src="/src/assets/icons/ic_arrow_r.svg" alt="" /></div>

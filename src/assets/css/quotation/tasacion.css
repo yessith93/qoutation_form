@@ -918,7 +918,6 @@ line-height: 19px;}
 .calificacion .paso-tres {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;}
 .calificacion .paso-tres .img-wrap {width: 95px; height: 95px; margin-bottom: 30px;}
 .calificacion .paso-tres .titu {margin-bottom:0;}
-.calificacion .cerrar {position: absolute; right: 16px; top: 16px; width: 21px; height: 21px;}
 
 
 .cont-step.step-1 .form-group.bg .aux {background: #F4F4F4; border-bottom: 1px solid #1C2B4D; padding: 10px 12px 0; border-radius: 2px 2px 0px 0px;}
@@ -1315,6 +1314,7 @@ line-height: 19px;}
 .cotizador .car-resume .row-info{
 	display: flex;
 	justify-content: space-around;
+	gap :40px;
 }
 
 .cotizador .car-item.car-resume{
@@ -1363,7 +1363,6 @@ line-height: 19px;}
 	filter: brightness(0) saturate(100%) invert(12%) sepia(58%) saturate(1254%) hue-rotate(195deg) brightness(88%) contrast(90%);
 }
 .cotizador .car-item.car-resume .cont-info{
-	flex: 1 0 auto;
 	padding: 50px 40px;
 }
 .cotizador .car-item.car-resume .cont-info .row-info{
