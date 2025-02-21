@@ -8,7 +8,7 @@ export const QuoteProvider = ({ children }) => {
   const [quoteData, setQuoteData] = useState({
     model: {},
     version: {},
-    location: {},
+    concesionario: {},
     userInfo: {}
   });
 

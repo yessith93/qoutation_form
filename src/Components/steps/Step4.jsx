@@ -110,11 +110,11 @@ const Step4 = () => {
     <form onSubmit={HandleSubmit} className="div-step step4">
       <StepHeader step={4} title="Ingresa tus datos y elige tus preferencias de contacto" />
       <div className="row">
-        <TextInput label="Nombre" name="nombre" value={formData.nombre} onChange={handleInputChange} error={errors.nombre} />
-        <TextInput label="Apellidos" name="primer_apellido" value={formData.primer_apellido} onChange={handleInputChange} error={errors.primer_apellido} />
-        <TextInput label="RUT" name="rut" maxLength="11" minLength="8" value={formData.rut} onChange={handleInputChange} error={errors.rut} />
-        <TextInput label="Email de Contacto" name="email" value={formData.email} onChange={handleInputChange} error={errors.email} />
-        <TextInput label="Número de teléfono" name="telefono" maxLength="9" value={formData.telefono} onChange={handleInputChange} error={errors.telefono} />
+        <TextInput label="Nombre" name="nombre" value={formData.nombre} required={true} onChange={handleInputChange} error={errors.nombre} />
+        <TextInput label="Apellidos" name="primer_apellido" value={formData.primer_apellido} required={true} onChange={handleInputChange} error={errors.primer_apellido} />
+        <TextInput label="RUT" name="rut" maxLength="11" minLength="8" value={formData.rut} required={true} onChange={handleInputChange} error={errors.rut} />
+        <TextInput label="Email de Contacto" name="email" value={formData.email} required={true} onChange={handleInputChange} error={errors.email} />
+        <TextInput label="Número de teléfono" name="telefono" maxLength="9" value={formData.telefono} required={true} onChange={handleInputChange} error={errors.telefono} />
         <RadioGroup label="Necesito financiamiento para adquirir este auto" name="financiamiento" value={formData.financiamiento} onChange={handleInputChange} />
         <RadioGroup label="Usaré mi auto actual en parte de pago" name="auto_parte_pago" value={formData.auto_parte_pago} onChange={handleInputChange} />
         <RadioGroup label="Quisiera participar de un Test Drive de este vehículo" name="test_drive" value={formData.test_drive} onChange={handleInputChange} />
