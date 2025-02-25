@@ -37,7 +37,7 @@ const Dropdown = ({ label_text, options, onChange}) => {
                 <div className="enc-select" onClick={handleLabelClick}>
                     <p className="drop-txt">{labelText}</p>
                     <figure className="ic-arrow">
-                        <img src="/src/assets/icons/ic_arrow_d.svg" alt="" />
+                        <img src="/icons/ic_arrow_d.svg" alt="" />
                     </figure>
                 </div>
                 <div className="list-select" ref={listRef} style={{ maxHeight: '0px' }}>

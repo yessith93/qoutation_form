@@ -15,7 +15,7 @@
         "nombre_corto": "EC40 Pure Electric",
         "asocfile": "/site/docs/20230606/20230606175503/ficha_tecnica_ec40_my25.pdf",
         "ocultar_informado": "si",
-        "foto": "/src/assets/models_images/0c4.png"
+        "foto": "/models_images/0c4.png"
     },
     {
         "modelo": "EX40 Pure Electric",
@@ -33,7 +33,7 @@
         "nombre_corto": "EX40 Pure Electric",
         "asocfile": "/site/docs/20230615/20230615175004/volvo___ficha_tecnica_ex40_my25.pdf",
         "ocultar_informado": "si",
-        "foto": "/src/assets/models_images/xc40-pure.png"
+        "foto": "/models_images/xc40-pure.png"
     },
     {
         "modelo": "EX30 Eléctrico",
@@ -52,7 +52,7 @@
         "nombre_corto": "EX30",
         "asocfile": "/site/docs/20240313/20240313151901/ficha_tecnica_ex30_my25_.pdf",
         "ocultar_informado": "si",
-        "foto": "/src/assets/models_images/foto_0000059020240313151901_ex30-reveal.png"
+        "foto": "/models_images/foto_0000059020240313151901_ex30-reveal.png"
     },
     {
         "modelo": "XC90 Plug-In Hybrid",
@@ -70,7 +70,7 @@
         "nombre_corto": "XC90 Plug-In Hybrid",
         "asocfile": "/site/docs/20230525/20230525133458/ficha_tecnica_xc90_my25.pdf",
         "ocultar_informado": "si",
-        "foto": "/src/assets/models_images/foto_0000016220230525133458_1.png"
+        "foto": "/models_images/foto_0000016220230525133458_1.png"
     },
     {
         "modelo": "XC60 Plug-In Hybrid",
@@ -88,7 +88,7 @@
         "nombre_corto": "XC60 Plug-In Hybrid",
         "asocfile": "/site/docs/20230606/20230606175321/ficha_tecnica_xc60_my25.pdf",
         "ocultar_informado": "si",
-        "foto": "/src/assets/models_images/foto_0000024620230606175321_xc60l.png"
+        "foto": "/models_images/foto_0000024620230606175321_xc60l.png"
     },
     {
         "modelo": "XC60 Polestar",
@@ -106,6 +106,6 @@
         "nombre_corto": "XC60 Polestar Engineered",
         "asocfile": "/site/docs/20241204/20241204140409/ficha_tecnica_xc60_t8_polestar_engineered.pdf",
         "ocultar_informado": "si",
-        "foto": "/src/assets/models_images/foto_0000034420241204140409__COTIZADOR_480x194.png"
+        "foto": "/models_images/foto_0000034420241204140409__COTIZADOR_480x194.png"
     }
 ]

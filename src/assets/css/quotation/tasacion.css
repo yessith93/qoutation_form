@@ -73,7 +73,7 @@
 align-items: center;
 justify-content: center;
 	color: #8C8C8C;
-	max-width: 330px;
+	max-width: 340px;
 	width: 100%;
 	font-size: 18px;
 line-height: 22px;
@@ -1052,6 +1052,7 @@ line-height: 19px;}
     background: none;
     outline: none;
 	border: none;
+	margin: 0 auto;
 }
 .cotizador .tab-content{
 	margin-top: 40px;
