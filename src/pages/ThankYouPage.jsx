@@ -1,25 +1,26 @@
-import Rating from '../Components/thankYouPage/rating';
-import Headers from '../Components/thankYouPage/headers';
-import DropdownMobile from '../Components/thankYouPage/DropdownMobile';
 import { useQuote } from '../hooks';
-import ModelCard from '../Components/thankYouPage/ModelCard';
-import Info from '../Components/thankYouPage/info';
+import { ModelCard, Info, Headers, DropdownMobile, Rating } from '../Components/thankYouPage';
 
-const thankYouPage = () => {
+const getUserInfo = (userInfo) => [
+  { label: 'Nombre completo', value: `${userInfo?.nombre || ''} ${userInfo?.primer_apellido || ''}`.trim() },
+  { label: 'RUT', value: userInfo?.rut || 'No especificado' },
+  { label: 'Email', value: userInfo?.email || 'No especificado' },
+  { label: 'Teléfono', value: userInfo?.telefono || 'No especificado' },
+];
+
+const getAdditionalInfo = (userInfo) => [
+  { label: 'Necesito financiamiento para adquirir este auto', value: userInfo?.financiamiento ? 'Sí' : 'No' },
+  { label: 'Usaré mi auto actual en parte de pago', value: userInfo?.auto_parte_pago ? 'Sí' : 'No' },
+  { label: 'Quisiera participar de un Test Drive de este vehículo', value: userInfo?.test_drive ? 'Sí' : 'No' },
+];
+
+
+const ThankYouPage = () => {
   const { quoteData } = useQuote();
-  const { model, version, userInfo } = quoteData;
+  const { model = {}, version = {}, userInfo = {} } = quoteData || {};
 
-  const userInformation = [
-    { label: 'Nombre completo', value: `${userInfo.nombre} ${userInfo.primer_apellido}` },
-    { label: 'RUT', value: userInfo.rut },
-    { label: 'Email', value: userInfo.email },
-    { label: 'Teléfono', value: userInfo.telefono },
-  ];
-  const additionalInfo = [
-    { label: 'Necesito financiamiento para adquirir este auto', value: userInfo.financiamiento ? 'Sí' : 'No' },
-    { label: 'Usaré mi auto actual en parte de pago', value: userInfo.auto_parte_pago ? 'Sí' : 'No' },
-    { label: 'Quisiera participar de un Test Drive de este vehículo', value: userInfo.test_drive ? 'Sí' : 'No' },
-  ];
+  const userInformation = getUserInfo(userInfo);
+  const additionalInfo = getAdditionalInfo(userInfo);
 
   return (
     <>
@@ -29,7 +30,7 @@ const thankYouPage = () => {
         <article className="car-item car-resume">
           <ModelCard model={model} version={version} />
           <Info userInformation={userInformation} additionalInfo={additionalInfo} />
-          <DropdownMobile userInfo={userInformation} additionalInfo={additionalInfo} />
+          <DropdownMobile userInformation={userInformation} additionalInfo={additionalInfo} />
         </article>
         <Rating />
       </div>
@@ -37,4 +38,4 @@ const thankYouPage = () => {
   );
 };
 
-export default thankYouPage;
+export default ThankYouPage;

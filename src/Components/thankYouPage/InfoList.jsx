@@ -1,6 +1,6 @@
 import styles from '../../assets/css/quotation/Components/thankYouPage/InfoList.module.css';
-console.log(styles);
-const InfoList = ({ items }) => (
+
+const InfoList = ({ items = []}) => (
     <ul className={`${styles.info_list} info-list`}>
       {items.map((item, index) => (
         <li key={index}>

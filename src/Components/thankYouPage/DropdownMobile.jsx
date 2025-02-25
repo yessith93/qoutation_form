@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const DropdownMobile = ({ userInfo, additionalInfo }) => {
+const DropdownMobile = ({ userInformation, additionalInfo }) => {
     const [showDetailsMobile, setShowDetailsMobile] = useState(false);
 
     const handleToggleDetailsMobile = () => {
@@ -18,7 +18,7 @@ const DropdownMobile = ({ userInfo, additionalInfo }) => {
                 <div className="list-select">
                     <div className="article-inner">
                         <div className="row-info">
-                            <InfoList items={userInfo} />
+                            <InfoList items={userInformation} />
                             <InfoList items={additionalInfo} />
                         </div>
                     </div>
