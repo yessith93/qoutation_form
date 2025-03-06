@@ -1,8 +1,9 @@
 import { useState,useEffect,useMemo } from "react";
 import Dropdown from "../../General_components/Dropdown";
 
-const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
-    const initialLabelText = "Selecciona Comuna";
+const initialLabelText = "Selecciona Comuna";
+
+const SecondDealerSelector = ({  selectedOption,selectedRegion, setSelectOption }) => {
     const [labelText, setLabelText] = useState(initialLabelText);
     const [filteredComunas, setFilteredComunas] = useState([]);
     const comunas = useMemo(() => ({
@@ -69,20 +70,21 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
     const onChange = (option) => {
         if (option) {
             if (filteredComunas.find(c => c.id === option.id)) {
-                setSelectOption(option.name);
+                setSelectOption(option);
             }
         }
     }
     //change the label when selectedRegion changes
     useEffect(() => {
-        if (selectedRegion==="") {
+        if (selectedRegion.name==="") {
             setLabelText(initialLabelText);
         }else
-            setLabelText(`Selecciona Comuna de ${selectedRegion}`);
-        setFilteredComunas(comunas[selectedRegion] ?? []);
-        setSelectOption("");
-    }, [selectedRegion]);
+            setLabelText(`Selecciona Comuna de ${selectedRegion.name}`);
 
+        setFilteredComunas(comunas[selectedRegion.name] ?? []);
+        setSelectOption({id:"",name:""});
+    }, [selectedRegion.id]);
+    
     return (
         <>
             {
@@ -90,7 +92,7 @@ const SecondDealerSelector = ({  selectedRegion, setSelectOption }) => {
                 ? (
                     <Dropdown label_text={labelText} options={[]}  />
                 ):(
-                    <Dropdown label_text={labelText} options={filteredComunas} onChange={onChange}  />
+                    <Dropdown label_text={labelText} options={filteredComunas} onChange={onChange} selectedOption={selectedOption} />
                 ) 
             }
         </>

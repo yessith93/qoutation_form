@@ -1,7 +1,7 @@
 import { useState,useEffect,useMemo } from "react";
 import Dropdown from "../../General_components/Dropdown";
 
-const ThirdDealerSelector = ({  selectedComuna, setSelectOption }) => {
+const ThirdDealerSelector = ({  selectedComuna,selectedOption, setSelectOption }) => {
     const initialLabelText = "Selecciona Concesionario";
     const [labelText, setLabelText] = useState(initialLabelText);
     const [filteredDealers, setFilteredDealers] = useState([]);
@@ -75,13 +75,14 @@ const ThirdDealerSelector = ({  selectedComuna, setSelectOption }) => {
     }
     //change the label when selectedRegion changes
     useEffect(() => {
-        if (selectedComuna==="") {
+        if (selectedComuna.name==="") {
             setLabelText(initialLabelText);
         }else
-            setLabelText(`Selecciona Comuna de ${selectedComuna}`);
-            setFilteredDealers(comunas[selectedComuna] ?? []);
-            setSelectOption({});
-    }, [selectedComuna]);
+            setLabelText(`Selecciona Comuna de ${selectedComuna.name}`);
+
+        setFilteredDealers(comunas[selectedComuna.name] ?? []);
+        setSelectOption({id:"",name:""});
+    }, [selectedComuna.id]);
 
     return (
         <>
@@ -90,7 +91,7 @@ const ThirdDealerSelector = ({  selectedComuna, setSelectOption }) => {
                 ? (
                     <Dropdown label_text={labelText} options={[]}  />
                 ):(
-                    <Dropdown label_text={labelText} options={filteredDealers} onChange={onChange}  />
+                    <Dropdown label_text={labelText} options={filteredDealers} onChange={onChange} selectedOption={selectedOption}/>
                 ) 
             }
         </>
