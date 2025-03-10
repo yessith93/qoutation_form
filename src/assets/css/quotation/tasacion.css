@@ -123,7 +123,7 @@ line-height: 22px;
     color: #1A1A1A;
     margin-bottom: 30px;
 }
-.tasacion .titu strong {font-family: AvenirNextLTPro-Bold,sans-serif;}
+.tasacion .titu strong {font-family: AvenirNextLTPro-Bold,sans-serif;font-weight: 600;}
 .tasacion .instruction {margin-bottom: 60px; font-family: AvenirNextLTPro-Regular,sans-serif; color: #666666;font-size: 18px; line-height: 22px; text-align: center;}
 .tasacion .baj{
     font-size: 18px;
@@ -193,25 +193,6 @@ line-height: 22px;
 	background-position: 90%;
 	background-size: 100%;
 }
-.tasacion .step-bar .ic-car{
-	background-image: url("../../imag/v1/icon/ic_step_g_01.svg");
-}
-.tasacion .step-bar .ic-credential{
-	background-image: url("../../imag/v1/icon/ic_step_g_02.svg");
-}
-.tasacion .step-bar .ic-check{
-	background-image: url("../../imag/v1/icon/ic_step_g_03.svg");
-}
-
-.tasacion .step-bar .active .ic-car{
-	background-image: url("../../imag/v1/icon/ic_step_w_01.svg");
-}
-.tasacion .step-bar .active .ic-credential{
-	background-image: url("../../imag/v1/icon/ic_step_w_02.svg");
-}
-.tasacion .step-bar .active .ic-check{
-	background-image: url("../../imag/v1/icon/ic_step_w_03.svg");
-}
 
 .tasacion .step-bar .ic-number {font-family: avenirnextltpro-medium, sans-serif; color: #969696; font-size: 22px; line-height: 26px;}
 .tasacion .step-bar .active .ic-number {color: #ffffff;}
@@ -245,61 +226,6 @@ line-height: 22px;
 	color: #1C2B4D;
 }
 
-.tasacion .form-search{
-	margin-bottom: 40px;
-}
-
-.tasacion .form-search .wrap-search{
-	max-width: 650px;
-	margin: 0 auto 50px;
-	display: flex;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-ms-flex-align: flex-start;
-	-moz-box-align: flex-start;
-	-webkit-box-align: flex-start;
-	-webkit-align-items: flex-start;
-	align-items: flex-start;
-}
-.tasacion .form-search .wrap-search .pref{
-	flex: 1 0 auto;
-	-webkit-flex: 1 0 auto;
-	margin-right: 20px;
-}
-
-.tasacion .form-search .wrap-search .pref{
-	color: #232323;
-	margin-right: 20px;
-	font-family: nunito_sans_extraboldregular, sans-serif;
-}
-
-.tasacion .form-search .wrap-search .btn-sec{
-	border-color: #1C2B4D;
-	color: #1C2B4D;
-	margin-left: 20px;
-	max-width: 205px;
-	border-radius: 0rem;
-	height: 56px;
-}
-.tasacion .step-2 .form-group select {color: #414141;}
-
-.tasacion .form-search .wrap-search .btn-sec:hover{
-	color: #ffffff;
-}
-
-.tasacion .form-search .instruction{
-	text-align:center;
-	margin: 40px auto 0;
-	max-width: 500px;
-	line-height: 1.5;
-}
 
 .tasacion .form-group label, .tasacion .form-group .subtit{
 	padding-bottom: 20px;
@@ -307,17 +233,6 @@ line-height: 22px;
 	display: block;
     font-family: var(--font-regular);
 }
-.tasacion .form-group select{
-	background-image: url("../../imag/v1/icon/chevron_down_round.svg");
-	background-position: 95%;
-	padding-right: 30px !important;
-}
-
-ul.metodo-pago {margin:0 auto 60px;display: table;}
-ul.metodo-pago li { float:left; margin:0 5px; }
-ul.metodo-pago li a {border-bottom:2px solid #414141; display: block; min-width: 165px; font-family: AvenirNextLTPro-Regular,sans-serif; color: #666666; font-size: 18px; line-height: 22px; text-align: center; padding-bottom:10px;}
-ul.metodo-pago li.select a {font-family: AvenirNextLTPro-Bold,sans-serif; float:left; margin:0 5px; border-bottom:4px solid #414141; color: #414141;}
-
 .tasacion .form-group input, .tasacion .form-group select{
 	width: 100%;
 	background-color: #F4F4F4;
@@ -350,8 +265,6 @@ border-bottom-right-radius: 0;
 -webkit-border-bottom-left-radius: 0;
 border-bottom-left-radius: 0;
 }
-
-.tasacion .form-group .wrap-search DIV {flex:1 1 400px;}
 
 .tasacion .form-group input::placeholder, .tasacion .form-group select::placeholder{
 	color: #AAAAAA;
@@ -515,24 +428,7 @@ border-bottom-left-radius: 0;
 	color: #898989;
 	line-height: 1.3;
 	display: flex;
-}
-
-/* deslizador */
-.tasacion .form-group .slidecontainer {
-	width: 100%;
-	margin-top: 15px;
-    margin-bottom: 45px;
-    display: block;
-}
-
-.tasacion .form-group .slidecontainer p{
-	flex: 1 0 auto;
-	-webkit-flex: 1 0 auto;
-	text-align: right;
-	color: #014E98;
-	font-family: nunito_sans_extraboldregular, sans-serif;
-}
-  
+}  
 .tasacion .form-group .slider {
 	-webkit-appearance: none;
 	width: 100%;
@@ -619,88 +515,24 @@ line-height: 29px;
 	margin-top: 40px;
 	font-family: nunito_sans_extraboldregular, sans-serif;
 }
-.tasacion .form-group .slidecontainer .top-range {display: flex;margin-bottom: 30px;}
-.tasacion .form-group .slidecontainer .top-range span {font-family: AvenirNextLTPro-Demi,sans-serif; font-size: 18px; line-height: 22px;color: #414141;}
-.tasacion .form-group .slidecontainer .top-range p {font-family: AvenirNextLTPro-Demi,sans-serif;color: #414141;font-size: 20px; line-height: 24px;}
-.tasacion .form-group .slidecontainer .top-range p span {font-family: AvenirNextLTPro-Demi,sans-serif;color: #414141;font-size: 20px; line-height: 24px;}
-.tasacion .form-group .slidecontainer .bottom-range {display: flex; margin-top: 30px; justify-content:space-between;}
-.tasacion .form-group .slidecontainer .bottom-range p {flex: 0 1 auto; -webkit-flex: 0 1 auto;font-family: AvenirNextLTPro-Regular,sans-serif;color: #666666;font-size: 16px;
-line-height: 19px;}
-.box-datos.dos .titu.datos, .form-group .auxi-form .titu.datos {font-size: 20px; line-height: 24px; color: #1A1A1A;text-align: left;}
-.box-datos.dos .auxi-form, .form-group .auxi-form {background-color: #F4F4F4;}
-.box-datos.dos .form-group .auxi-form label, .form-group .auxi-form label, .form-group .auxi-form .subtit {font-family: "AvenirNextLTPro-Demi", Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, sans-serif; padding-bottom:0px; padding-top: 10px; padding-left: 12px;}
-.box-datos.dos .form-group .auxi-form input, .form-group .auxi-form input, .box-datos.dos .form-group .auxi-form select, .form-group .auxi-form select {padding: 12px; font-family: AvenirNextLTPro-Regular,sans-serif;}
-
-
-.box-datos.dos .lg-6 .lg-6.form-group {margin-bottom:0; border-left-width:0; width: 48%;}
-.box-datos.dos .lg-6 .lg-6.form-group + .form-group {margin-bottom: 25px; margin-left: 18px;}
 .cont-btn.dos {}
-.cont-btn.tres {display:none;}
 
 
 
 @media (max-width: 767px) {
-	.box-datos .seleccion {display: block !important;}
-	.box-datos .seleccion .form-group {width:100% !important;}
 	.tasacion h3.titu {margin: 20px auto;}
-	ul.metodo-pago {margin: 0 auto 30px;}
-	.tasacion .form-group .slidecontainer {margin-bottom:20px;}
-	.info-financiera .cont-finaciera {display: block !important;}
-	.info-financiera .cont-finaciera .cont-valor {display: flex; justify-content:space-between;}
-  	.info-financiera .cont-finaciera .cont-valor .valor-financiero {flex: 0 1 45%; -webkit-flex: 0 1 45%;font-size: 16px !important;
-line-height: 19px !important;}
-  	.resumen-financiero .info.uno span {flex: 0 1 40%; -webkit-flex: 0 1 40%;font-size: 16px !important;
-line-height: 19px !important;}
-  	.resumen-financiero .info.uno span.valor {flex: 0 1 60%; -webkit-flex: 0 1 60%;font-size: 24px !important;
-line-height: 29px !important;}
-  	.resumen-financiero .info.dos span {font-size: 16px !important;
-line-height: 19px !important;}
-
   	.tasacion .tit {font-size: 10px; line-height: 12px}
   	.tasacion .step-bar li .subtit {font-size: 7px; line-height: 8px;}
   	.tasacion .instruction {font-size: 14px; line-height: 17px;}
-
-  	.cont-btn.tres {position: fixed; bottom: 77px;}
 }
 @media (max-width: 500px) {
-	.cont-step.step-3 .cont-detail .cont-datos .row .col { margin-bottom:20px; }
-	.btn-cierre {display: none !important;}
 	.tasacion .btn-main {flex: 0 1 100%; -webkit-flex: 0 1 100%;font-size: 13px; line-height: 16px;max-width: 600px;}
-	/*.cont-btn.dos {display:none;}*/
-	.cont-btn.tres {display:flex; flex-direction: row !important; flex-wrap: nowrap !important;}
-	.tasacion .cont-btn.tres a + a {margin-bottom: 0;}
 	.tasacion .btn-sec {padding: 16px 30px; height: auto;font-size: 13px; line-height: 16px !important;}
 	.calificacion {position: fixed;z-index: 99; position: fixed !important;bottom: 70px !important;}
-	.tasacion .form-search .wrap-search {display: block;}
-	.tasacion .form-group .wrap-search DIV {overflow: hidden;}
-	.tasacion .form-group .wrap-search .btn-sec {margin: 20px auto 0 !important; display: table; float: none;}
-	.box-datos.dos .lg-6 .lg-6.form-group  {margin-bottom: 25px!important; margin-left:0!important; width: 100%;}
-	.box-datos.dos .form-group .auxi-form label, .form-group .auxi-form label { display:none; }
-	.dato-tres {margin-bottom: 20px !important; float: left !important; clear: none !important; margin-right: 10px; width: 47%;}
 	.tasacion .cont-detail .cont-txt .subtit {font-size: 18px; line-height: 22px;}
 	.tasacion .cont-detail .cont-txt .datos-persona {font-size: 14px; line-height: 17px;}
 	.tasacion .cont-detail .cont-txt .baj {font-size: 14px; line-height: 17px;}
-	.cont-datos{padding: 15px 15px 60px;}
-	.cont-datos .valor {font-size: 12px !important; line-height: 14px !important;}
-	.cont-datos .row .lg-5 .precio {font-size: 18px !important; line-height: 22px !important;}
-	.cont-datos .revisar-datos {font-size: 14px !important; line-height: 17px !important;}
-	.cont-datos .dato-dos span {font-size: 14px !important; line-height: 17px !important;}
-	.cont-datos .dato-dos span + span {font-size: 14px !important; line-height: 17px !important;}
-	.cont-datos .revisar-datos {background-image: url("../../imag/v1/icon/arrow_downb.svg")!important; width: 100%; border-bottom: 1px solid #000; padding: 0 30px 10px 0 !important;}
-	.cont-datos .tit-modelo {font-size: 14px !important; line-height: 17px !important;}
-	.cont-datos .dato-uno {font-size: 12px !important; line-height: 14px !important; margin-bottom:20px !important;}
-	.dato-tres span {font-size: 12px;
-line-height: 14px;}
-	.dato-tres span.destacado{font-size: 14px;
-line-height: 17px;}
-	.cont-datos {padding: 15px  15px 0 15px !important; margin-bottom: 25px  !important;}
-	.cont-step.step-3 .cont-btn.dos {display: block;}
-	.cont-step.step-3 .cont-btn.dos .btn-main {max-width: 500px !important; margin-bottom: 10px !important; justify-content: flex-start !important;}
-	ul.metodo-pago {margin: 0 auto 60px; display: flex;}
-	ul.metodo-pago li {float: left; margin: 0 5px; width: 50%;}
-	ul.metodo-pago li a {min-width: auto;}
-	.box-datos.dos .titu.datos {font-family: avenirnextltpro-bold,sans-serif;color: #414141;font-size: 16px;
-line-height: 19px;}
+	
 }
 
 
@@ -728,10 +560,6 @@ line-height: 19px;}
 	.tasacion .step-bar li:before{
 		top: 48%;
 	}
-	.tasacion .form-search .wrap-search{
-		flex-direction: column;
-		align-items: flex-start;
-	}
 	.tasacion .step-bar{
 		flex-wrap: wrap;
 		margin-bottom: 20px;
@@ -754,10 +582,6 @@ line-height: 19px;}
 		font-size: 20px;
 		color: #232323;
 	}
-	.tasacion .form-search .wrap-search .pref{
-		margin-bottom: 20px;
-		margin-right: 0;
-	}
 	.tasacion .step-bar li{
 		padding: 15px;
 	}
@@ -777,9 +601,6 @@ line-height: 19px;}
 	.tasacion .step-bar li:nth-child(3) .img-wrap{
 		margin-right: 0;
 	}
-	/*.tasacion .form-search .wrap-search .btn-sec{
-		display: none;
-	}*/
 	.tasacion .form-group input, .tasacion .form-group select{
 		padding: 13px 20px;
 	}
@@ -794,13 +615,6 @@ line-height: 19px;}
 
 	.tasacion .form-group .radio-group label{
 		font-size: 16px;
-	}
-	.tasacion .form-group .slidecontainer p{
-		margin-bottom: 20px;
-	}
-	.tasacion .form-group .slidecontainer{
-		flex-direction: column-reverse;
-		align-items: flex-start;
 	}
 	.tasacion .form-group .slider{
 		flex: 0 0 7px;
@@ -853,10 +667,6 @@ line-height: 19px;}
 		padding: 0 15px;
 	}
 }
-
-
-.cont-datos { padding: 50px 25px 60px; margin: 0 auto; max-width: 940px; overflow: hidden;  background: #F4F4F4; border-bottom: 6px solid #1C2B4D; box-shadow: 0px 9px 11px rgba(170, 170, 170, 0.23); border-radius: 8px 8px 2px 2px;}
-.cont-step.step-3 .cont-detail {display: block;}
 
 .cont-btn.dos .btn-main {max-width: 351px; height: 70px; padding: 0px 16px; text-transform: none; font-family: avenirnextltpro-demi, sans-serif; background: #F4F4F4; color: #000000; font-size: 18px; line-height: 22px;display: flex; align-items:center; justify-content:center; }
 .cont-btn.dos .btn-main .img-wrap {flex: 0 1 30px; text-transform: none; margin: 0 10px 0 0}
@@ -912,59 +722,6 @@ line-height: 19px;}
 .calificacion .paso-tres {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;}
 .calificacion .paso-tres .img-wrap {width: 95px; height: 95px; margin-bottom: 30px;}
 .calificacion .paso-tres .titu {margin-bottom:0;}
-
-
-.cont-step.step-1 .form-group.bg .aux {background: #F4F4F4; border-bottom: 1px solid #1C2B4D; padding: 10px 12px 0; border-radius: 2px 2px 0px 0px;}
-.cont-step.step-1 .form-group.bg .aux .form-control {background: #F4F4F4; border-color:#F4F4F4 ;}
-
-.box-datos {max-width: 607px; width: 100%; margin: 0 auto;}
-.box-datos .seleccion {display: flex; justify-content: space-between; margin-bottom: 30px;}
-.box-datos .seleccion .form-group {width: 47%;}
-
-.box-datos.dos {max-width: 1000px; width: 100%; margin: 0 auto;}
-.box-datos.dos + .box-datos.dos {margin: 60px auto 0;}
-.wrap-search span {float: left; font-size: 14px; line-height: 17px; color: #414141; margin-top: 10px;  margin-left: 10px}
-
-.info-financiera {margin-bottom:30px; }
-.info-financiera .cont-finaciera {display: flex; justify-content:space-between;}
-.info-financiera .cont-finaciera .form-group {flex: 0 1 50%; -webkit-flex: 0 1 50%;}
-.info-financiera .cont-finaciera .cont-valor {flex: 0 1 50%; -webkit-flex: 0 1 40%;}
-.info-financiera .cont-finaciera .cont-valor .valor-financiero { display: flex; justify-content:space-between; margin-bottom: 20px;}
-.info-financiera .cont-finaciera .cont-valor .valor-financiero span {font-family: AvenirNextLTPro-Demi,sans-serif; font-size: 18px; line-height: 22px; color: #414141;}
-.info-financiera .cont-finaciera .cont-valor .valor-financiero span.item {display: flex; align-items:center;}
-.info-financiera .cont-finaciera .cont-valor .valor-financiero span.item a {display: flex; align-items:center; margin-left: 5px}
-
-.resumen-financiero { padding:20px; background: #F4F4F4; border-bottom: 6px solid #1C2B4D; box-shadow: 0px 9px 11px rgba(170, 170, 170, 0.23); border-radius: 8px 8px 2px 2px; }
-.resumen-financiero .info.uno {display: flex; justify-content:space-between; border-bottom: 1px solid #D2D1D1; padding-bottom: 30px}
-.resumen-financiero .info.uno span {font-family: AvenirNextLTPro-Demi,sans-serif; display: flex; align-items:center;color: #414141; font-size: 24px; line-height: 29px;}
-.resumen-financiero .info.uno span.valor {font-family: AvenirNextLTPro-Demi,sans-serif; color: #1C2B4D;font-size: 40px; line-height: 48px;}
-.resumen-financiero .info.dos {display: flex; justify-content:space-between; padding-top: 30px; padding-bottom: 30px}
-.resumen-financiero .info.dos span {font-family: AvenirNextLTPro-Demi,sans-serif; display: flex; align-items:center; color: #666666; font-size: 24px; line-height: 29px;}
-.resumen-financiero .info.dos span.valor {font-family: AvenirNextLTPro-Demi,sans-serif; color: #666666; font-size: 24px; line-height: 29px;}
-.btn-detalle {color: #1C2B4D; font-size: 16px; line-height: 19px; font-family: AvenirNextLTPro-Demi,sans-serif;display: flex; align-items:center; }
-.btn-detalle img {margin-left: 5px}
-.btn-cierre {font-family: AvenirNextLTPro-Demi,sans-serif;color: #1C2B4D; font-size: 18px; line-height: 22px; margin: 0 auto; display: table;}
-
-.cont-datos .tit-modelo {margin-bottom:15px; font-family: AvenirNextLTPro-Demi,sans-serif;font-size: 24px; line-height: 29px; color: #414141;}
-.cont-datos .dato-uno {float: left; margin-bottom: 30px;color: #414141; font-size: 18px; line-height: 22px; font-family:AvenirNextLTPro-Regular,sans-serif;}
-.cont-datos .dato-uno + .dato-uno {margin-left: 15px; margin-bottom: 30px;font-family:AvenirNextLTPro-Regular,sans-serif;}
-.cont-datos .valor {color: #666666;font-size: 18px; line-height: 22px; width: 100%; display: table;}
-.cont-datos .row .lg-5 .precio {margin-bottom: 30px; font-family: AvenirNextLTPro-Demi,sans-serif; color:#1C2B4D; font-size: 40px; line-height: 48px; float: left; clear: both;}
-.cont-datos .revisar-datos {float: left; clear: both;background-image: url("../../imag/v1/icon/arrow_next.svg"); background-position: 95%; background-repeat: no-repeat; font-family: AvenirNextLTPro-Demi,sans-serif; color:#1C2B4D; font-size: 20px; padding: 0 30px 0 0; display: table;}
-.cont-datos .dato-dos {margin-bottom: 20px; float: left; clear: both;}
-.cont-datos .dato-dos span {color: #666666;font-size: 16px; line-height: 19px; float: left; clear: both;}
-.cont-datos .dato-dos span + span {color: #414141;font-size: 18px; line-height: 22px; float: left; clear: both;}
-.cont-datos .dato-dos a {color: #414141;font-size: 18px; line-height: 22px;float: left; clear: both;}
-.dato-tres {margin-bottom: 20px; float: left; clear: both;}
-.dato-tres span {font-family: avenirnextltpro-medium,sans-serif;color: #414141;font-size: 18px; line-height: 22px;float: left; clear: both;}
-.dato-tres span.destacado {font-family: AvenirNextLTPro-Demi,sans-serif; color: #1C2B4D; font-size: 18px; line-height: 22px;float: left; clear: both;}
-.cont-step.step-3 .img-wrap {margin:0 auto; display: table;}
-
-
-
-
-
-
 
 /*----*/
 
@@ -1635,9 +1392,6 @@ line-height: 19px;}
 
 /* Media querys */
 @media (min-width: 430px) and (max-width: 767px) {
-	.tasacion .cont-btn, .tasacion .cont-btn.tres {
-		bottom: 69px !important;
-	}
 	.tasacion .cont-btn.dos{
 		bottom: 0 !important;
 	}
@@ -1710,23 +1464,9 @@ line-height: 19px;}
 	.cotizador .cont-btn:not(.dos) a, .cotizador .cont-btn:not(.dos) a + a{
 		margin: 0
 	}
-	.tasacion .cont-step.step-1 .cont-btn {position: relative; bottom: 0; margin:20px auto; }
+	
 	.tasacion .cont-btn.dos {display: none;}
-	.cont-step.step-3 .cont-btn.dos {display: block; position: relative; bottom: 0; margin: 15px auto;}
-	.cont-step.step-3 .cont-btn.dos .btn-main {margin-bottom: 20px}
-	.cont-step.step-3 .cont-btn.dos .btn-main {justify-content: flex-start;}
-	.tasacion .cont-btn, .tasacion .cont-btn.tres {/*position: fixed;*/ bottom: 77px; z-index: 10; left: 0; right: 0; display: flex; flex-wrap: nowrap; flex-direction: row-reverse; padding: 0; max-width: 450px; 
-		max-width: 100%; margin: 0 auto;}
-	.tasacion .cont-btn, .tasacion .cont-btn.tres a, .tasacion .cont-btn, .tasacion .cont-btn.tres a + a {margin: 0}
-	.tasacion .cont-btn, .tasacion .cont-btn.tres .btn-main {z-index: 0;justify-content: flex-start;text-align: left;}
 	.calificacion {right: 0; left: 0; margin: 0 auto;}
-	.dato-tres {
-  margin-bottom: 20px !important;
-  float: left !important;
-  clear: none !important;
-  margin-right: 10px;
-  width: 47%;
-}
 
 	.tasacion.cotizador .cont-btn.dos {display: flex; position: relative; bottom: 0; margin: 15px auto; 
 		justify-content: center !important;}
@@ -2015,7 +1755,7 @@ margin-bottom: 10px;color: #414141;
     color: #1A1A1A;
     /* font-family: "VolvoNovum-Regular"; */
     font-style: normal;
-    font-weight: 500;
+    /* font-weight: 500; */
     line-height: normal;
     text-transform: none;
 	font-size: 36px;
@@ -2035,7 +1775,7 @@ margin-bottom: 10px;color: #414141;
 }
 .cotizador .tab-bar .cont-tabs .tablink {
     color: #53565A;
-    font-family: "VolvoNovum-Medium";
+    /* font-family: "VolvoNovum-Medium"; */
     font-weight: 500;
     line-height: normal;
 }
