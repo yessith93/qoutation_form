@@ -1081,17 +1081,14 @@ line-height: 19px;}
 }
 
 .cotizador .version-sel .car-item{
-	padding: 24px;
+	cursor: initial;
 }
 
 .cotizador .car-item{
 	background-color: #F4F4F4;
 	border-bottom: 3px solid  #1C2B4D;
 	border-radius: 8px 8px 2px 2px;
-}
-.cotizador .car-item a{
 	padding: 24px;
-	display: block;
 	cursor: pointer;
 }
 .cotizador .car-item .img-wrap img{

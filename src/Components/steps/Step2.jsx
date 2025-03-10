@@ -6,6 +6,7 @@ import LoadingIndicator from '../General_components/LoadingIndicator';
 import Dropdown from '../General_components/Dropdown';
 import ContainerBtn from '../General_components/ContainerBtn';
 import StepHeader from '../General_components/StepHeader';
+import ModelCard from '../General_components/model_card';
 
 
 const Step2 = () => {
@@ -66,14 +67,7 @@ const Step2 = () => {
     <div className="div-step step2">
       <StepHeader step={2} title="Elige la categoría, modelo y versión" subtitle="del vehículo que quieres" />
       <div className="version-sel">
-        <article className="car-item">
-          <figure className="img-wrap modelo-img">
-            <img src={img} alt={name} />
-          </figure>
-          <div className="cont-subtit">
-            <h3 className="subtit modelo-title">{name}</h3>
-          </div>
-        </article>
+        <ModelCard model={model} noArrow={true} />
         {loading && <LoadingIndicator message="Cargando Versiones..." />}
         {error && <ErrorMessage message={error} onRetry={onPrevious} />}
         {!loading && !error && 
