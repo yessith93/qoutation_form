@@ -1,4 +1,3 @@
-.tasacion { background: #FBFBFB; }
 .tasacion a { text-decoration: none; }
 
 .tasacion .cont-btn{
@@ -19,11 +18,6 @@
 .tasacion .step-bar li.mobile{
 	display: none;
 }
-
-.tasacion .cont-btn a + a{
-	margin-left: 40px;
-}
-
 .tasacion .legal{
 	font-size: 13px;
 	color: #777777;
