@@ -20,17 +20,10 @@ a {
 .cont-tit small {
     font-size: smaller;
 }
-.cont-tit strong {
-    font-weight: bold;
-}
 
 .block-tabs.tabs-info .tab-content.active .block-full-hor {
     background-color: #F4F4F4;
 }    
-    
-strong {
-    font-weight: 700;
-}
 .separa {
     width: 100%;
     clear: both;

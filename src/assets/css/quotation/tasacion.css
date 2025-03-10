@@ -1001,16 +1001,6 @@ line-height: 19px;}
     opacity: 0.3;
 }
 
-.cotizador .cont-tit .titu{
-	font-size: 36px;
-	line-height: 1.2;
-	max-width: 1000px;
-    font-family: var(--font-bold);
-    text-transform:uppercase;
-}
-.cotizador .cont-tit .titu strong{
-    font-family: var(--font-bold);
-}
 
 .cotizador .cont-tit .baj{
 	font-size: 24px;
@@ -2029,15 +2019,13 @@ margin-bottom: 10px;color: #414141;
 }
 .cotizador .cont-tit .titu {
     color: #1A1A1A;
-    font-family: "VolvoNovum-Regular";
+    /* font-family: "VolvoNovum-Regular"; */
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     text-transform: none;
-}
-.cotizador .cont-tit .titu strong {
-    font-family: "VolvoNovum-Medium";
-    font-weight: 400;
+	font-size: 36px;
+	max-width: 1000px;
 }
 .cotizador .step-bar li .img-wrap {
     border-color: #325996;
