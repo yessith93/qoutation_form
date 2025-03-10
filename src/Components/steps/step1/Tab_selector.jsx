@@ -3,7 +3,7 @@ const TabSelector = ({ families, models,setModels }) => {
   const [selectedFamily, setSelectedFamily] = useState('all');
 
   const filteredModels = models.filter(model => 
-    selectedFamily === 'all' || model.familia === selectedFamily
+    selectedFamily === 'all' || model.family === selectedFamily
   );
   const handleFamilyClick = (familia) => {
     setSelectedFamily(familia);
