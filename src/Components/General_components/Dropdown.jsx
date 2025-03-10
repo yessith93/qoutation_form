@@ -26,15 +26,16 @@ const Dropdown = ({ label_text, options, onChange,selectedOption}) => {
     useEffect(() => {
         if (options.length === 1) {
             handleOptionClick(options[0]);
-            console.log(options[0]);
         }else{
             setLabelText(label_text);
         }
     }, [options]);
 
     useEffect(() => {
-        if (selectedOption && selectedOption.name && selectedOption.name.length > 0) {
-            handleOptionClick(selectedOption);
+        if (selectedOption && selectedOption.name && selectedOption.name.length > 0 && options.length>1) {
+            if (options.find(o => o.id === selectedOption.id)) {
+                handleOptionClick(selectedOption);
+            }
         }
     }, [selectedOption]);
 
