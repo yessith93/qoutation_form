@@ -3,10 +3,10 @@ import Dropdown from "../../General_components/Dropdown";
 
 const initialLabelText = "Selecciona Comuna";
 
-const SecondDealerSelector = ({  selectedOption,selectedRegion, setSelectOption }) => {
+const SecondDealerSelector = ({  previouslySelectedOption,selectedRegion, setSelectOption }) => {
     const [labelText, setLabelText] = useState(initialLabelText);
-    const [filteredComunas, setFilteredComunas] = useState([]);
-    const comunas = useMemo(() => ({
+    const [filteredDistricts, setFilteredDistricts] = useState([]);
+    const districts = useMemo(() => ({
         "Metropolitana": [
             {
                 name: "Lo Barnechea",
@@ -69,7 +69,7 @@ const SecondDealerSelector = ({  selectedOption,selectedRegion, setSelectOption 
     
     const onChange = (option) => {
         if (option) {
-            if (filteredComunas.find(c => c.id === option.id)) {
+            if (filteredDistricts.find(c => c.id === option.id)) {
                 setSelectOption(option);
             }
         }
@@ -79,20 +79,20 @@ const SecondDealerSelector = ({  selectedOption,selectedRegion, setSelectOption 
         if (selectedRegion.name==="") {
             setLabelText(initialLabelText);
         }else
-            setLabelText(`Selecciona Comuna de ${selectedRegion.name}`);
+            setLabelText(`${initialLabelText} de ${selectedRegion.name}`);
 
-        setFilteredComunas(comunas[selectedRegion.name] ?? []);
+        setFilteredDistricts(districts[selectedRegion.name] ?? []);
         setSelectOption({id:"",name:""});
     }, [selectedRegion.id]);
     
     return (
         <>
             {
-            filteredComunas.length === 0 
+            filteredDistricts.length === 0 
                 ? (
                     <Dropdown label_text={labelText} options={[]}  />
                 ):(
-                    <Dropdown label_text={labelText} options={filteredComunas} onChange={onChange} selectedOption={selectedOption} />
+                    <Dropdown label_text={labelText} options={filteredDistricts} onChange={onChange} previouslySelectedOption={previouslySelectedOption} />
                 ) 
             }
         </>

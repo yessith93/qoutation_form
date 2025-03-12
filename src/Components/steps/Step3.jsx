@@ -38,22 +38,24 @@ const Step3 = () => {
     }
   },[selectedDealer.id]);
   
-  if (region && region.id && region.id!=="" ) {
+  const isValidSelection = (item) => item && item.id && item.id !== "";
+
+  if (isValidSelection(region)) {
     SelectedRegionPreviousStep = region;
   }
-  if (comuna && comuna.id && comuna.id!=="" ) {
+  if (isValidSelection(comuna)) {
     SelectedComunaPreviousStep = comuna;
   }
-  if (concesionario && concesionario.id && concesionario.id!=="" ) {
+  if (isValidSelection(concesionario)) {
     SelectedConcesionarioPreviousStep = concesionario;
   }
   
   return (
     <div className="div-step step3">
       <StepHeader step={3} title="Escoge dónde quieres cotizar tu auto" />
-      <FirstDealerSelector setSelectOption={setSelectedRegion} selectedOption={SelectedRegionPreviousStep? SelectedRegionPreviousStep : null} />
-      <SecondDealerSelector selectedRegion={selectedRegion} setSelectOption={setSelectedComuna} selectedOption={SelectedComunaPreviousStep? SelectedComunaPreviousStep : null}/>
-      <ThirdDealerSelector selectedComuna={selectedComuna} setSelectOption={setSelectedDealer} selectedOption={SelectedConcesionarioPreviousStep? SelectedConcesionarioPreviousStep : null} />
+      <FirstDealerSelector setSelectOption={setSelectedRegion} previouslySelectedOption={SelectedRegionPreviousStep? SelectedRegionPreviousStep : null} />
+      <SecondDealerSelector selectedRegion={selectedRegion} setSelectOption={setSelectedComuna} previouslySelectedOption={SelectedComunaPreviousStep? SelectedComunaPreviousStep : null}/>
+      <ThirdDealerSelector selectedComuna={selectedComuna} setSelectOption={setSelectedDealer} previouslySelectedOption={SelectedConcesionarioPreviousStep? SelectedConcesionarioPreviousStep : null} />
       <ContainerBtn  disableNextButton={disableNextButton}  additionalFunction={updateDealer}/>
     </div>
   );

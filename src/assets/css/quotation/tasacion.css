@@ -745,7 +745,7 @@ line-height: 29px;
 .cotizador .cont-form .enc-select{
 	max-width: 600px;
 	margin: 0 auto;
-	/*background-color: #F4F4F4;*/
+	background-color: #F4F4F4;
 }
 .cotizador .cont-form .enc-select.disable { 
     pointer-events: none;
@@ -964,15 +964,8 @@ line-height: 29px;
 .cotizador .dropdown-container.open .enc-select .drop-txt{
 	color: #1C2B4D;
 }
-
-.cotizador .dropdown-container.open .enc-select {
-	border-bottom: 2px solid #1C2B4D;
-}
 .cotizador .dropdown-container.selected .enc-select {
 	border-bottom: 2px solid #1C2B4D;
-}
-.cotizador .dropdown-container.open{
-	overflow: visible;
 }
 
 .cotizador .dropdown-container .article-inner{

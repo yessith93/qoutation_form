@@ -1,20 +1,10 @@
 import { useState,useEffect,useRef } from 'react';
-const Dropdown = ({ label_text, options, onChange,selectedOption}) => {
+const Dropdown = ({ label_text, options, onChange,previouslySelectedOption}) => {
     const [labelText, setLabelText] = useState(label_text);
     const [isOpen, setIsOpen] = useState(false);
     const listRef = useRef(null);
     //open and close dropdown
-    const handleLabelClick = () => {
-        setIsOpen(!isOpen);
-    };
-    //show and hide options when the label is clicked
-    useEffect(() => {
-        if (isOpen && listRef.current) {
-          listRef.current.style.maxHeight = listRef.current.scrollHeight + 'px';
-        } else if (listRef.current) {
-          listRef.current.style.maxHeight = '0px';
-        }
-      }, [isOpen]);
+     const handleLabelClick = () => setIsOpen((prev) => !prev);
     
     //change the label when an option is clicked and select the option
     const handleOptionClick = (option) => { 
@@ -29,18 +19,15 @@ const Dropdown = ({ label_text, options, onChange,selectedOption}) => {
         }else{
             setLabelText(label_text);
         }
-    }, [options]);
-
-    useEffect(() => {
-        if (selectedOption && selectedOption.name && selectedOption.name.length > 0 && options.length>1) {
-            if (options.find(o => o.id === selectedOption.id)) {
-                handleOptionClick(selectedOption);
+        if (previouslySelectedOption && previouslySelectedOption.name && previouslySelectedOption.name.length > 0 && options.length>1) {
+            if (options.find(o => o.id === previouslySelectedOption.id)) {
+                handleOptionClick(previouslySelectedOption);
             }
         }
-    }, [selectedOption]);
+    }, [options,previouslySelectedOption]);
 
     return (
-        <div className={`enc-select ${options.length === 0  ? 'disable' :  ''} `} style={{ backgroundColor: 'rgb(244, 244, 244)' }}>
+        <div className={`enc-select ${options.length === 0  ? 'disable' :  ''} `} >
             <div className={`dropdown-container ${isOpen ? 'open' : ''}`}>
                 <div className="enc-select" onClick={handleLabelClick}>
                     <p className="drop-txt">{labelText}</p>
@@ -48,7 +35,11 @@ const Dropdown = ({ label_text, options, onChange,selectedOption}) => {
                         <img src="/icons/ic_arrow_d.svg" alt="" />
                     </figure>
                 </div>
-                <div className="list-select" ref={listRef} style={{ maxHeight: '0px' }}>
+                <div 
+                    className="list-select" 
+                    ref={listRef} 
+                    style={{ maxHeight: isOpen ? `${listRef.current?.scrollHeight}px` : '0px' }}
+                >
                     <div className="article-inner">
                         <ul>
                             {options.length > 0 ? (

@@ -1,7 +1,7 @@
 import { useMemo,useCallback,useState } from 'react';
 import Dropdown from '../../General_components/Dropdown';
 
-const FirstDealerSelector = ({ selectedOption, setSelectOption }) => {
+const FirstDealerSelector = ({ previouslySelectedOption, setSelectOption }) => {
     const regions = useMemo(() =>[{
             name: "II Región - Antofagasta",
             id: "II Región - Antofagasta",
@@ -43,7 +43,7 @@ const FirstDealerSelector = ({ selectedOption, setSelectOption }) => {
         },[] );
 
     return (
-        <Dropdown label_text="Selecciona Región" options={regions} onChange={onChange} selectedOption={selectedOption} />
+        <Dropdown label_text="Selecciona Región" options={regions} onChange={onChange} previouslySelectedOption={previouslySelectedOption} />
     );
 };  
 export default FirstDealerSelector;

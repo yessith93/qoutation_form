@@ -1,7 +1,7 @@
 import { useState,useEffect,useMemo } from "react";
 import Dropdown from "../../General_components/Dropdown";
 
-const ThirdDealerSelector = ({  selectedComuna,selectedOption, setSelectOption }) => {
+const ThirdDealerSelector = ({  selectedComuna,previouslySelectedOption, setSelectOption }) => {
     const initialLabelText = "Selecciona Concesionario";
     const [labelText, setLabelText] = useState(initialLabelText);
     const [filteredDealers, setFilteredDealers] = useState([]);
@@ -91,7 +91,7 @@ const ThirdDealerSelector = ({  selectedComuna,selectedOption, setSelectOption }
                 ? (
                     <Dropdown label_text={labelText} options={[]}  />
                 ):(
-                    <Dropdown label_text={labelText} options={filteredDealers} onChange={onChange} selectedOption={selectedOption}/>
+                    <Dropdown label_text={labelText} options={filteredDealers} onChange={onChange} previouslySelectedOption={previouslySelectedOption}/>
                 ) 
             }
         </>

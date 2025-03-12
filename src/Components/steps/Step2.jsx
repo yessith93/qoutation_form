@@ -61,7 +61,7 @@ const Step2 = () => {
         {loading && <LoadingIndicator message="Cargando Versiones..." />}
         {error && <ErrorMessage message={error} />}
         {!loading && !error && 
-        <Dropdown label_text= 'Selecciona una versión' options={versions} onChange={handleDropdownChange} selectedOption={version}/> 
+        <Dropdown label_text= 'Selecciona una versión' options={versions} onChange={handleDropdownChange} previouslySelectedOption={version}/> 
         }
       </div>
       <ContainerBtn disableNextButton={disableNextButton} />
