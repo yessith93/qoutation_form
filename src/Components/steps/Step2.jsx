@@ -14,21 +14,21 @@ const Step2 = () => {
   const { handleNextStep } = useStep();
   const[disableNextButton, setDisableNextButton] = useState(true);
   const { model,version } = quoteData;
-  const { name, img, id } = model;
   const [versions, setVersions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   // get data from api
   useEffect(() => {
-    if (!id) return;
+    if (!model?.id) return;
+
     setLoading(true);
-    setVersions([]);
     setError(null);
 
     const fetchVersions = async () => {
       try {
         // En desarrollo usa getModelsMock(), en producción usa getModels()
-        const { versions } = await versionService.getVersionsMock(id);
+        const { versions } = await versionService.getVersionsMock(model.id);
         setVersions(versions);
       } catch (err) {
         setError('error fetching Versions');
@@ -39,39 +39,29 @@ const Step2 = () => {
     };
 
     fetchVersions();
-  }, [id]);
+  }, [model.id]);
 
-  const searchVersionSelected = (version) => {
-    if (version) {
-      return versions.find(v => v.id === version.id);
-    }
-    return null;
-  }
   const handleDropdownChange = (option) => {
-    if (option) {
-      if(searchVersionSelected(option)) {
-        let wasThereAVersionBefore = Object.keys(version).length > 0 ? true : false;
+    if (option && versions.some(v => v.id === option.id)) {
+        const wasThereAVersionBefore = Boolean(Object.keys(version).length);
         updateQuoteData('version', option);
         setDisableNextButton(false);
+        //this skips the step if there's only one option, but doesn't skip it if the user wants to go back
         if (versions.length === 1&& !wasThereAVersionBefore) {
           handleNextStep();
         }
-      }
     }
   }
 
-
-  // if (loading) return <LoadingIndicator message="Cargando Versiones..." />;
-  if (error) return <ErrorMessage message={error} onRetry={onPrevious} />;
   return (
     <div className="div-step step2">
       <StepHeader step={2} title="Elige la categoría, modelo y versión" subtitle="del vehículo que quieres" />
       <div className="version-sel">
         <ModelCard model={model} noArrow={true} />
         {loading && <LoadingIndicator message="Cargando Versiones..." />}
-        {error && <ErrorMessage message={error} onRetry={onPrevious} />}
+        {error && <ErrorMessage message={error} />}
         {!loading && !error && 
-        <Dropdown label_text= 'Selecciona una versión' options={versions} onChange={handleDropdownChange}/> 
+        <Dropdown label_text= 'Selecciona una versión' options={versions} onChange={handleDropdownChange} selectedOption={version}/> 
         }
       </div>
       <ContainerBtn disableNextButton={disableNextButton} />
