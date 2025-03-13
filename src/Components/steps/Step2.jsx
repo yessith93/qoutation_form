@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuote, useStep } from '../../hooks';
 import { versionService } from '../../services/get_versions';
-import ErrorMessage from '../General_components/ErrorMessage';
-import LoadingIndicator from '../General_components/LoadingIndicator';
-import Dropdown from '../General_components/Dropdown';
-import ContainerBtn from '../General_components/ContainerBtn';
-import StepHeader from '../General_components/StepHeader';
-import ModelCard from '../General_components/model_card';
-
+import { ErrorMessage, LoadingIndicator, Dropdown, ContainerBtn, StepHeader, ModelCard } from '../General_components';
 
 const Step2 = () => {
   const { quoteData,updateQuoteData } = useQuote();

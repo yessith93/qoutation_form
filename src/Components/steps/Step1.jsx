@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { modelService } from '../../services/Get_models';
 import TabSelector from './step1/Tab_selector';
 import ModelCards from './step1/Model_cards';
-import ErrorMessage from '../General_components/ErrorMessage';
-import LoadingIndicator from '../General_components/LoadingIndicator';
-import StepHeader from '../General_components/StepHeader';
+import {ErrorMessage,LoadingIndicator,StepHeader} from '../General_components';
 
 const Step1 = () => {
   const [models, setModels] = useState([]);

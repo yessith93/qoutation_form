@@ -1,9 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import ContainerBtn from '../General_components/ContainerBtn';
-import StepHeader from '../General_components/StepHeader';
-import TextInput from '../General_components/forms/TextInput';
-import CheckboxWithMessage from '../General_components/forms/CheckboxWithMessage';
-import RadioGroup from '../General_components/forms/RadioGroup';
+import {ContainerBtn,StepHeader,TextInput,CheckboxWithMessage,RadioGroup} from '../General_components';
 import { useQuote } from '../../hooks';
 
 const formConditions = "El Cliente autoriza a Sociedad Comercializadora Ditec Automoviles S.A. a compartir su información con empresas asociadas y filiales tanto nacionales como extranjeras, y a contactarlo para enviarle información relevante y/o preguntarle su opinión por la forma en que fueron prestados los servicios. El Cliente declara que ha sido informado acerca del propósito del almacenamiento de sus datos personales y autoriza su tratamiento de conformidad lo regula la ley 19.628 de protección de datos de carácter personal y a su Política de Privacidad y Protección de Datos Personales.";

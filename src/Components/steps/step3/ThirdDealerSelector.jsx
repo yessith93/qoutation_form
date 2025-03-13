@@ -78,7 +78,7 @@ const ThirdDealerSelector = ({  selectedComuna,previouslySelectedOption, setSele
         if (selectedComuna.name==="") {
             setLabelText(initialLabelText);
         }else
-            setLabelText(`Selecciona Comuna de ${selectedComuna.name}`);
+            setLabelText(`${initialLabelText} de ${selectedComuna.name}`);
 
         setFilteredDealers(comunas[selectedComuna.name] ?? []);
         setSelectOption({id:"",name:""});

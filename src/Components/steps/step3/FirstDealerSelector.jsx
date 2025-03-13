@@ -35,15 +35,19 @@ const FirstDealerSelector = ({ previouslySelectedOption, setSelectOption }) => {
             id: "XII Región de Magallanes y la Antártica Chilena",
         },
     ],[]);
-    const onChange = useCallback(
-        (option) => {
-          if (option && regions.find((r) => r.id === option.id)) {
+    const onChange = useCallback((option) => {
+        if (option && regions.find((r) => r.id === option.id)) {
             setSelectOption(option);
-          }
-        },[] );
+        }
+    },[setSelectOption] );
 
     return (
-        <Dropdown label_text="Selecciona Región" options={regions} onChange={onChange} previouslySelectedOption={previouslySelectedOption} />
+        <Dropdown 
+            label_text="Selecciona Región" 
+            options={regions} 
+            onChange={onChange} 
+            previouslySelectedOption={previouslySelectedOption} 
+        />
     );
 };  
 export default FirstDealerSelector;
