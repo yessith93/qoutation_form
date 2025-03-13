@@ -8,16 +8,13 @@ const Step3 = () => {
   const [selectedComuna, setSelectedComuna] = useState({id:"",name:""});
   const [selectedDealer, setSelectedDealer] = useState({id:"",name:""});
   const [disableNextButton, setDisableNextButton] = useState(true);
+
   const { updateQuoteData,quoteData } = useQuote();
   const { dealer } = quoteData;
   const { region, comuna } = dealer;
 
   const updateDealer = () => {
-    const fullDealer = {
-      ...selectedDealer, 
-      region: selectedRegion, 
-      comuna: selectedComuna
-    };
+    const fullDealer =  { ...selectedDealer, region: selectedRegion, comuna: selectedComuna };
     updateQuoteData('dealer', fullDealer);
   }
 

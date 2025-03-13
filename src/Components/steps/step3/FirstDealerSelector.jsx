@@ -1,46 +1,13 @@
 import { useMemo,useCallback,useState } from 'react';
 import Dropdown from '../../General_components/Dropdown';
-
+import { regions } from '../../../assets/data/FullDealers';
 const FirstDealerSelector = ({ previouslySelectedOption, setSelectOption }) => {
-    const regions = useMemo(() =>[{
-            name: "II Región - Antofagasta",
-            id: "II Región - Antofagasta",
-        },
-        {
-            name: "IV Región - Coquimbo",
-            id: "IV Región - Coquimbo",
-        },
-        {
-            name: "IX Región - Araucanía",
-            id: "IX Región - Araucanía",
-        },
-        {
-            name: "Metropolitana",
-            id: "Metropolitana",
-        },
-        {
-            name: "V Región - Valparaíso",
-            id: "V Región - Valparaíso",
-        },
-        {
-            name: "VIII Región - Biobío",
-            id: "VIII Región - Biobío",
-        },
-        {
-            name: "X Región - Los Lagos",
-            id: "X Región - Los Lagos",
-        },
-        {
-            name: "XII Región de Magallanes y la Antártica Chilena",
-            id: "XII Región de Magallanes y la Antártica Chilena",
-        },
-    ],[]);
+    
     const onChange = useCallback((option) => {
-        if (option && regions.find((r) => r.id === option.id)) {
+        if (option?.id && regions.some((r) => r.id === option.id)) {
             setSelectOption(option);
         }
     },[setSelectOption] );
-
     return (
         <Dropdown 
             label_text="Selecciona Región" 

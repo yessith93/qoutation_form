@@ -25,6 +25,7 @@ const Dropdown = ({ label_text, options, onChange,previouslySelectedOption}) => 
     useEffect(() => {
         if (options.length === 1) {
             setSelectedOption(options[0]);
+            console.log(options[0]);
             onChange(options[0]);
         }else if (previouslySelectedOption && options.find(o => o.id === previouslySelectedOption.id)) {
             setSelectedOption(previouslySelectedOption);
