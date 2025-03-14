@@ -1,23 +1,25 @@
-import { useState,useEffect,useMemo } from "react";
+import { useState,useEffect,useCallback } from "react";
 import Dropdown from "../../General_components/Dropdown";
-import { comunas } from '../../../assets/data/FullDealers';
+import { useDealers } from '../../../hooks';
 
 const ThirdDealerSelector = ({  selectedComuna,previouslySelectedOption, setSelectOption }) => {
     const [filteredDealers, setFilteredDealers] = useState([]);
-    console.log(selectedComuna);
+    const [emptyOption] = useState({ id: "", name: "" }); 
+    
     const labelText = selectedComuna.name ? `Selecciona Concesionario de ${selectedComuna.name}` : "Selecciona Concesionario";
-    const onChange = (option) => {
-        if (option) {
-            if (filteredDealers.find(c => c.id === option.id)) {
-                setSelectOption(option);
-            }
+    const dealers = useDealers();
+    
+    const onChange = useCallback((option) => {
+        if (option?.id && filteredDealers.some(c => c.id === option.id)) {
+            setSelectOption(option);
         }
-    }
+    }, [filteredDealers, setSelectOption]);
+
     //change the label when selectedRegion changes
     useEffect(() => {
-        setFilteredDealers(comunas[selectedComuna.name] ?? []);
-        setSelectOption({id:"",name:""});
-    }, [selectedComuna.id]);
+        setFilteredDealers(dealers[selectedComuna.name] ?? []);
+        setSelectOption(emptyOption);
+    }, [selectedComuna.id,setSelectOption]);
 
     return (
         <>

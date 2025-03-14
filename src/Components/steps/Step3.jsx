@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ContainerBtn, StepHeader } from '../General_components'; 
 import { FirstDealerSelector, SecondDealerSelector, ThirdDealerSelector } from './step3';
-import { useQuote } from '../../hooks/UseQuote';
+import { useQuote } from '../../hooks';
 
 const Step3 = () => {
   const [selectedRegion, setSelectedRegion] = useState({id:"",name:""}); 
