@@ -1,36 +1,31 @@
-import { useState,useEffect,useCallback} from "react";
+import { useMemo,useCallback} from "react";
 import Dropdown from "../../General_components/Dropdown";
 import { useDistricts } from '../../../hooks';
 
-const SecondDealerSelector = ({  previouslySelectedOption,selectedRegion, setSelectOption }) => {
-    const [filteredDistricts, setFilteredDistricts] = useState([]);
-    const [emptyOption] = useState({ id: "", name: "" }); 
-    
-const labelText = selectedRegion.name ? `Selecciona Comuna de ${selectedRegion.name}` : "Selecciona Comuna";
-const districts = useDistricts();
+const SecondDealerSelector = ({  previouslySelectedOption,updateSelectedDealer,selectedDealer }) => {    
+    const districts = useDistricts();
+    const labelDistrictText = useMemo(() => 
+        selectedDealer.region?.name && selectedDealer.region.name !== "Seleccionar Región" 
+        ? `Selecciona Comuna de ${selectedDealer.region.name}` 
+        : "Selecciona Comuna", 
+        [selectedDealer.region?.name]
+    );
 
-const onChange = useCallback((option) => {
-    if (option?.id && filteredDistricts.some(c => c.id === option.id)) {
-        setSelectOption(option);
-    }
-}, [filteredDistricts, setSelectOption]);
-//change the options when selected Region changes
-useEffect(() => {
-    setFilteredDistricts(districts[selectedRegion.name] ?? []);
-    setSelectOption(emptyOption);
-}, [selectedRegion.id,setSelectOption]);
-    
+    const filteredDistricts = useMemo(() => districts[selectedDealer.region?.id] ?? [], [selectedDealer.region?.id, districts]);
+
+    const onChangeDistricts = useCallback((option) => {
+        if (option?.id && filteredDistricts.some(d => d.id === option.id) && selectedDealer.district.id !== option.id) {
+          updateSelectedDealer('district', option);
+        }
+    }, [filteredDistricts,selectedDealer.district.id]);
+
     return (
-        <>
-            {
-            filteredDistricts.length === 0 
-                ? (
-                    <Dropdown label_text={labelText} options={[]}  />
-                ):(
-                    <Dropdown label_text={labelText} options={filteredDistricts} onChange={onChange} previouslySelectedOption={previouslySelectedOption} />
-                ) 
-            }
-        </>
+        <Dropdown 
+            label_text={labelDistrictText} 
+            options={filteredDistricts} 
+            onChange={onChangeDistricts} 
+            previouslySelectedOption={previouslySelectedOption} 
+      />
     );
 };
 export default SecondDealerSelector;

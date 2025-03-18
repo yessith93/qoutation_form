@@ -1,37 +1,32 @@
-import { useState,useEffect,useCallback } from "react";
+import { useMemo,useCallback } from "react";
 import Dropdown from "../../General_components/Dropdown";
 import { useDealers } from '../../../hooks';
 
-const ThirdDealerSelector = ({  selectedComuna,previouslySelectedOption, setSelectOption }) => {
-    const [filteredDealers, setFilteredDealers] = useState([]);
-const [emptyOption] = useState({ id: "", name: "" }); 
-    
-const labelText = selectedComuna.name ? `Selecciona Concesionario de ${selectedComuna.name}` : "Selecciona Concesionario";
-const dealers = useDealers();
-    
-    const onChange = useCallback((option) => {
-        if (option?.id && filteredDealers.some(c => c.id === option.id)) {
-            setSelectOption(option);
+const ThirdDealerSelector = ({  previouslySelectedOption,updateSelectedDealer,selectedDealer }) => {
+    const dealers = useDealers();
+
+    const labelDealerText = useMemo(() => 
+        selectedDealer.district?.name && selectedDealer.district.name !== "Seleccionar Comuna" 
+          ? `Selecciona Concesionario de ${selectedDealer.district.name}` 
+          : "Selecciona Concesionario", 
+        [selectedDealer.district?.name]
+      );
+
+    const filteredDealers = useMemo(() => dealers[selectedDealer?.district?.id] ?? [], [selectedDealer.district?.id, dealers]);
+
+    const onChangeDealer = useCallback((option) => {
+        if (option?.id && filteredDealers.some(d => d.id === option.id)&& selectedDealer.dealer.id !== option.id) {
+          updateSelectedDealer('dealer', option);
         }
-    }, [filteredDealers, setSelectOption]);
-
-//change the label when selectedRegion changes
-useEffect(() => {
-setFilteredDealers(dealers[selectedComuna.name] ?? []);
-setSelectOption(emptyOption);
-}, [selectedComuna.id,setSelectOption]);
-
+      }, [filteredDealers,selectedDealer.dealer.id]);
+    
     return (
-        <>
-            {
-            filteredDealers.length === 0 
-                ? (
-                    <Dropdown label_text={labelText} options={[]}  />
-                ):(
-                    <Dropdown label_text={labelText} options={filteredDealers} onChange={onChange} previouslySelectedOption={previouslySelectedOption}/>
-                ) 
-            }
-        </>
+        <Dropdown 
+            label_text={labelDealerText} 
+            options={filteredDealers} 
+            onChange={onChangeDealer} 
+            previouslySelectedOption={previouslySelectedOption}
+      />
     );
 };
 export default ThirdDealerSelector;

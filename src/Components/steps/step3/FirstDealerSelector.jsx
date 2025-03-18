@@ -1,20 +1,20 @@
 import React,{ useCallback, memo } from 'react';
 import Dropdown from '../../General_components/Dropdown';
 import { useRegions } from '../../../hooks';
-const FirstDealerSelector = memo(({ previouslySelectedOption, setSelectOption }) => {
+const FirstDealerSelector = memo(({ previouslySelectedOption, updateSelectedDealer,selectedDealer }) => {
     const regions = useRegions();
 
-    const onChange = useCallback((option) => {
-        if (option?.id && regions.some((r) => r.id === option.id)) {
-            setSelectOption(option);
+    const onChangeRegions = useCallback((option) => {
+        if (option?.id && regions.some(r => r.id === option.id)&& selectedDealer.region.id !== option.id) {
+          updateSelectedDealer('region', option);
         }
-    },[setSelectOption,regions] );
+      }, [regions,selectedDealer.region.id]);
 
     return (
         <Dropdown 
             label_text="Selecciona Región" 
             options={regions} 
-            onChange={onChange} 
+            onChange={onChangeRegions} 
             previouslySelectedOption={previouslySelectedOption} 
         />
     );
