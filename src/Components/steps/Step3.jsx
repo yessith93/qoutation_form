@@ -4,69 +4,55 @@ import { useQuote,useDealerFullData } from '../../hooks';
 
 const isValidSelection = (item) => item && item.id && item.id !== "";
 
-const Step3 = () => {
-  const [selectedRegion, setSelectedRegion] = useState({id:"",name:""}); 
-  const [selectedComuna, setSelectedComuna] = useState({id:"",name:""});
-  const [selectedDealer, setSelectedDealer] = useState({id:"",name:""});
-  const [selectedDealer2, setSelectedDealer2] = useState({
+const Step3 = () => { 
+  const [selectedDealer, setSelectedDealer] = useState({
     region: { id: "", name: "Seleccionar Región" },
-    comuna: { id: "", name: "Seleccionar Comuna" },
+    district: { id: "", name: "Seleccionar Comuna" },
     dealer: { id: "", name: "Seleccionar Dealer" }
   });
 
   const [regions, districts, dealers] = useDealerFullData();
   
-  const { updateQuoteData,quoteData } = useQuote();
-  const { dealer } = quoteData;
-  const { region, comuna } = dealer || { region: {}, comuna: {} };
+  const { updateQuoteData, quoteData: { dealer: dealerInfo } } = useQuote();
+  const { region, district, dealer } = dealerInfo || { region: {}, district: {}, dealer: {} };
   
-  const labelDistrictText = selectedRegion.name ? `Selecciona Comuna de ${selectedRegion.name}` : "Selecciona Comuna";
-  const labelDealerText = selectedComuna.name ? `Selecciona Concesionario de ${selectedComuna.name}` : "Selecciona Concesionario";
-
-  // const filteredDistricts = useMemo(() => districts[selectedDealer?.region?.name] ?? [], [selectedDealer.region, districts]);
-  const filteredDistricts = useMemo(() => districts[selectedRegion?.id] ?? [], [selectedRegion, districts]);
-  // const filteredDealers = useMemo(() => dealers[selectedDealer?.comuna?.name] ?? [], [selectedDealer.comuna, dealers]);
-  const filteredDealers = useMemo(() => dealers[selectedComuna?.id] ?? [], [selectedComuna, dealers]);
+  const labelDistrictText = selectedDealer.region.name ? `Selecciona Comuna de ${selectedDealer.region.name}` : "Selecciona Comuna";
+  const labelDealerText = selectedDealer.district.name ? `Selecciona Concesionario de ${selectedDealer.district.name}` : "Selecciona Concesionario";
+  //filter the next dropdowns
+  const filteredDistricts = useMemo(() => districts[selectedDealer.region?.id] ?? [], [selectedDealer.region, districts]);
+  const filteredDealers = useMemo(() => dealers[selectedDealer?.district?.name] ?? [], [selectedDealer.district, dealers]);
   
   const onChangeRegions = useCallback((option) => {
     if (option?.id && regions.some(r => r.id === option.id)) {
-      setSelectedRegion(option);
-      setSelectedComuna({ id: "", name: "" });
-
-      setSelectedDealer2(prev => ({ 
+      setSelectedDealer(prev => ({ 
         ...prev, 
         region: option, 
-        comuna: { id: "", name: "" }, 
+        district: { id: "", name: "" }, //empty the next dropdown
         dealer: { id: "", name: "" } 
       })); 
     }
-  }, [setSelectedDealer,setSelectedRegion,selectedComuna]);
+  }, [setSelectedDealer]);
   
   const onChangeDistricts = useCallback((option) => {
     if (option?.id && filteredDistricts.some(d => d.id === option.id)) {
-      setSelectedComuna(option);
-      setSelectedDealer({ id: "", name: "" });//set next dropwdown to empty
-
-      setSelectedDealer2(prev => ({ 
+      setSelectedDealer(prev => ({ 
         ...prev, 
-        comuna: option, 
+        district: option, 
         dealer: { id: "", name: "" } 
       }))
     }
-  }, [filteredDistricts, setSelectedComuna,setSelectedDealer]);
+  }, [filteredDistricts,setSelectedDealer]);
 
   const onChangeDealer = useCallback((option) => {
     if (option?.id && filteredDealers.some(d => d.id === option.id)) {
-      setSelectedDealer(option);
 
-      setSelectedDealer2(prev => ({ ...prev, dealer: option }));
+      setSelectedDealer(prev => ({ ...prev, dealer: option }));
     }
-  }, [filteredDealers, setSelectedDealer]);
+  }, [filteredDealers,setSelectedDealer]);
 
   const updateDealer = () => {
-    if (selectedDealer?.id && selectedRegion?.id && selectedComuna?.id) {
-      const fullDealer =  { ...selectedDealer, region: selectedRegion, comuna: selectedComuna };
-      updateQuoteData('dealer', fullDealer);
+    if (selectedDealer.dealer?.id && selectedDealer.region?.id && selectedDealer.district?.id) {
+      updateQuoteData('dealer', selectedDealer);
     }
   }
   
@@ -83,7 +69,7 @@ const Step3 = () => {
         label_text={labelDistrictText} 
         options={filteredDistricts} 
         onChange={onChangeDistricts} 
-        previouslySelectedOption={isValidSelection(comuna) ? comuna : null} 
+        previouslySelectedOption={isValidSelection(district) ? district : null} 
       />
       <Dropdown 
         label_text={labelDealerText} 
@@ -91,7 +77,7 @@ const Step3 = () => {
         onChange={onChangeDealer} 
         previouslySelectedOption={isValidSelection(dealer) ? dealer : null}
       />
-      <ContainerBtn  disableNextButton={!isValidSelection(selectedDealer)}  additionalFunction={updateDealer}/>
+      <ContainerBtn  disableNextButton={!isValidSelection(selectedDealer.dealer)}  additionalFunction={updateDealer}/>
     </div>
   );
 };
