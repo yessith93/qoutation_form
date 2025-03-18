@@ -1,7 +1,6 @@
 import React, { useEffect, useState,useMemo,useCallback } from 'react';
 import { ContainerBtn, StepHeader,Dropdown } from '../General_components'; 
-import { FirstDealerSelector, SecondDealerSelector, ThirdDealerSelector } from './step3';
-import { useQuote,useRegions,useDistricts,useDealers } from '../../hooks';
+import { useQuote,useDealerFullData } from '../../hooks';
 
 const isValidSelection = (item) => item && item.id && item.id !== "";
 
@@ -15,9 +14,7 @@ const Step3 = () => {
     dealer: { id: "", name: "Seleccionar Dealer" }
   });
 
-  const regions = useRegions();
-  const districts = useDistricts();
-  const dealers = useDealers();
+  const [regions, districts, dealers] = useDealerFullData();
   
   const { updateQuoteData,quoteData } = useQuote();
   const { dealer } = quoteData;
