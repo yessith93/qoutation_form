@@ -1,6 +1,5 @@
-import { useState,useEffect,useRef } from 'react';
+import { useState,useEffect,useRef,useCallback,useMemo } from 'react';
 const Dropdown = ({ label_text, options, onChange,previouslySelectedOption}) => {
-    const [labelText, setLabelText] = useState(label_text);
     const [selectedOption, setSelectedOption] = useState(null);
 
     const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +14,11 @@ const Dropdown = ({ label_text, options, onChange,previouslySelectedOption}) => 
     }, [isOpen]);
     
     //change the label when an option is clicked and select the option
-    const handleOptionClick = (option) => { 
-        // setLabelText(option.name);
+    const handleOptionClick = useCallback((option) => {
         setSelectedOption(option);
         setIsOpen(false);
-        onChange(option);        
-    }
+        onChange(option);
+    }, [onChange]);      
     //select the first option when there is only one option
     useEffect(() => {
         if (options.length === 1) {
@@ -34,6 +32,12 @@ const Dropdown = ({ label_text, options, onChange,previouslySelectedOption}) => 
         }
     }, [options,previouslySelectedOption]);
 
+    const renderedOptions = useMemo(() => options.map(option => (
+        <li key={option.id} data-id={option.id} onClick={() => handleOptionClick(option)}>
+          <a>{option.name}</a>
+        </li>
+      )), [options, handleOptionClick]);
+      
     return (
         <div className={`enc-select ${options.length === 0  ? 'disable' :  ''} `} >
             <div className={`dropdown-container ${isOpen ? 'open' : ''}`}>
@@ -50,11 +54,7 @@ const Dropdown = ({ label_text, options, onChange,previouslySelectedOption}) => 
                     <div className="article-inner">
                         <ul>
                             {options.length > 0 ? (
-                                options.map((option) => (
-                                    <li key={option.id} data-id={option.id} onClick={() => handleOptionClick(option)}>
-                                        <a>{option.name}</a>
-                                    </li>
-                                ))
+                                renderedOptions
                             ) : (
                                 <li>No hay versiones disponibles</li>
                             )}

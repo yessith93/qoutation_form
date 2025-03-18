@@ -4,10 +4,10 @@ import { useDealers } from '../../../hooks';
 
 const ThirdDealerSelector = ({  selectedComuna,previouslySelectedOption, setSelectOption }) => {
     const [filteredDealers, setFilteredDealers] = useState([]);
-    const [emptyOption] = useState({ id: "", name: "" }); 
+const [emptyOption] = useState({ id: "", name: "" }); 
     
-    const labelText = selectedComuna.name ? `Selecciona Concesionario de ${selectedComuna.name}` : "Selecciona Concesionario";
-    const dealers = useDealers();
+const labelText = selectedComuna.name ? `Selecciona Concesionario de ${selectedComuna.name}` : "Selecciona Concesionario";
+const dealers = useDealers();
     
     const onChange = useCallback((option) => {
         if (option?.id && filteredDealers.some(c => c.id === option.id)) {
@@ -15,11 +15,11 @@ const ThirdDealerSelector = ({  selectedComuna,previouslySelectedOption, setSele
         }
     }, [filteredDealers, setSelectOption]);
 
-    //change the label when selectedRegion changes
-    useEffect(() => {
-        setFilteredDealers(dealers[selectedComuna.name] ?? []);
-        setSelectOption(emptyOption);
-    }, [selectedComuna.id,setSelectOption]);
+//change the label when selectedRegion changes
+useEffect(() => {
+setFilteredDealers(dealers[selectedComuna.name] ?? []);
+setSelectOption(emptyOption);
+}, [selectedComuna.id,setSelectOption]);
 
     return (
         <>
