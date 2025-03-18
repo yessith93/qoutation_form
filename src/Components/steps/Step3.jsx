@@ -2,28 +2,38 @@ import React, { useEffect, useState,useMemo,useCallback } from 'react';
 import { ContainerBtn, StepHeader,Dropdown } from '../General_components'; 
 import { useQuote,useDealerFullData } from '../../hooks';
 
-const isValidSelection = (item) => item && item.id && item.id !== "";
+const isValidSelection = (item) => !!item?.id;
 
 const Step3 = () => { 
+  const [regions, districts, dealers] = useDealerFullData();
+  const { updateQuoteData, quoteData: { dealer: dealerInfo } } = useQuote();
+  const { region, district, dealer } = dealerInfo || { region: {}, district: {}, dealer: {} };
+
   const [selectedDealer, setSelectedDealer] = useState({
     region: { id: "", name: "Seleccionar Región" },
     district: { id: "", name: "Seleccionar Comuna" },
     dealer: { id: "", name: "Seleccionar Dealer" }
   });
 
-  const [regions, districts, dealers] = useDealerFullData();
+  const labelDistrictText = useMemo(() => 
+    selectedDealer.region?.name && selectedDealer.region.name !== "Seleccionar Región" 
+      ? `Selecciona Comuna de ${selectedDealer.region.name}` 
+      : "Selecciona Comuna", 
+    [selectedDealer.region?.name]
+  );
   
-  const { updateQuoteData, quoteData: { dealer: dealerInfo } } = useQuote();
-  const { region, district, dealer } = dealerInfo || { region: {}, district: {}, dealer: {} };
-  
-  const labelDistrictText = selectedDealer.region.name ? `Selecciona Comuna de ${selectedDealer.region.name}` : "Selecciona Comuna";
-  const labelDealerText = selectedDealer.district.name ? `Selecciona Concesionario de ${selectedDealer.district.name}` : "Selecciona Concesionario";
+  const labelDealerText = useMemo(() => 
+    selectedDealer.district?.name && selectedDealer.district.name !== "Seleccionar Comuna" 
+      ? `Selecciona Concesionario de ${selectedDealer.district.name}` 
+      : "Selecciona Concesionario", 
+    [selectedDealer.district?.name]
+  );
   //filter the next dropdowns
   const filteredDistricts = useMemo(() => districts[selectedDealer.region?.id] ?? [], [selectedDealer.region, districts]);
-  const filteredDealers = useMemo(() => dealers[selectedDealer?.district?.name] ?? [], [selectedDealer.district, dealers]);
+  const filteredDealers = useMemo(() => dealers[selectedDealer?.district?.id] ?? [], [selectedDealer.district, dealers]);
   
   const onChangeRegions = useCallback((option) => {
-    if (option?.id && regions.some(r => r.id === option.id)) {
+    if (option?.id && regions.some(r => r.id === option.id)&& selectedDealer.region.id !== option.id) {
       setSelectedDealer(prev => ({ 
         ...prev, 
         region: option, 
@@ -31,30 +41,35 @@ const Step3 = () => {
         dealer: { id: "", name: "" } 
       })); 
     }
-  }, [setSelectedDealer]);
+  }, [regions,selectedDealer.region.id]);
   
   const onChangeDistricts = useCallback((option) => {
-    if (option?.id && filteredDistricts.some(d => d.id === option.id)) {
+    if (option?.id && filteredDistricts.some(d => d.id === option.id) && selectedDealer.district.id !== option.id) {
       setSelectedDealer(prev => ({ 
         ...prev, 
         district: option, 
         dealer: { id: "", name: "" } 
       }))
     }
-  }, [filteredDistricts,setSelectedDealer]);
+  }, [filteredDistricts,selectedDealer.district.id]);
 
   const onChangeDealer = useCallback((option) => {
-    if (option?.id && filteredDealers.some(d => d.id === option.id)) {
-
+    if (option?.id && filteredDealers.some(d => d.id === option.id)&& selectedDealer.dealer.id !== option.id) {
       setSelectedDealer(prev => ({ ...prev, dealer: option }));
     }
-  }, [filteredDealers,setSelectedDealer]);
+  }, [filteredDealers,selectedDealer.dealer.id]);
 
-  const updateDealer = () => {
+  const updateDealer = useCallback(() => {
     if (selectedDealer.dealer?.id && selectedDealer.region?.id && selectedDealer.district?.id) {
       updateQuoteData('dealer', selectedDealer);
     }
-  }
+  }, [selectedDealer, updateQuoteData]);
+  
+  const isNextButtonDisabled = useMemo(
+    () => !isValidSelection(selectedDealer.dealer),
+    [selectedDealer.dealer]
+  );
+  
   
   return (
     <div className="div-step step3">
@@ -77,7 +92,7 @@ const Step3 = () => {
         onChange={onChangeDealer} 
         previouslySelectedOption={isValidSelection(dealer) ? dealer : null}
       />
-      <ContainerBtn  disableNextButton={!isValidSelection(selectedDealer.dealer)}  additionalFunction={updateDealer}/>
+      <ContainerBtn  disableNextButton={isNextButtonDisabled}  additionalFunction={updateDealer}/>
     </div>
   );
 };
