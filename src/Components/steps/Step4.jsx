@@ -5,7 +5,7 @@ import { useQuote } from '../../hooks';
 const formConditions = "El Cliente autoriza a Sociedad Comercializadora Ditec Automoviles S.A. a compartir su información con empresas asociadas y filiales tanto nacionales como extranjeras, y a contactarlo para enviarle información relevante y/o preguntarle su opinión por la forma en que fueron prestados los servicios. El Cliente declara que ha sido informado acerca del propósito del almacenamiento de sus datos personales y autoriza su tratamiento de conformidad lo regula la ley 19.628 de protección de datos de carácter personal y a su Política de Privacidad y Protección de Datos Personales.";
 
 const Step4 = () => {
-  const {updateQuoteData,setFormSubmitted} = useQuote();
+  const {updateQuoteData,setFormSubmitted,quoteData} = useQuote();
   const [formData, setFormData] = useState({
     nombre: '',
     primer_apellido: '',
@@ -19,6 +19,15 @@ const Step4 = () => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateAllFields = (formData) => {
+    validateField("nombre", formData.nombre);
+    validateField("primer_apellido", formData.primer_apellido);
+    validateField("rut", formData.rut);
+    validateField("email", formData.email);
+    validateField("telefono", formData.telefono);
+    validateField("termsAccepted", formData.termsAccepted);
+  };
 
   const validateField = (name, value) => {
     let error = "";
@@ -45,9 +54,9 @@ const Step4 = () => {
       default:
         break;
     }
-
     setErrors((prev) => ({ ...prev, [name]: error }));
   };
+  
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -57,6 +66,7 @@ const Step4 = () => {
       ...prev,
       [name]: fieldValue,
     }));
+
     validateField(name, fieldValue);
   };
 
@@ -66,7 +76,7 @@ const Step4 = () => {
         return true;
       }
       return formData[key] !== "";
-    });
+  });
 
   const simulateApiCall = (data) => {
     return new Promise((resolve) => {
@@ -76,21 +86,15 @@ const Step4 = () => {
       }, 1000);
     });
   };
-  const HandleSubmit = async(e) => {
+  const HandleSubmit = async (e) => {
     e.preventDefault();
-    let newErrors = {};
-    if (!formData.nombre.trim()) newErrors.nombre = "El nombre es obligatorio.";
-    if (!formData.primer_apellido.trim()) newErrors.primer_apellido = "El apellido es obligatorio.";
-    if (!/^[0-9]+-[0-9kK]$/.test(formData.rut)) newErrors.rut = "El RUT no es válido.";
-    if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "El correo no es válido.";
-    if (!/^\d{9}$/.test(formData.telefono)) newErrors.telefono = "El teléfono debe tener 9 dígitos.";
-    if (!formData.termsAccepted) newErrors.termsAccepted = "Debes aceptar los términos.";
 
-    if (Object.keys(newErrors).length === 0) {
+    validateAllFields(formData);
+    if (isFormValid) {
       setIsSubmitting(true);
       try {
-        const response = await simulateApiCall(formData);
-        updateQuoteData('userInfo', formData);
+        updateQuoteData("userInfo", formData);
+        const response = await simulateApiCall(quoteData);
         setFormSubmitted(true);
       } catch (error) {
         console.error("Error al enviar los datos:", error);
@@ -99,8 +103,8 @@ const Step4 = () => {
       }
     } else {
       setErrors(newErrors);
-    };
-  }
+    }
+  };
 
   return (
     <form onSubmit={HandleSubmit} className="div-step step4">

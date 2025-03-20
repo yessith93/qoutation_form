@@ -83,9 +83,6 @@ select, input {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
-select {
-    background: url(/volvo/imag/v1/icon/arrow.png) no-repeat right 10px #fff;
-}
 .cont_enc {
     margin: 20px 0;
 }

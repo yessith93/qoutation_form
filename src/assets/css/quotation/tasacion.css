@@ -233,7 +233,7 @@ line-height: 22px;
 	display: block;
     font-family: var(--font-regular);
 }
-.tasacion .form-group input, .tasacion .form-group select{
+.tasacion .form-group input{
 	width: 100%;
 	background-color: #F4F4F4;
 	border-top:none;
@@ -243,45 +243,19 @@ line-height: 22px;
 	border-radius: 0;
 	padding: 20px 16px;
 	font-size: 18px;
-line-height: 22px;
-	color: #414141;}
+	line-height: 22px;
+	color: #414141;
+}
+
 .tasacion h3.titu {font-family: AvenirNextLTPro-Regular,sans-serif;
     font-size: 16px;
 	line-height: 19px;
     text-align: center;
     color: #414141;
     margin-bottom: 20px;}
-.tasacion .form-group input.patente {background: #F4F4F4; border-bottom: 1px solid #414141; border-right:none; border-left:none; border-top:none; 
--moz-border-radius-topleft: 2px;
--webkit-border-top-left-radius: 2px;
- border-top-left-radius: 2px;
--moz-border-radius-topright: 2px;
--webkit-border-top-right-radius: 2px;
-border-top-right-radius: 2px;
--moz-border-radius-bottomright: 0;
--webkit-border-bottom-right-radius: 0;
-border-bottom-right-radius: 0;
--moz-border-radius-bottomleft: 0;
--webkit-border-bottom-left-radius: 0;
-border-bottom-left-radius: 0;
-}
 
-.tasacion .form-group input::placeholder, .tasacion .form-group select::placeholder{
-	color: #AAAAAA;
-}
-.tasacion .form-group input::-webkit-input-placeholder, .tasacion .form-group select::-webkit-input-placeholder{
-	color: #AAAAAA;
-}
 .tasacion .form-group input:-ms-input-placeholder, .tasacion .form-group input:-ms-input-placeholder{
 	color: #AAAAAA;
-}
-
-
-.tasacion .step-2 .form-group input::placeholder, .tasacion .step-2 .form-group select::placeholder{
-	color: #414141; opacity: 1;
-}
-.tasacion .step-2 .form-group input::-webkit-input-placeholder, .tasacion .step-2 .form-group select::-webkit-input-placeholder{
-	color: #414141; opacity: 1;
 }
 .tasacion .step-2 .form-group input:-ms-input-placeholder, .tasacion .step-2 .form-group input:-ms-input-placeholder{
 	color: #414141; opacity: 1;
@@ -600,9 +574,6 @@ line-height: 29px;
 	}
 	.tasacion .step-bar li:nth-child(3) .img-wrap{
 		margin-right: 0;
-	}
-	.tasacion .form-group input, .tasacion .form-group select{
-		padding: 13px 20px;
 	}
 	.tasacion .radio-group{
 		flex-direction: column;
@@ -1258,7 +1229,7 @@ line-height: 29px;
 	margin-top: 10px;
 	color: #DE4346;
 }
-.tasacion .form-group input, .tasacion .form-group select{
+.tasacion .form-group input{
 	font-size: 18px;
 	background-color: #F4F4F4;
 	border: none;
@@ -1267,6 +1238,11 @@ line-height: 29px;
 	color: #414141;
     font-family: "AvenirNextLTPro-Demi", Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, sans-serif;
 }
+.tasacion .form-group:has(>.txt-error) input {
+    border-color: #DE4346;
+    border-width: 2px;
+}
+
 .tasacion .form-group .form-control{
 	display:block;
 	border:none;
@@ -1634,9 +1610,6 @@ margin-bottom: 10px;color: #414141;
 
 	/*estilos formulario*/
 	
-	.tasacion .form-group input, .tasacion .form-group select{
-		font-size: 14px;
-	}
 	.tasacion .form-group label, .tasacion .form-group .subtit{
 		font-size: 14px;
 	}
@@ -1659,9 +1632,6 @@ margin-bottom: 10px;color: #414141;
 	}
 	.tasacion .msj-checkbox .legal{
 		font-size: 12px;
-	}
-	.tasacion .form-group select{
-		background-size: 16px;
 	}
 	.cotizador .dropdown-container .list-select{
 		position: relative;
