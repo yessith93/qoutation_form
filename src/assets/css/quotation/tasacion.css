@@ -80,9 +80,6 @@ line-height: 22px;
 	color: #ffffff !important;
 	border-color: #1C2B4D;
 }
-.step-2 .cont-btn.dos .btn-main:hover{
-	background-color: #333;
-}
 .tasacion .cont-form{
 	padding: 60px 0;
 }
@@ -395,6 +392,7 @@ line-height: 22px;
 	transition: .2s all ease;
 	margin-right: 10px;
 	margin-top: 2px;
+	max-height: 18px;
 }
 
 .tasacion .msj-checkbox .legal{
@@ -489,9 +487,6 @@ line-height: 29px;
 	margin-top: 40px;
 	font-family: nunito_sans_extraboldregular, sans-serif;
 }
-.cont-btn.dos {}
-
-
 
 @media (max-width: 767px) {
 	.tasacion h3.titu {margin: 20px auto;}
@@ -620,30 +615,12 @@ line-height: 29px;
 		font-size: 16px;
 		text-align: left;
 	}
-	.cont-btn.dos{
-		flex-wrap: wrap !important;
-		justify-content: flex-start !important;
-	}
-	.cont-btn.dos .btn-main{
-		justify-content: flex-start;
-		font-size: 14px;
-		font-family: avenirnextltpro-demi, sans-serif; 
-	}
-	.cont-btn.dos a + a{
-		margin-top: 8px;
-	}
 }
 @media (min-width: 767px) and (max-width: 991px) {
 	.tasacion .auxi{
 		padding: 0 15px;
 	}
 }
-
-.cont-btn.dos .btn-main {max-width: 351px; height: 70px; padding: 0px 16px; text-transform: none; font-family: avenirnextltpro-demi, sans-serif; background: #F4F4F4; color: #000000; font-size: 18px; line-height: 22px;display: flex; align-items:center; justify-content:center; }
-.cont-btn.dos .btn-main .img-wrap {flex: 0 1 30px; text-transform: none; margin: 0 10px 0 0}
-.step-2 .cont-btn.dos .btn-main {background: #1C2B4D; color: #ffffff;}
-.step-2 .cont-btn.dos .btn-sec {border: 1px solid #1C2B4D; color: #1C2B4D;}
-
 
 /* Exciting Part */
 /* ==================== */
@@ -1122,13 +1099,13 @@ line-height: 29px;
 	display: none;
 }
 
-.cotizador .cont-btn:not(.dos){
+.cotizador .cont-btn{
 	display: block;
 	max-width: 450px;
 	margin: 0 auto;
 }
 
-.cotizador .cont-btn:not(.dos) .btn-sec {
+.cotizador .cont-btn .btn-sec {
 	font-size: 16px;
 	color: #1C2B4D;
 	border: 1px solid #1C2B4D;
@@ -1137,17 +1114,17 @@ line-height: 29px;
 	align-items: center;
 	justify-content: center;
 }
-.cotizador .cont-btn:not(.dos) .btn-sec:hover{
+.cotizador .cont-btn .btn-sec:hover{
 	background-color:  #1C2B4D;
 	color: #ffffff;
 }
 
-.cotizador .cont-btn:not(.dos) a + a{
+.cotizador .cont-btn a + a{
 	margin-left: 0;
 	margin-top: 15px;
 }
 
-.cotizador .cont-btn:not(.dos) a{
+.cotizador .cont-btn a{
 	width: 100%;
 	display: block;
 	max-width: 100%;
@@ -1361,9 +1338,6 @@ line-height: 29px;
 
 /* Media querys */
 @media (min-width: 430px) and (max-width: 767px) {
-	.tasacion .cont-btn.dos{
-		bottom: 0 !important;
-	}
 	.tasacion .btn-sec{
 		max-width: 100%;
 		height: auto;
@@ -1419,7 +1393,7 @@ line-height: 29px;
 		max-width: 95%;
 		margin: 0 auto;
 	}
-	.cotizador .cont-btn:not(.dos){
+	.cotizador .cont-btn{
 		/*position: fixed;*/
 		bottom: 77px;
 		z-index: 10;
@@ -1430,18 +1404,11 @@ line-height: 29px;
 		flex-direction: row-reverse;
 		padding: 0
 	}
-	.cotizador .cont-btn:not(.dos) a, .cotizador .cont-btn:not(.dos) a + a{
+	.cotizador .cont-btn a, .cotizador .cont-btn a + a{
 		margin: 0
 	}
 	
-	.tasacion .cont-btn.dos {display: none;}
 	.calificacion {right: 0; left: 0; margin: 0 auto;}
-
-	.tasacion.cotizador .cont-btn.dos {display: flex; position: relative; bottom: 0; margin: 15px auto; 
-		justify-content: center !important;}
-	.tasacion.cotizador .cont-btn.dos .btn-main {margin-bottom: 20px}
-	.tasacion.cotizador .cont-btn.dos .btn-main {z-index: 0;justify-content: flex-start; text-align: left;height: 55px;}
-
 
 	.cotizador .content-sidebar .cont-form{
 		margin-left: 0;
