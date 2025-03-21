@@ -1,5 +1,6 @@
 import { useQuote } from '../hooks';
-import { ModelCard, Info, Headers, DropdownMobile, Rating } from '../Components/thankYouPage';
+import { Info, Headers, DropdownMobile, Rating } from '../Components/thankYouPage';
+import { ModelCard} from '../Components/General_components';
 
 const getUserInfo = (userInfo) => [
   { label: 'Nombre completo', value: `${userInfo?.nombre || ''} ${userInfo?.primer_apellido || ''}`.trim() },
@@ -28,7 +29,7 @@ const ThankYouPage = () => {
       <div className="wrapper">
         <h2 className="tit">Resumen de cotización</h2>
         <article className="car-item car-resume">
-          <ModelCard model={model} version={version} />
+          <ModelCard model={model} versionName={version?.name} noArrow={true} specifications/>
           <Info userInformation={userInformation} additionalInfo={additionalInfo} />
           <DropdownMobile userInformation={userInformation} additionalInfo={additionalInfo} />
         </article>
