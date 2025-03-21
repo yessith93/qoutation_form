@@ -13,7 +13,7 @@ const QuotationForm = () => {
     <section className="cont-form">
       <div className="auxi">
         {
-          formSubmitted ? <ThankYouPage /> : <FormPage />
+          true ? <ThankYouPage /> : <FormPage />
         }
       </div>
     </section>

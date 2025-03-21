@@ -3,7 +3,7 @@ import { Info, Headers, DropdownMobile, Rating } from '../Components/thankYouPag
 import { ModelCard} from '../Components/General_components';
 
 const getUserInfo = (userInfo) => [
-  { label: 'Nombre completo', value: `${userInfo?.nombre || ''} ${userInfo?.primer_apellido || ''}`.trim() },
+  { label: 'Nombre completo', value: `${userInfo?.nombre || 'no especificado'} ${userInfo?.primer_apellido || ''}`.trim() },
   { label: 'RUT', value: userInfo?.rut || 'No especificado' },
   { label: 'Email', value: userInfo?.email || 'No especificado' },
   { label: 'Teléfono', value: userInfo?.telefono || 'No especificado' },

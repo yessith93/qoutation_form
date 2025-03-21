@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import InfoList from './InfoList';
+import arrow from '/icons/ic_arrow_r.svg';
 
 const DropdownMobile = ({ userInformation, additionalInfo }) => {
     const [showDetailsMobile, setShowDetailsMobile] = useState(false);
@@ -10,8 +12,9 @@ const DropdownMobile = ({ userInformation, additionalInfo }) => {
     return (
         <div className="dropdown-container only-mobile">
             <div className="enc-select">
-                <button className="btn-dropdown" onClick={handleToggleDetailsMobile} aria-expanded={showDetailsMobile} >
-                    Ver detalle <img src="/src/assets/icons/ic_arrow_d.svg" alt="ic_arrow" />
+                <button className={`btn-dropdown ${showDetailsMobile?"open":"close"}`} onClick={handleToggleDetailsMobile} aria-expanded={showDetailsMobile} >
+                    Ver detalle 
+                    <img className="ic-arrow" src={arrow} alt="ic_arrow" />
                 </button>
             </div>
             {showDetailsMobile && (
